@@ -1,4 +1,4 @@
-# Welcome to 210222 Reston Java MSA!
+# Welcome to 210517 Reston Java Enterprise!
 This is the batch repository for the remote Fullstack Java and Microservices Revature batch starting May. 17th, 2021.
 Here you will find all of the notes from class aslong with study-guides, project guidelines, and more resources.
 
