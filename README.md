@@ -1,5 +1,5 @@
 # Welcome to 210517 Reston Java Enterprise!
-This is the batch repository for the remote Fullstack Java Enterprise Revature batch starting May. 17th, 2021.
+This is the repository for the remote Fullstack Java Enterprise Revature batch starting May. 17th, 2021.
 Here you will find all of the notes from class aslong with study-guides, project guidelines, and more resources.
 
 ### Most Recent QC/Interview Guide can be found [here](https://github.com/210517-Enterprise/demos/blob/main/week1/README.md) :star:
