@@ -15,7 +15,7 @@ Here you will find all of the notes from class aslong with study-guides, project
   > The Monday quizes serve as a review for all of the material covered in the week prior.
 
 * 1 hour lunch breaks are scheduled as follows:
-  - **Monday, Thursday**: 1pm - 2pm EST
+  - **Monday, Thursday, Friday**: 1pm - 2pm EST
   - **Tuesday**: 12:45pm - 2pm EST
   - **Wednesday**: 1pm - 3pm EST
  
@@ -35,5 +35,4 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 :pizza: = Lunch <br>
 :pencil2: = Quiz <br>
 :speech_balloon: = 1-on-1 Interviews <br>
-:question: = Office Hours <br>
 `blank space` = lecture & demos
