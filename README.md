@@ -35,5 +35,5 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 :pizza: = Lunch <br>
 :pencil2: = Quiz <br>
 :speech_balloon: = 1-on-1 Interviews <br>
-`blank space` = lecture, demos & exercises
+`blank space` = lecture, demos & exercises <br>
 :mag: = self or group study 
