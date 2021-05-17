@@ -1,4 +1,6 @@
 # Week 1 Study Questions & Assignments
+Try this challenge (here)[https://github.com/210517-Enterprise/demos/blob/main/week1/FirstJavaProject/src/com/revature/C/scanner/GradeCalcChallenge.java]. 
+
 You should research and be able to answer the following questions:
 
 ## `Monday`
