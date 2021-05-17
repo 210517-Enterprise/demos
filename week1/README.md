@@ -19,21 +19,9 @@ You should research and be able to answer the following questions:
 
 - Can I still instantiate an object if I don't define a constructor?
 
-- What is the root class from which every class extends?
-
-- Where are Strings stored?
-
-- What is a POJO? What is a bean?
-
-- What are the access modifiers in Java? Explain them
-
 - What is a wrapper class?
 
 - What is autoboxing / unboxing?
-
-- Tell me about Arrays:
-  - What is an Array? 
-  - Can I change the size of an Array?
 
 - Tell me the full syntax of the `main` method. What is its purpose?
 
