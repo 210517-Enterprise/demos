@@ -1,5 +1,5 @@
 # Week 1 Study Questions & Assignments
-You research and be able to answer the following questions:
+You should research and be able to answer the following questions:
 
 ## `Monday`
 
