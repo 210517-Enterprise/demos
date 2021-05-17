@@ -9,7 +9,8 @@ Here you will find all of the notes from class aslong with study-guides, project
 ---
 
 ## Weekly Schedule:
-* Class starts 10:00am EST M-F, ends at 6:00pm M-Th, 3pm on Friday
+* Class starts 10:00am EST M-F, technically ends at 6:00pm M-Th, 3pm on Friday
+> Typically I will end lecture at 3/3:30pm EST.  You are expected to code and study for the remainder of the work day.
 * **Mondays** will be our 1-on-1 Interview days - you will have a 15 minute interview with Sophia.  If you're not interviewing, you'll be working on your projects/exercises or studying for QC. QC's are often held on Mondays as well (or Tuesdays).
 * Every **Monday at 10:00am EST** we will begin class with a quiz :pencil2: which will last for 1 hour.  We reconvene and begin the new content for that week at 11am.
   > The Monday quizes serve as a review for all of the material covered in the week prior.
