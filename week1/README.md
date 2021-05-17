@@ -2,10 +2,6 @@
 You research and be able to answer the following questions:
 
 ## `Monday`
-:star: Complete the Array Sorting Challenge [here](https://github.com/sophiagavrila/IntroToJava/blob/main/week1/FirstJavaProject/src/com/revature/F/arrays/C_ArrayChallenge.java).
-   > You don't need to submit this to me - it is for your benefit.
-
-<br>
 
 - What is Java and why is it so great?
 
