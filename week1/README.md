@@ -19,8 +19,6 @@ You should research and be able to answer the following questions:
 
 - What is an object?  What is a class?
 
-- Can I still instantiate an object if I don't define a constructor?
-
 - What is a wrapper class?
 
 - What is autoboxing / unboxing?
