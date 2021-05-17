@@ -27,12 +27,12 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 12:45    | :speech_balloon: | :pizza:        |           |          |            |
 1:00    | :pizza:  |  :pizza:       |  :pizza:        |    :pizza:      |    :pizza:       |
 2:00    |   :speech_balloon:      |         |  :pizza:          |          |            |
-3:00    |   :speech_balloon:      |         |           |          |            |
+3:00    |   :speech_balloon:      |   :mag:      |   :mag:        |   :mag:       |    :mag:        |
 4:00    |  :speech_balloon:       |  :mag:     |      :mag:     |   :mag:       |   :mag:         |
 5:00    |  :speech_balloon:       |  :mag:       |   :mag:        |    :mag:      |    :mag:      | 
-6:00    |        |         |   :mag:        |   :mag:       |   :mag:         |
 
 :pizza: = Lunch <br>
 :pencil2: = Quiz <br>
 :speech_balloon: = 1-on-1 Interviews <br>
 `blank space` = lecture, demos & exercises
+:mag: = self or group study 
