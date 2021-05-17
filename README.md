@@ -28,8 +28,8 @@ Time EST |  Monday | Tuesday | Wednesday | Thursday |   Friday   |
 12:45    | :speech_balloon: | :pizza:        |           |          |            |
 1:00    | :pizza:  |  :pizza:       |  :pizza:        |    :pizza:      |    :pizza:       |
 2:00    |   :speech_balloon:      |         |  :pizza:          |          |            |
-3:00    |   :speech_balloon:      |   :mag:      |   :mag:        |   :mag:       |    :mag:        |
-4:00    |  :speech_balloon:       |  :mag:     |           |   :mag:       |   :mag:         |
+3:00    |   :speech_balloon:      |   :mag:      |          |   :mag:       |    :mag:        |
+4:00    |  :speech_balloon:       |  :mag:     |      :mag:      |   :mag:       |   :mag:         |
 5:00    |  :speech_balloon:       |  :mag:       |   :mag:        |    :mag:      |    :mag:      | 
 
 :pizza: = Lunch <br>
