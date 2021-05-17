@@ -9,7 +9,7 @@ You research and be able to answer the following questions:
    
 - How is Java code compiled and executed? In otherwords, explain src code --> byte code --> Target machine's JVM
 
-   - [Here](https://www.dummies.com/programming/java/what-is-a-java-virtual-machine/#:~:text=Generally%2C%20computers%20don't%20execute,in%20a%20slightly%20different%20way.) is a great resource and example! 
+   - [Here](https://www.dummies.com/programming/java/what-is-a-java-virtual-machine/#:~:text=Generally%2C%20computers%20don't%20execute,in%20a%20slightly%20different%20way.) is a great resource and example.
 
 - What are some useful features in Java 8 (*It's ok if you list them with a brief conceptual overview)*.
 
