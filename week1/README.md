@@ -47,6 +47,11 @@ System.out.println(s1.equals(s2));  // f
 
 > *Explanation*: Identical String literals are collected in the "String pool" in an effort to conserve memory. Reference variables will then point to the same String object instance. **Changing the object's state in the String pool will make changes to all references to that String object**. Instead, when a change to a String is made, the JVM makes a new String object, and the reference variable points to the new String in the String pool.
 
+<br>
+
+<hr>
+
+<br>
 
 ## `Monday`
 
