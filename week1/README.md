@@ -20,7 +20,7 @@ You should research and be able to answer the following questions:
 - How many interfaces can a class implement?
 
 - How is memory managed in Java
-   - [Here]() is a page about `Gabage Collection`.
+   - [Here is a page about `Gabage Collection`.](https://www.geeksforgeeks.org/garbage-collection-java/#:~:text=Garbage%20collector%20is%20best%20example,memory%20by%20destroying%20unreachable%20objects.)
 
 - Why are Strings immutable in Java?
 
