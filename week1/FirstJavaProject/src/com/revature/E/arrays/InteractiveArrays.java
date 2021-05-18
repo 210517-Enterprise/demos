@@ -13,7 +13,7 @@ public class InteractiveArrays {
 		int size = 5;
 		int[] returnedArr = getIntegers(size);
 		
-		System.out.println(Arrays.toString(returnedArr));
+		double avg = getAverage(returnedArr);
 		
 
 	}
@@ -45,6 +45,27 @@ public class InteractiveArrays {
 	 * Once you create this method, call it within the main method, and print its return, after passing through
 	 * the array that returned by the getIntegers method.
 	 */
+	
+	static double getAverage(int[] arr) {
+		
+		int sum = 0;
+		
+		for(int i=0; i<arr.length; i++) {
+			sum += arr[i];
+		}
+		
+		return (double) sum / (double) arr.length;
+
+	}
+	
+	static void printArray(int[] arr) {
+		
+		for(int n : arr) {
+			// for EACH element within the array passed as a parameter, I will print it to the screen.
+			System.out.println(n);
+		}
+		
+	}
 
 	
 	
