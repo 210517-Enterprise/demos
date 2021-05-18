@@ -1,6 +1,52 @@
 # Week 1 Study Questions & Assignments
 You should research and be able to answer the following questions:
 
+## `Tuesday`
+- :star: Try the Array sort challenge.
+
+- What are access modifiers? Explain all 4.
+
+- Tell me about Arrays:
+   - What is an Array?
+   - Can I change the size of an Array?
+
+- What is Abstraction?
+
+- What's the difference between an Abstract class and an Interface?
+   - Here's a [great thread on Stack Overflow about this topic](https://stackoverflow.com/questions/479142/when-to-use-an-interface-instead-of-an-abstract-class-and-vice-versa).
+
+- How many classes can a Class extend? In other words, does Java support **multi-inheritance**?
+
+- How many interfaces can a class implement?
+
+- How is memory managed in Java
+   - [Here]() is a page about `Gabage Collection`.
+
+- Why are Strings immutable in Java?
+
+- What is the difference between String, StringBuilder, and StringBuffer 
+
+- How many objects are created? What is the output?
+```java
+String s1 = "hello";
+String s2 = "hello";
+String s3 = new String("hello");
+
+System.out.println(s1 == s2);       // a
+System.out.println(s1.equals(s2));  // b
+System.out.println(s1 == s3);       // c
+System.out.println(s1.equals(s3));  // d
+
+s1.concat("goodbye");
+System.out.println(s1 == s2);       // e
+System.out.println(s1.equals(s2));  // f
+```
+
+> Here is the answer to the above 2 questions for your reference: <br>
+> *Answer*: 2 objects are created.
+> *Explanation*: Identical String literals are collected in the "String pool" in an effort to conserve memory. Reference variables will then point to the same String object instance. **Changing the object's state in the String pool will make changes to all references to that String object**. Instead, when a change to a String is made, the JVM makes a new String object, and the reference variable points to the new String in the String pool.
+
+
 ## `Monday`
 
 - :star: Try this challenge [here](https://github.com/210517-Enterprise/demos/blob/main/week1/FirstJavaProject/src/com/revature/C/scanner/GradeCalcChallenge.java). 
