@@ -2,7 +2,7 @@
 You should research and be able to answer the following questions:
 
 ## `Tuesday`
-- :star: Try the Array sort challenge.
+- :star: Try the [Array sort challenge](https://github.com/210517-Enterprise/demos/blob/main/week1/FirstJavaProject/src/com/revature/E/arrays/ArrayChallenge.java).
 
 - What are access modifiers? Explain all 4.
 
