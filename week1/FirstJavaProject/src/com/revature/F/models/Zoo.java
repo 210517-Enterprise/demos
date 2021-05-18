@@ -25,7 +25,9 @@ public class Zoo {
 	public Zoo() {
 		// A Constructor call, such as super() or this() must be the first statement in a Constructor
 		// If not provided, the Compiler will add in a call to super() for you
-		super();
+		// this(); // you cannot call this from a no-args constructor
+		
+		super(); // whether we call this in a no-args constructor or not, supr() always exists
 		this.workers = new Employee[0];
 		this.animals = new ArrayList<Animal>(); 
 		this.area = 0;
@@ -42,13 +44,23 @@ public class Zoo {
 	}
 	
 	public Zoo(double area, String name, String address, boolean isOpen) {
-		this();// I am calling the FIRST constructor within this constructor
+		// I am calling the FIRST constructor within this constructor
 		// if you don't declare this or super(), super() will 
 		// calling this() allows me to use that constructor to take over in initializing the values that I HAVEN'T initialized within this constructor.
+		this();
 		this.area = area;
 		this.isOpen = isOpen;
 		this.address = address;
 		this.name = name;
+	}
+	
+	public Zoo(Employee[] workers, List<Animal> animals, double area, String name, String address, boolean isOpen) {
+		// use the this() constructor method to make a call to the above constructor
+		
+		this(area, name, address, isOpen);
+		this.workers = workers;
+		this.animals = animals;			
+	
 	}
 
 	public Employee[] getWorkers() {
@@ -72,6 +84,11 @@ public class Zoo {
 	}
 
 	public void setArea(double area) {
+		
+		if (area < 0) {
+			throw new RuntimeException("Area cannot be negative");
+			// this will crash our program and tell us why
+		}
 		this.area = area;
 	}
 

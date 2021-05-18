@@ -24,6 +24,8 @@ public class Driver {
 		
 		System.out.println(franksZoo.getWorkers());
 		
+		Cat finn = new Cat();
+		
 	}
 
 }
