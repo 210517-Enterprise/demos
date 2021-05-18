@@ -15,6 +15,8 @@ You should research and be able to answer the following questions:
 - What's the difference between an Abstract class and an Interface?
    - Here's a [great thread on Stack Overflow about this topic](https://stackoverflow.com/questions/479142/when-to-use-an-interface-instead-of-an-abstract-class-and-vice-versa).
 
+   - Check out [this resource as well](https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-java/).
+
 - How many classes can a Class extend? In other words, does Java support **multi-inheritance**?
 
 - How many interfaces can a class implement?
