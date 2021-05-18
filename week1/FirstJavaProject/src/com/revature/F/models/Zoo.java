@@ -6,6 +6,14 @@ import java.util.List;
 
 public class Zoo {
 	
+	// We have a concept of Constructors
+	// These are special methods whose job it is to initialize all of the properties for the object
+	
+	// Java provides a "default constructor" if you do not create ANY constructor yourself
+//	public Zoo() {
+//		
+//	}
+	
 	private Employee[] workers;
 	private List<Animal> animals; // Here we are using the List Interface to include a collection of objects (specifically Animal type)
 	private double area;
@@ -13,9 +21,10 @@ public class Zoo {
 	private String address;
 	private boolean isOpen;
 	
-	// Whenever I instnaitate a Zoo with NO parameters...this is the constructor that I'm calling....
+	// Whenever I instantiate a Zoo with NO parameters...this is the constructor that I'm calling....
 	public Zoo() {
-		// here we are manipulating the no args constructor
+		// A Constructor call, such as super() or this() must be the first statement in a Constructor
+		// If not provided, the Compiler will add in a call to super() for you
 		super();
 		this.workers = new Employee[0];
 		this.animals = new ArrayList<Animal>(); 

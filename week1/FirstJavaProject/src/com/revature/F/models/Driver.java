@@ -20,7 +20,7 @@ public class Driver {
 		
 		System.out.println(myZoo.getName());
 		
-		Zoo franksZoo = new Zoo(204.4, "Frank's Safari Zoo" , "32 Pennsulvania Ave", true);
+		Zoo franksZoo = new Zoo(204.4, "Frank's Safari Zoo" , "32 Pennsylvania Ave", true);
 		
 		System.out.println(franksZoo.getWorkers());
 		
