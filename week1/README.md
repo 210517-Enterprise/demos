@@ -44,6 +44,7 @@ System.out.println(s1.equals(s2));  // f
 
 > Here is the answer to the above 2 questions for your reference: <br>
 > *Answer*: 2 objects are created.
+
 > *Explanation*: Identical String literals are collected in the "String pool" in an effort to conserve memory. Reference variables will then point to the same String object instance. **Changing the object's state in the String pool will make changes to all references to that String object**. Instead, when a change to a String is made, the JVM makes a new String object, and the reference variable points to the new String in the String pool.
 
 
