@@ -1,6 +1,19 @@
 # Week 1 Study Questions & Assignments
 You should research and be able to answer the following questions:
 
+## `Wednesday`
+- :star: Begin **Java-Problems** *due Friday June 4th*
+
+- How do we handle Exceptions in Java?
+   - Checked vs. Unchecked?  
+   - Check out this [guide to exceptions](https://www.protechtraining.com/content/java_fundamentals_tutorial-exceptions).
+
+-  
+
+<br>
+
+<hr>
+
 ## `Tuesday`
 - :star: Try the [Array sort challenge](https://github.com/210517-Enterprise/demos/blob/main/week1/FirstJavaProject/src/com/revature/E/arrays/ArrayChallenge.java).
 
