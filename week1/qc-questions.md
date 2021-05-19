@@ -24,22 +24,6 @@
   * Bean - a POJO that has private data members, public getters/setters, and overrides `.hashcode()`, `.equals()`, and `.toString()` methods
 * How can you force garbage collection in Java?
   * Garbage collection cannot be forced but only requested using `System.gc()`.
-* How many objects are created? What is the output?
-  * Ans: 2 objects; a = true; b = true; c = false; d = true; e = true; f = true
-```java
-String s1 = "hello";
-String s2 = "hello";
-String s3 = new String("hello");
-
-System.out.println(s1 == s2);       // a
-System.out.println(s1.equals(s2));  // b
-System.out.println(s1 == s3);       // c
-System.out.println(s1.equals(s3));  // d
-
-s1.concat("goodbye");
-System.out.println(s1 == s2);       // e
-System.out.println(s1.equals(s2));  // f
-```
 * Why are strings immutable in java?
   * Identical String literals are collected in the "String pool" in an effort to conserve memory. Reference variables will then point to the same String object instance. Changing the object's state in the String pool will make changes to all references to that String object. Instead, when a change to a String is made, the JVM makes a new String object, and the reference variable points to the new String in the String pool.
 * What is the difference between `String`, `StringBuilder`, and `StringBuffer`?
