@@ -2,7 +2,7 @@
 You should research and be able to answer the following questions:
 
 ## `Wednesday`
-- :star: Begin **Java-Problems** *due Friday June 4th*
+- :star: Begin [**Java-Problems**](https://classroom.github.com/a/DNzxX6Hm) *due Friday June 4th*
 
 - How do we handle Exceptions in Java?
    - Checked vs. Unchecked?  
