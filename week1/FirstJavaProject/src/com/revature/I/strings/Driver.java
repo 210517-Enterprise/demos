@@ -27,13 +27,16 @@ public class Driver {
 		String s4 = "Hello " + "World"; // the + operator is intelligent when it comes to Strings and builds the same String Literal that s ands2 point to
 		System.out.println(s4 == s); // it has both the same content AND the address is equal is memory
 		
+		// https://www.geeksforgeeks.org/difference-between-concat-and-operator-in-java/
+		
 	
 		String s5 = "Hello "; // this is in the string pool
 		
 		String s6 = s5 + "World"; // returning a string object outside of String pool 
 		
 		// does s6 point to the SAME String literal object as s?
-		System.out.println(s6 == s);
+		System.out.println(s6 == s); // s is in the string pool and is equal to "Hello World".  s6 is also equal to "Hello World", but its address in memory is
+		// but its address in memory is not equivelent to s....
 		
 		System.out.println(s6);
 		
