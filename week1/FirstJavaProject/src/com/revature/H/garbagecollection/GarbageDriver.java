@@ -1,4 +1,4 @@
-package com.revaure.H.garbagecollection;
+package com.revature.H.garbagecollection;
 
 public class GarbageDriver {
 	
