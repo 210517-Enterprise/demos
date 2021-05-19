@@ -7,6 +7,7 @@ You should research and be able to answer the following questions:
 - How do we handle Exceptions in Java?
    - Checked vs. Unchecked?  
    - Check out this [guide to exceptions](https://www.protechtraining.com/content/java_fundamentals_tutorial-exceptions).
+   - Great [video on exceptions](https://www.youtube.com/watch?v=8WTVLa1Xtsk).
 
 -  
 
