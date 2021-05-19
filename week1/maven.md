@@ -130,4 +130,4 @@ java -jar <Your-Project-Name>-0.0.1-SNAPSHOT.jar
 ### Resources:
 - [Intro to Maven](https://www.studytonight.com/maven/introduction-to-maven)
 - [The difference between `package` and `install`](https://stackoverflow.com/questions/16602017/how-are-mvn-clean-package-and-mvn-clean-install-different)
-- [Why did we include that executable jar plugin in the `pom.xml`?](https://stackoverflow.com/questions/16602017/how-are-mvn-clean-package-and-mvn-clean-install-different) 
+- [Why did we include that executable jar plugin in the `pom.xml`?](https://maven.apache.org/shared/maven-archiver/examples/classpath.html) 
