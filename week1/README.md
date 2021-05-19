@@ -1,6 +1,23 @@
 # Week 1 Study Questions & Assignments
 You should research and be able to answer the following questions:
 
+## `Wednesday`
+- :star: Begin [**Java-Problems**](https://classroom.github.com/a/DNzxX6Hm) *due Friday June 4th*
+
+- How do we handle Exceptions in Java?
+   - Checked vs. Unchecked?  
+   - Check out this [guide to exceptions](https://www.protechtraining.com/content/java_fundamentals_tutorial-exceptions).
+   - Great [video on exceptions](https://www.youtube.com/watch?v=8WTVLa1Xtsk).
+   - [Guide](https://www.geeksforgeeks.org/throw-throws-java/) to `throw` and `throws` keyword in java.
+
+-  What is Maven?
+   - You can review the demo we did [here](https://github.com/210517-Enterprise/demos/blob/main/week1/maven.md)
+   - Solid resource on [Intro to Maven](https://www.studytonight.com/maven/introduction-to-maven)
+
+<br>
+
+<hr>
+
 ## `Tuesday`
 - :star: Try the [Array sort challenge](https://github.com/210517-Enterprise/demos/blob/main/week1/FirstJavaProject/src/com/revature/E/arrays/ArrayChallenge.java).
 
