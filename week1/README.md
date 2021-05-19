@@ -10,7 +10,9 @@ You should research and be able to answer the following questions:
    - Great [video on exceptions](https://www.youtube.com/watch?v=8WTVLa1Xtsk).
    - [Guide](https://www.geeksforgeeks.org/throw-throws-java/) to `throw` and `throws` keyword in java.
 
--  
+-  What is Maven?
+   - You can review the demo we did [here](https://github.com/210517-Enterprise/demos/blob/main/week1/maven.md)
+   - Solid resource on [Intro to Maven](https://www.studytonight.com/maven/introduction-to-maven)
 
 <br>
 
