@@ -1,5 +1,6 @@
 package com.revature;
 
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Random;
@@ -11,9 +12,17 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 // This will a test Suite (which is a collection of unit tests)
-// Unit tests test small chunks of code -- methods.  We use assertions 
-// which give us custom functionality inherited from the JUnit framework.
 public class CalculatorTest {
+	
+	/*
+	 * Unit Testing
+	 * 
+	 * Unit Testing means testing small units of your application.  Typically,
+	 * these are methods.  We test our code to prove that the code works as expected.
+	 * 
+	 * You can also use unit testing to prove to the client or customer that your program indeed works
+	 * and accounts for all types of errors.
+	 */
 	
 	private Calculator calculator;
 	
@@ -53,6 +62,42 @@ public class CalculatorTest {
 		assertTrue(calculator.add(x, y) == calculator.add(y, x));
 		
 	}
+	
+	@Test
+	public void testInverseProperty() {
+		System.out.println("Test 2");
+		
+		Random r = new Random();
+		
+		int x = r.nextInt(Integer.MAX_VALUE);
+		
+		assertTrue(calculator.add(x, -1 * x) == 0);
+	}
+
+	@Test
+	public void testAddAgain() {
+		System.out.println("Test 3");
+		
+		// Here we are using a lambda expression with () -> 
+		assertThrows(IllegalArgumentException.class,
+				() -> calculator.add(Integer.MAX_VALUE, 1)
+		);
+	}
+	
+	@Test
+	public void testMultiplyInverseProperty() {
+		System.out.println("Test 4");
+		
+		Random r = new Random();
+		
+		double x = r.nextDouble() * Integer.MAX_VALUE;
+		
+		double inverse = 1.0d / x;
+		
+		assertTrue(calculator.multiply(x, inverse) == 1.0d);
+	}
+	
+	
 
 }
 
