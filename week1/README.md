@@ -23,6 +23,9 @@ You should research and be able to answer the following questions:
 - What is the difference between HashTable and HashMap?
    - Hashtable is synchronized whereas Hashmap is not.
    - Hashmap permits null values and the null key.
+   
+Binary Search: 
+<a href="https://gyazo.com/c8aa9f554a7081e2b4a9dbcf1c2b5f02"><img src="https://i.gyazo.com/c8aa9f554a7081e2b4a9dbcf1c2b5f02.gif" alt="Image from Gyazo" width="462"/></a>
 
 <br>
 
