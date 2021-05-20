@@ -4,8 +4,8 @@ You should research and be able to answer the following questions:
 ## `Thursday`
 - When do you use `ArrayList` instead of `LinkedList`?
    - Great resource [here](https://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java)
-- What is the Collections Framework?
-   - How does "Collections Framework" differ from `Collection`? Check [here](https://www.tutorialspoint.com/difference-between-collection-and-collections-in-java#:~:text=Collection%20framework%20contains%20multiple%20wrapper,Hashtable%2C%20collection%20interfaces%20and%20etc.&text=Java%20util%20collection%20%2D%20It%20contains,%2C%20queue%20%2C%20List%20and%20etc.)
+- What is the Collections API?
+   - How does "Collections API" differ from `Collection`? Check [here](https://www.tutorialspoint.com/difference-between-collection-and-collections-in-java#:~:text=Collection%20framework%20contains%20multiple%20wrapper,Hashtable%2C%20collection%20interfaces%20and%20etc.&text=Java%20util%20collection%20%2D%20It%20contains,%2C%20queue%20%2C%20List%20and%20etc.)
    - How does `Map` Interface relate to the Collection Framework? (Does it extend `java.util.Collection`?)
 
 - What are the interfaces in the Collections API?
