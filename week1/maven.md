@@ -1,3 +1,5 @@
+> Scroll to the bottom of this page for a guide on how to create a Maven project
+
 # Maven :star:
 Maven is a **build automation tool** used primarily for Java projects. Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. 
 
@@ -27,7 +29,9 @@ These lifecycle phases (plus the other lifecycle phases not shown here) are exec
 <hr>
 
 # Demo
-1. Create Maven Project.
+1. Create Maven Project:
+
+	- In the left hand upper corner of Eclipse click File > New > Other > Search for "Maven" > Click Maven Project > Click Create Simple Project > > group Id = com.revature > Artifact ID = > MyProject > click Finish.
 
 2. Within the `src/main/java` folder add a base package (like `com.revature`).
 
