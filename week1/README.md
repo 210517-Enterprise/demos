@@ -1,6 +1,33 @@
 # Week 1 Study Questions & Assignments
 You should research and be able to answer the following questions:
 
+## `Thursday`
+- What are the interfaces in the Collections API?
+
+- What is the difference between a Set and a List?
+
+- What is the difference between a Array and an ArrayList?
+
+- What is the difference between ArrayList and Vector?
+   - Vector is synchronized whereas ArrayList is not. 
+
+- What is the difference between TreeSet and HashSet?
+   - The two general purpose Set implementations are HashSet and TreeSet. HashSet is much faster (constant time versus log time for most operations) but offers no ordering guarantees.
+   
+- What is the difference between HashTable and HashMap?
+   - Hashtable is synchronized whereas Hashmap is not.
+   - Hashmap permits null values and the null key.
+
+- When do you use `ArrayList` instead of `LinkedList`?
+   - Great resource [here](https://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java)
+- What is the Collections Framework?
+   - How does "Collections Framework" differ from `Collection`? Check [here](https://www.tutorialspoint.com/difference-between-collection-and-collections-in-java#:~:text=Collection%20framework%20contains%20multiple%20wrapper,Hashtable%2C%20collection%20interfaces%20and%20etc.&text=Java%20util%20collection%20%2D%20It%20contains,%2C%20queue%20%2C%20List%20and%20etc.)
+   - How does `Map` Interface relate to the Collection Framework? (Does it extend `java.util.Collection`?)
+
+<br>
+
+<hr>
+
 ## `Wednesday`
 - :star: Begin [**Java-Problems**](https://classroom.github.com/a/DNzxX6Hm) *due Friday June 4th*
 
