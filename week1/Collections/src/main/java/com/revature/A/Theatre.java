@@ -8,19 +8,24 @@ public class Theatre {
 
 	private final String theatreName;
 	private List<Seat> seats = new ArrayList<Seat>();
-	// ArrayList
-//		Arraylist advantages
-	//
-//		It is not synchronized so it is fast.
-//		It works fast when we have to fetch or get the elements from the list.
-//		It maintains insertion order, means any element by default will be added in the end of arraylist.
-//		There can be duplicates in the arraylist.
 
-//		Disadvantages
-	//
-//		Never used Arraylist when you have to do lot of insertion and deletion as this will force arraylist to adjust the elements present in the list instead used linkedlist.
-//		When you want to add elements in the last or first and the arrayList size is 0, in this case u can use linkedlist to add specifically on top and bottom of list.
-//		You can't maintain uniqueness.
+	
+	//ArrayList
+	/*
+		Advantages
+		
+		It is not synchronized so it is fast.
+		It works fast when we have to fetch or get the elements from the list.
+		It maintains insertion order, means any element by default will be added in the end of arraylist.
+		There can be duplicates in the arraylist.
+
+		Disadvantages
+	
+		Never used Arraylist when you have to do lot of insertion and deletion as this will force arraylist to adjust the elements present in the list instead used linkedlist.
+		When you want to add elements in the last or first and the arrayList size is 0, in this case u can use linkedlist to add specifically on top and bottom of list.
+		You can't maintain uniqueness.
+	*/
+
 
 	// LinkedList
 	/*
@@ -63,6 +68,13 @@ public class Theatre {
 	}
 
 	public boolean reserveSeat(String seatNumber) {
+		
+		/*
+		 * BINARY SEARCH ALGORITHM
+		 * 
+		 * We control clicked Collections.binarySearch() and
+		 * then 
+		 */
 		
 		int low = 0;
 		int high = seats.size() - 1;

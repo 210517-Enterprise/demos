@@ -29,7 +29,7 @@ public class Driver {
 	 *		Abstract methods do NOT have implementations
 	 *		Abstract classes may still have regular methods
 	 *
-	 * synchronized keyword:
+	 * synchronized keyword: (StringBuffer) -- synchronized things are slower
 	 * 		Can only be used on variables and methods
 	 * 		It prevents the variable/method from being accessed by multiple threads at once
 	 * 
@@ -56,8 +56,31 @@ public class Driver {
 
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		String x = new String("hello");
+		System.out.println(x instanceof Object);
+
+		
+		Circle c = new Circle();
+		
+		c.setRadius(10);
+		
+		// this is a default method inherited from the Interface.
+		c.myMethod();
+		
+		// We can call a static method from an interface by calling the interface itself
+		Calculable.myStaticMethod();
+	
 	}
+	
+	
+	
+	public static int  add (int x, int y) {
+		return x + y;
+	}
+	
+	
+	
+	
 
 }
