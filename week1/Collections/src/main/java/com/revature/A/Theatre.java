@@ -2,7 +2,7 @@ package com.revature.A;
 
 import java.util.ArrayList;
 import java.util.Collection; // ALMOST root interace of the API (extedns Iterable)
-import java.util.List;
+import java.util.List; 
 
 public class Theatre {
 
@@ -12,18 +12,21 @@ public class Theatre {
 	
 	//ArrayList
 	/*
-		Advantages
-		
-		It is not synchronized so it is fast.
-		It works fast when we have to fetch or get the elements from the list.
-		It maintains insertion order, means any element by default will be added in the end of arraylist.
-		There can be duplicates in the arraylist.
-
-		Disadvantages
 	
-		Never used Arraylist when you have to do lot of insertion and deletion as this will force arraylist to adjust the elements present in the list instead used linkedlist.
-		When you want to add elements in the last or first and the arrayList size is 0, in this case u can use linkedlist to add specifically on top and bottom of list.
-		You can't maintain uniqueness.
+	Advantages
+		
+	It is not synchronized so it is fast.
+	It works fast when we have to fetch or get the elements from the list.
+	It maintains insertion order, means any element by default will be added in the end of arraylist.
+	There can be duplicates in the arraylist.
+
+	Disadvantages
+
+	Never used Arraylist when you have to do lot of insertion and deletion as this will force arraylist 
+	to adjust the elements present in the list instead used linkedlist.
+	When you want to add elements in the last or first and the arrayList size is 0, 
+	in this case u can use linkedlist to add specifically on top and bottom of list.
+	You can't maintain uniqueness.
 	*/
 
 
