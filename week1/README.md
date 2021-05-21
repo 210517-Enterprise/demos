@@ -3,8 +3,9 @@ You should research and be able to answer the following questions:
 
 ## `Friday`
 :exclamation: **Assignments** ❗
-- Hackerrank Problem: [Solve `Diagonal Difference`](https://www.hackerrank.com/210517-enterprise-hr0) *Complete by Monday 10:00am EST and talk me through your code in our 1-on-1 interview on Monday* <br>
-- **Optional Extra Practice**: [Custom Algorithm Assignment](https://classroom.github.com/a/6-0WFWWc) 
+- Hackerrank Problem: [Solve `Diagonal Difference`](https://www.hackerrank.com/210517-enterprise-hr0) 🕙 *Due by Monday May 24th 10:00am EST* 
+   > Talk me through your code in our 1-on-1 interview on Monday* <br>
+- **Optional Extra Practice**: [Custom Algorithm Assignment](https://classroom.github.com/a/6-0WFWWc) <br>
 - **Project-0: Banking API**: 🕙*Due Wednesday May 2nd*  
 
 
