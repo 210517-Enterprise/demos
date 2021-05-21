@@ -169,4 +169,13 @@ public class Hello {}
 ```java
 public class MyException extends RuntimeException {}
 ```
-  
+
+## JUnit
+* What is JUnit?
+  * A Java unit testing framework for testing code - use it for TDD
+* What is TDD?
+  * Test-driven development - write unit tests before application code, then write code to make tests pass. Repeat this process until functionality is complete.
+* What are the annotations in JUnit? Order of execution?
+  * BeforeClass, AfterClass, Before, After, Test, Ignore
+* Give an example of a test case?
+  * Adding two numbers, check that the method returns the sum
