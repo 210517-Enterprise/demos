@@ -1,13 +1,13 @@
 package com.revature.A;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set; 
 
 public class Theatre {
 
 	private final String theatreName;
-	private Set<Seat> seats = new HashSet<Seat>(); // major diff between List and Set is that Set does not allow duplicates
+	private List<Seat> seats = new ArrayList<Seat>(); // major diff between List and Set is that Set does not allow duplicates
 	
 	/*
 	======== ArrayList ========
@@ -68,7 +68,7 @@ public class Theatre {
 		}
 	}
 
-	/*public boolean reserveSeat(String seatNumber) {
+	public boolean reserveSeat(String seatNumber) {
 		
 		/*
 		 * BINARY SEARCH ALGORITHM -- O(log n) time complexity
@@ -78,28 +78,28 @@ public class Theatre {
 		 * this case a Seat object's seatNumber
 		 */
 		
-//		int low = 0;
-//		int high = seats.size() - 1;
-//
-//		int i = 0; // using this to count time
-//		while (low <= high) {
-//			i++;
-//			System.out.println("Iteration #" + i + ", "); // to demonstrate how many iterations it takes to get to target
-//			int mid = (low + high) / 2; // splits the list in 2 each time
-//			
-//			Seat midVal = seats.get(mid);
-//			int cmp = midVal.getSeatNumber().compareTo(seatNumber);
-//
-//			if (cmp < 0)
-//				low = mid + 1;
-//			else if (cmp > 0)
-//				high = mid - 1;
-//			else
-//				return seats.get(mid).reserve(); // key found
-//		}
-//		System.out.println("No seat found");
-//		return false; // key not found
+		int low = 0;
+		int high = seats.size() - 1;
 
+		int i = 0; // using this to count time
+		while (low <= high) {
+			i++;
+			System.out.println("Iteration #" + i + ", "); // to demonstrate how many iterations it takes to get to target
+			int mid = (low + high) / 2; // splits the list in 2 each time
+			
+			Seat midVal = seats.get(mid);
+			int cmp = midVal.getSeatNumber().compareTo(seatNumber);
+
+			if (cmp < 0)
+				low = mid + 1;
+			else if (cmp > 0)
+				high = mid - 1;
+			else
+				return seats.get(mid).reserve(); // key found
+		}
+		System.out.println("No seat found");
+		return false; // key not found
+	}
 //		Seat requestedSeat = null;      // imagine that the requested Seat does not exist yet
 		
 		/*
@@ -128,7 +128,7 @@ public class Theatre {
 		return requestedSeat.reserve(); // returning true or false whether the seat was reserved or not
 */
 
-	public Set<Seat> getSeats() {
+	public List<Seat> getSeats() {
 		return seats;
 	}
 
