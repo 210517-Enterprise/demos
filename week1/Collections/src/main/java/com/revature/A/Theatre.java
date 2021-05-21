@@ -1,13 +1,13 @@
 package com.revature.A;
 
-import java.util.ArrayList;
-import java.util.Collection; // ALMOST root interace of the API (extends Iterable Interface)
-import java.util.List; 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set; 
 
 public class Theatre {
 
 	private final String theatreName;
-	private List<Seat> seats = new ArrayList<Seat>();
+	private Set<Seat> seats = new HashSet<Seat>(); // major diff between List and Set is that Set does not allow duplicates
 	
 	/*
 	======== ArrayList ========
@@ -68,7 +68,7 @@ public class Theatre {
 		}
 	}
 
-	public boolean reserveSeat(String seatNumber) {
+	/*public boolean reserveSeat(String seatNumber) {
 		
 		/*
 		 * BINARY SEARCH ALGORITHM -- O(log n) time complexity
@@ -78,27 +78,27 @@ public class Theatre {
 		 * this case a Seat object's seatNumber
 		 */
 		
-		int low = 0;
-		int high = seats.size() - 1;
-
-		int i = 0; // using this to count time
-		while (low <= high) {
-			i++;
-			System.out.println("Iteration #" + i + ", "); // to demonstrate how many iterations it takes to get to target
-			int mid = (low + high) / 2; // splits the list in 2 each time
-			
-			Seat midVal = seats.get(mid);
-			int cmp = midVal.getSeatNumber().compareTo(seatNumber);
-
-			if (cmp < 0)
-				low = mid + 1;
-			else if (cmp > 0)
-				high = mid - 1;
-			else
-				return seats.get(mid).reserve(); // key found
-		}
-		System.out.println("No seat found");
-		return false; // key not found
+//		int low = 0;
+//		int high = seats.size() - 1;
+//
+//		int i = 0; // using this to count time
+//		while (low <= high) {
+//			i++;
+//			System.out.println("Iteration #" + i + ", "); // to demonstrate how many iterations it takes to get to target
+//			int mid = (low + high) / 2; // splits the list in 2 each time
+//			
+//			Seat midVal = seats.get(mid);
+//			int cmp = midVal.getSeatNumber().compareTo(seatNumber);
+//
+//			if (cmp < 0)
+//				low = mid + 1;
+//			else if (cmp > 0)
+//				high = mid - 1;
+//			else
+//				return seats.get(mid).reserve(); // key found
+//		}
+//		System.out.println("No seat found");
+//		return false; // key not found
 
 //		Seat requestedSeat = null;      // imagine that the requested Seat does not exist yet
 		
@@ -128,9 +128,7 @@ public class Theatre {
 		return requestedSeat.reserve(); // returning true or false whether the seat was reserved or not
 */
 
-	}
-
-	public Collection<Seat> getSeats() {
+	public Set<Seat> getSeats() {
 		return seats;
 	}
 
@@ -157,8 +155,22 @@ public class Theatre {
 	 * and restricting access
 	 */
 
-	// Tomorrow we will implement the COMPARABLE Interface
-	private class Seat {
+	
+	
+	/*
+	 * Java Comparable interface is used to order the objects of the user-defined
+	 * class. This interface is found in java. lang package and contains only one
+	 * method named compareTo(Object). 
+	 * 
+	 * It provides a single sorting sequence only, // if we want to add more sorting  sequences, we use Comparator 
+	 * i.e., you can sort the elements on the basis of single data member only.
+	 */
+	public class Seat implements Comparable<Seat>{
+		
+		// this method is involved in any type of Sorting!
+		public int compareTo(Seat seat) {
+			return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
+		}
 
 		private final String seatNumber;
 		private boolean reserved = false;
@@ -192,5 +204,6 @@ public class Theatre {
 				return false;
 			}
 		}
+
 	}
 }

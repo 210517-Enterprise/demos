@@ -1,5 +1,11 @@
 package com.revature.A;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import com.revature.A.Theatre.Seat;
+
 public class Driver {
 	
 	/*
@@ -23,17 +29,21 @@ public class Driver {
 		
 		theatre.listSeats();
 		
+		Collections.sort((List<Seat>) theatre.getSeats());
+		System.out.println("****************************");
+		theatre.listSeats();
+		
 		int numOfSeats = theatre.getSeats().size();
 		
 		
-		// run the reserve seat method TWICE to prove that our reservation system works
-		for(int i=0; i<=1; i++) {
-			if (theatre.reserveSeat("B09")) {
-				System.out.println("Seat is free, pay to reserve");
-			} else {
-				System.out.println("Sorry, seat is taken");
-			}
-		}
+//		// run the reserve seat method TWICE to prove that our reservation system works
+//		for(int i=0; i<=1; i++) {
+//			if (theatre.reserveSeat("B09")) {
+//				System.out.println("Seat is free, pay to reserve");
+//			} else {
+//				System.out.println("Sorry, seat is taken");
+//			}
+//		}
 		
 		
 		
