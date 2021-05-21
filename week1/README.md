@@ -1,6 +1,13 @@
 # Week 1 Study Questions & Assignments
 You should research and be able to answer the following questions:
 
+## `Friday`
+:exclamation: **Assignments** ❗
+- Hackerrank Problem: [Solve `Diagonal Difference`](https://www.hackerrank.com/210517-enterprise-hr0) *Complete by Monday 10:00am EST and talk me through your code in our 1-on-1 interview on Monday* <br>
+- **Optional Extra Practice**: [Custom Algorithm Assignment](https://classroom.github.com/a/6-0WFWWc) 
+- **Project-0: Banking API**: 🕙*Due Wednesday May 2nd*  
+
+
 ## `Thursday`
 - When do you use `ArrayList` instead of `LinkedList`?
    - Great resource [here](https://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java)
