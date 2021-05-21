@@ -71,7 +71,7 @@ public class Theatre {
 	public boolean reserveSeat(String seatNumber) {
 		
 		/*
-		 * BINARY SEARCH ALGORITHM
+		 * BINARY SEARCH ALGORITHM -- O(log n) time complexity
 		 * 
 		 * We ctrl + clicked Collections.binarySearch() and
 		 * then customized the target we're looking for which is in 
