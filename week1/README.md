@@ -5,8 +5,10 @@ You should research and be able to answer the following questions:
 :exclamation: **Assignments** ❗
 - Hackerrank Problem: [Solve `Diagonal Difference`](https://www.hackerrank.com/210517-enterprise-hr0) 🕙 *Due by Monday May 24th 10:00am EST* 
    > Talk me through your code in our 1-on-1 interview on Monday <br>
-- **Project-0: Banking API**: 🕙*Due Wednesday June 2nd*
+- **[Project-0: Banking API](https://classroom.github.com/a/371I_oZ4)**: 🕙*Due Wednesday June 2nd*
 - **Optional Extra Practice**: [Custom Algorithm Assignment](https://classroom.github.com/a/6-0WFWWc) <br>
+- Review **all questions below** and **[this comprehensive QC studyguide]()** to prepare you for QC next Monday.
+- 
 
 
 ## `Thursday`
