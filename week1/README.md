@@ -8,7 +8,7 @@ You should research and be able to answer the following questions:
    > Need some practice? Try [these](https://www.hackerrank.com/domains/data-structures) 👈 <br>
 > - **[Project-0: Banking API](https://classroom.github.com/a/371I_oZ4)**: 🕙*Due Wednesday June 2nd*
 > - **Optional Extra Practice**: [Custom Algorithm Assignment](https://classroom.github.com/a/6-0WFWWc) <br>
-> - Review **all questions below** and **[this comprehensive QC studyguide]()** to prepare you for QC next Monday.
+> - Review **all questions below** and **[this comprehensive QC studyguide](https://github.com/210517-Enterprise/demos/blob/main/week1/qc-questions.md)** to prepare you for QC next Monday.
 
 
 ## `Thursday`
