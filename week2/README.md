@@ -1,7 +1,7 @@
 # Week 2: SQL & JDBC Study Questions
 You should research and be able to answer the following questions at the ned of each day:
 
-> Use Google and [class notes]()
+> Use Google and [class notes](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md)
 
 <br>
 
