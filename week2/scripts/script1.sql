@@ -94,12 +94,55 @@ SELECT * FROM public.users;
 
 TRUNCATE TABLE public.users CASCADE;
 
+DROP TABLE IF EXISTS public.one CASCADE;
+DROP TABLE IF EXISTS public.two CASCADE;
 
+CREATE TABLE public.one (
+	c_one INTEGER PRIMARY KEY,
+	c_two INTEGER
+);
 
+CREATE TABLE public.two (
+	c_one INTEGER PRIMARY KEY,
+	c_two INTEGER
+);
 
+INSERT INTO public.one VALUES (1, 1), (2, 2);
+INSERT INTO public.two VALUES (1, 1), (2, 1);
 
+-- SET operations only operate on results that have the
+-- same number and type of columns
 
+-- The UNION operator will combine all results together
+-- However, it will not include duplicates
+SELECT * FROM public.one UNION SELECT * FROM public.two;
 
+-- UNION ALL does include duplicates
+SELECT * FROM public.one UNION ALL SELECT * FROM public.two;
+
+-- INTERSECT will only include matching results
+SELECT * FROM public.one INTERSECT SELECT * FROM public.two;
+
+-- EXCEPT will keep results from the left view, and remove
+-- any matching results that came from the right;
+/*
+ * The SQL EXCEPT clause/operator is used to combine two 
+ * SELECT statements and returns rows from the first SELECT 
+ * statement that are not returned by the second SELECT statement
+ */
+SELECT * FROM public.one EXCEPT SELECT * FROM public.two;
+
+-- SQL supports aggregate and scalar functions that can be used along with SELECT statements
+
+-- SCALAR FUNCTIONS
+-- are FUNCTIONS that operate ON ONLY a SINGLE INPUT and produce 1 output of EACH input
+-- UPPER, LOWER...
+
+-- AGGREGATE FUNCTIONS
+-- operate on an entire column as input and produce 1 output
+-- SUM, AVG, etc...
+
+SELECT SUM(one) FROM public.one;
 
 
 
