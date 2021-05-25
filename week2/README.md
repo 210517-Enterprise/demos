@@ -23,3 +23,5 @@ You should research and be able to answer the following questions at the ned of 
 -  What is a cascade delete?
     
 - How would you setup a primary key that automatically increments with every `INSERT` statement?
+
+- What is a **constraint**? Give some examples.
