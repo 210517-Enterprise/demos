@@ -2,11 +2,13 @@
 You should research and be able to answer the following questions at the ned of each day:
 
 > Use Google and [class notes](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md)<br>
-> The [PostgreSQL Documentation](https://www.postgresqltutorial.com/) is a great resource (and easy to follow).
+> The [PostgreSQL Documentation](https://www.postgresqltutorial.com/) is a great resource (and easy to follow).<br>
+> If you want to try out some `psql` commands, [here's a cheatsheet](https://www.postgresqltutorial.com/postgresql-cheat-sheet/)
 
 <br>
 
 ## `Tuesday`
+:star: For extra practice try the [Chinook Query Challenge](https://github.com/210517-Enterprise/demos/tree/main/week2/chinook-challenge)
 - Explain what SQL is. 
   -  What are some SQL RDBMS Vendors?  
  
