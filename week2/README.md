@@ -1,7 +1,9 @@
 # Week 2: SQL & JDBC Study Questions
 You should research and be able to answer the following questions at the ned of each day:
 
-> Use Google and the [notes]()
+> Use Google and [class notes]()
+
+<br>
 
 ## `Tuesday`
 - Explain what SQL is. 
