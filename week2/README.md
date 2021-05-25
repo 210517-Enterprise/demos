@@ -32,4 +32,8 @@ You should research and be able to answer the following questions at the ned of 
 - What is referential integrity?
   - Primary Key? Foreign Key?
 
-- What kind of services does AWS offer
+- What kind of services does AWS offer?
+
+- What is an AWS RDS?
+
+- What does an AWS Security Group do?
