@@ -8,7 +8,7 @@ You should research and be able to answer the following questions at the ned of 
 <br>
 
 ## `Tuesday`
-:star: For extra practice try the [Chinook Query Challenge](https://github.com/210517-Enterprise/demos/tree/main/week2/chinook-challenge) (*NOT* mandatory)
+:star: For extra practice try the [Chinook Query Challenge](https://github.com/210517-Enterprise/demos/tree/main/week2/chinook-challenge)
 - Explain what SQL is. 
   -  What are some SQL RDBMS Vendors?  
  
