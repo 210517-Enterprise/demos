@@ -14,7 +14,7 @@ You should research and be able to answer the following questions at the ned of 
 
 - What are the 5 sublanguages of SQL? Which commands correspond to them?
 
-- What is the difference between DELETE, DROP, and TRUNCATE commands?
+- What is the difference between `DELETE`, `DROP`, and `TRUNCATE` commands?
 
 - What are some SQL data types?
 
