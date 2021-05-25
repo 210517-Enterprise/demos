@@ -37,3 +37,5 @@ You should research and be able to answer the following questions at the ned of 
 - What is an AWS RDS?
 
 - What does an AWS Security Group do?
+
+- What does `JDBC` stand for?
