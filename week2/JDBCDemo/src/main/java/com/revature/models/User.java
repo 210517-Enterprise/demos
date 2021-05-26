@@ -26,6 +26,10 @@ public class User {
 		this.accounts = accounts;
 	}
 
+	public void addAccount(Account a) {
+		this.accounts.add(a); // Since it's an array list we can add new account objects.
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -65,6 +69,7 @@ public class User {
 	public void setAccounts(List<Account> accounts) {
 		this.accounts = accounts;
 	}
+
 
 	@Override
 	public int hashCode() {
