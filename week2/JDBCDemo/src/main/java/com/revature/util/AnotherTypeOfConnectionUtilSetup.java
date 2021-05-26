@@ -1,8 +1,12 @@
 package com.revature.util;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection; // THIS IS JDBC!
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 import org.slf4j.Logger; // this is wrapping around Log4J and providing extra functionality 
 import org.slf4j.LoggerFactory;
@@ -20,15 +24,17 @@ import org.slf4j.LoggerFactory;
  * - Static field of an instance of this class
  * - Leverage a public static getInstance() method
  */
-public class ConnectionUtil {
+public class AnotherTypeOfConnectionUtilSetup {
 	
 	
 	private static Connection conn = null;
 	
-	private static final Logger log = LoggerFactory.getLogger(ConnectionUtil.class);
+	private static final Logger log = LoggerFactory.getLogger(AnotherTypeOfConnectionUtilSetup.class);
+	
+	
 	
 	// Notice how weird this is...Only for singleton (for now...)
-	private ConnectionUtil() {
+	private AnotherTypeOfConnectionUtilSetup() {
 		super();
 	}
 	
@@ -43,33 +49,29 @@ public class ConnectionUtil {
 			log.error("We failed to reuse a Connection", e);
 			return null;
 		}
+
+		Properties prop = new Properties();
+
+		String url= "";
+		String username = "";
+		String password = "";
 		
-		// How to constuct your JDBC URL pulled straight from the postgres documentation
-		// jdbc:postgresql://host:port/database
-		// rememeber that your HOST and your currentSchema will be different
-		String url = System.getenv("DB_URL");
-		String username = System.getenv("DB_USERNAME");
-		String password = System.getenv("DB_PASSWORD");
-		
-		/*
-		 * Environment Variables are key/value pairs. Many Operating
-		 * Systems use Environment Variables to allow configuration information to be
-		 * passed into applications.
-		 * 
-		 * The way to set an environment variable differs from one operating system to
-		 * another. For example, in Windows, we use a System Utility application from
-		 * the control panel while in Unix we use shell scripts.
-		 * 
-		 * https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa
-		 */
-		
-		// If the above statement is false, then we should instead return a new Connection....
 		try {
+			
+			prop.load(new FileReader("C:\\Users\\SophieGavrila\\Desktop\\demos\\week2\\JDBCDemo\\src\\main\\resources\\application.properties"));
+			url = prop.getProperty("url");
+			username = prop.getProperty("username");
+			password = prop.getProperty("password");
+			
 			conn = DriverManager.getConnection(url, username, password);
 			log.info("Database connection extablished!");
 		} catch (SQLException e) {
 			log.error("We failed to establish a Connection");
 			return null;
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 
 		return conn;
