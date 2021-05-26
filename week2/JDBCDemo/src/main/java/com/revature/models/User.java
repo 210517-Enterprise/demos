@@ -16,8 +16,11 @@ public class User {
 	public User() {
 		super();
 	}
-
-	public User(int id, String username, String password, Role role, List<Account> accounts) {
+	
+	// You can create different constructors,  for example, one that doens't include the accounts!!!
+	// constructor for retrieving
+	public User(int id, String username, String password, Role role, List<Account> accounts) { // this would be all the accounts that 
+																							  // have the acc_owner FK pointing to this user's PK
 		super();
 		this.id = id;
 		this.username = username;
@@ -25,11 +28,20 @@ public class User {
 		this.role = role;
 		this.accounts = accounts;
 	}
+	// separate constructor that builds a user with npo list of accounts (you could do this with ID too)
+	// constuctor for INSERTING user to DB
+	public User(int id, String username, String password, Role role) { // Maybe the user doesn't have a list of accounts yet.....
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.role = role;
+	}
 
 	public void addAccount(Account a) {
 		this.accounts.add(a); // Since it's an array list we can add new account objects.
 	}
-	
+
 	public int getId() {
 		return id;
 	}

@@ -1,9 +1,11 @@
 package com.revature.repositories;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -68,8 +70,8 @@ public class UserDAO implements IUserDAO {
 					// We will cover Streams later, you're welcome to research this in the time being
 					// you don't need to use it unless you have queries that are as complex
 					List<User> potentialOwners = allUsers.stream()
-							.filter((u) -> u.getId() == id)
-							.collect(Collectors.toList());
+							.filter((u) -> u.getId() == id) // (u) represents each elemetn in the stream (think Collection) 
+							.collect(Collectors.toList()); // We are trying to find all of the users that have the same id
 					
 					if(potentialOwners.isEmpty()) {
 						List<Account> ownedAccounts = new ArrayList<>();
@@ -103,9 +105,49 @@ public class UserDAO implements IUserDAO {
 	}
 
 	@Override
-	public int insert(User u) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int insert(User u) { // Think about the User that you take in as being generated from the input that a user gives through the console
+		
+		try(Connection conn = ConnectionUtil.getConnection()) { 
+			
+			// We start with a SQL String -- RETURNING allows us to return the PK of the user inserted/created
+			String sql = "INSERT INTO sophiaproject0.users (username, pwd, user_role) VALUES (?, ?, ?) RETURNING sophiaproject0.users.id";
+			
+			// OWASP -- TOP Cyber  attack tactic
+			
+			// SQL Injection! Watch out .  Defend against SQL Injection with Prepared Statements!
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			
+			// The position of the ?'s begins at 1
+			stmt.setString(1, u.getUsername());
+			stmt.setString(2, u.getPassword());
+			
+			// To accommodate the difference between Java and SQL's Enums, we will setObject
+			stmt.setObject(3, u.getRole(), Types.OTHER); // if you don't insert a value that is equal with SQL's enums, it throws an error
+			
+			ResultSet rs;
+			
+			// our SQL statement is still returning a value
+			
+			/*
+			 * The statement (rs = stmt.executeQuery()) generates a value IF successful, if not, it returns as null
+			 */
+			
+			if ((rs = stmt.executeQuery()) != null) { // IF the SQL statement was successfully, then we want to iterate over the information
+				rs.next(); // A ResultSet cursor is initially positioned before the first row; the first call to the method next makes the first row the current row; thesecond call makes the second row the current row, and so on. 
+				// being returned within the JVM
+				int id = rs.getInt(1); // this is returning the value of the FIRST row of data returned (The PK of the user inserted) 
+				
+				return id;	 // if everything goes well we return the PK and quit out of the method exit!
+			} 
+			
+		} catch (SQLException e) {
+			log.error("Failure to insert a new user...", e);
+			return -1; // -1 typically indicates an error
+		}
+
+		return -1;
+		// -1 is not a valid id therefore it indicates somehting went wrong
+		
 	}
 
 	@Override
