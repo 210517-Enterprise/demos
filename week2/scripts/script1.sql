@@ -142,13 +142,17 @@ SELECT * FROM public.one EXCEPT SELECT * FROM public.two;
 -- operate on an entire column as input and produce 1 output
 -- SUM, AVG, etc...
 
-SELECT SUM(one) FROM public.one;
+SELECT SUM(c_one) FROM public.one;
 
 
+SELECT AVG(LENGTH(first_name)) FROM public.users;
 
+-- scalar function -- perform somthing to every value...and return it!
+SELECT UPPER(first_name) FROM public.users; 
 
+SELECT * FROM public.users;
 
-
+CREATE SCHEMA sophiaproject0;
 
 
 
