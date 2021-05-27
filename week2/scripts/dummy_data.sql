@@ -35,16 +35,17 @@ SELECT * FROM sophiaproject0.users_accounts_jt;
 
 -- This complex query will join the data from the users table, accounts table, and accounts_jt table showing you 
 -- each record of an account + balance with its corresponding user, user id, and user role
-SELECT sophiaproject0.users.id, sophiaproject0.users.username, sophiaproject0.users.pwd, sophiaproject0.users.user_role, sophiaproject0.accounts.id 
-
-	AS account_id, sophiaproject0.accounts.balance FROM sophiaproject0.users 
-
+SELECT sophiaproject0.users.id, sophiaproject0.users.username, sophiaproject0.users.pwd, sophiaproject0.users.user_role, sophiaproject0.accounts.id,
+sophiaproject0.accounts.balance FROM sophiaproject0.users 
+	-- then joining information from my joins table and accounts table
 		LEFT JOIN sophiaproject0.users_accounts_jt ON sophiaproject0.users.id = sophiaproject0.users_accounts_jt.acc_owner 
 		LEFT JOIN sophiaproject0.accounts ON sophiaproject0.accounts.id = sophiaproject0.users_accounts_jt.account;
 
 
 
-
-
+-- This finds a specific Account record of a particular user
+SELECT sophiaproject0.accounts.id, sophiaproject0.accounts.balance FROM 
+sophiaproject0.accounts INNER JOIN sophiaproject0.users_accounts_jt ON sophiaproject0.accounts.id = sophiaproject0.users_accounts_jt.account
+	 WHERE sophiaproject0.users_accounts_jt.acc_owner = 2;
 
 
