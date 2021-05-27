@@ -1,6 +1,7 @@
 package com.revature.repositories;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -20,7 +21,7 @@ public class AccountDAO implements IAccountDAO{
 	@Override
 	public List<Account> findAll() {
 		
-		// Start out with an emptyu list of Accounts
+		// Start out with an empty list of Accounts
 		List<Account> allAccounts = new ArrayList<Account>();
 		
 		// Use a try-with-resources block to obtain a connection
@@ -63,8 +64,37 @@ public class AccountDAO implements IAccountDAO{
 
 	@Override
 	public List<Account> findByOwner(int userId) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Account> ownedAccounts = new ArrayList<Account>();
+		
+		try(Connection conn = ConnectionUtil.getConnection()) {
+			
+			String sql = "SELECT accounts.id, accounts.balance FROM accounts INNER JOIN users_accounts_jt ON "
+					+ "accounts.id = users_accounts_jt.account WHERE users_accounts_jt.acc_owner = ?;"; // Join from the accounts table and the users_account_jjt  WHERE the accowner id is the same as the userId
+			
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			
+			// set the place holder == to the parameter passed through
+			stmt.setInt(1, userId); // the 1 represents FIRST ? mark, and the userId is the value I'm replacing it with.
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				double balance = rs.getDouble("balance");
+				
+				Account a = new Account(id, balance);
+				// In the case that there are duplicates in the owned accounts list, i can check for that
+				if(!ownedAccounts.contains(a)) {
+					ownedAccounts.add(a);
+				}	
+			}
+		} catch (SQLException e) {
+			log.error("We failed to retrieve accounts owned by user with the ID " + userId);
+			return new ArrayList<>();
+		}
+		return ownedAccounts;
+		
+		
 	}
 
 	@Override

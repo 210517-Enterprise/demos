@@ -1,12 +1,10 @@
 package com.revature;
 
-import java.util.List;
 import java.util.Scanner;
 
-import com.revature.models.Account;
 import com.revature.models.Role;
 import com.revature.models.User;
-import com.revature.repositories.AccountDAO;
+import com.revature.services.AccountService;
 import com.revature.services.UserService;
 
 public class Driver {
@@ -33,7 +31,8 @@ public class Driver {
 	*/
 		// users.forEach((anythingYouWant) -> System.out.println(anythingYouWant)); // u represents each element
 		
-		AccountDAO accdao = new AccountDAO(); // later we'll 
+		AccountService aserv = new AccountService();
+		System.out.println(aserv.findByOwner(5)); // user # 5 has 2 accounts
 		
 		// ctrl + shift + O to import quickly
 //		List<Account> accounts = accdao.findAll();
@@ -84,10 +83,25 @@ public class Driver {
 		
 		newUser = userv.register(newUser); // this called the insert method from the dao which is called WITHIN my service layer
 		
+		newUser.setId(5); // you shouldnt do this, but I'm demonstrating how we return all of the accounts from the DB
 		
-		System.out.println("The PK of the new user is " + newUser.getId());
-
+		newUser.setAccounts(aserv.findByOwner(newUser.getId())); // here we're setting the accounts object
 		
+		System.out.println("Hold tight we are finding all of your exisitng accounts");
+		
+		System.out.println("Your account are : " + aserv.findByOwner(newUser.getId()));
+		
+		
+		
+//		System.out.println("The PK of the new user is " + newUser.getId());
+//
+//		System.out.println(" Would you liek to open an account?");
+		
+		// maybe if else or some type of control flow
+		
+		
+		// if they say yes, ask for a deposit amount
+		// and create a new Account oject......
 	}
 
 }

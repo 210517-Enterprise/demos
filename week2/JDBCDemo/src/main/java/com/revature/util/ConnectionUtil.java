@@ -27,7 +27,7 @@ public class ConnectionUtil {
 	
 	private static final Logger log = LoggerFactory.getLogger(ConnectionUtil.class);
 	
-	// Notice how weird this is...Only for singleton (for now...)
+	// Notice how weird this is...Only for singleton
 	private ConnectionUtil() {
 		super();
 	}
