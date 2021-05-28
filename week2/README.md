@@ -8,9 +8,9 @@ You should research and be able to answer the following questions at the ned of 
 <br>
 
 ## `Rest of the Week`
-Go over these questions to prepare for :
+Go over these questions to prepare for QC on June 7th or 8th (exact date TBA).
 
-
+### SQL Questions
 1.  Explain what SQL is. What are some SQL RDBMS Vendors? *What is an RDBMS*?
     
 2.  Draw a simple ERD for modeling Students and Classes
@@ -56,7 +56,7 @@ Go over these questions to prepare for :
 
 23.  
     
-## JDBC Questions
+### JDBC Questions
 1. What is JDBC?
 
 2. What are the core interfaces / classes in JDBC?
@@ -74,33 +74,3 @@ Go over these questions to prepare for :
 
 ## `Tuesday`
 :star: For extra practice try the [Chinook Query Challenge](https://github.com/210517-Enterprise/demos/tree/main/week2/chinook-challenge)
-- Explain what SQL is. 
-  -  What are some SQL RDBMS Vendors?  
- 
-- What is an RDBMS?
-  - Are all databases relational?  What is the defining chracteristic of a relational database? 
-
-- What are the 5 sublanguages of SQL? Which commands correspond to them?
-
-- What is the difference between `DELETE`, `DROP`, and `TRUNCATE` commands?
-
-- What are some SQL data types?
-
-- Define the word “schema”.
-
--  What is a cascade delete?
-    
-- How would you setup a primary key that automatically increments with every `INSERT` statement?
-
-- What is a **constraint**? Give some examples.
-
-- What is referential integrity?
-  - Primary Key? Foreign Key?
-
-- What kind of services does AWS offer?
-
-- What is an AWS RDS?
-
-- What does an AWS Security Group do?
-
-- What does `JDBC` stand for?
