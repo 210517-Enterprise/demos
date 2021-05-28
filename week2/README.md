@@ -4,10 +4,11 @@ You should research and be able to answer the following questions at the ned of 
 > - Use Google and [class notes](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md)<br>
 > - The [PostgreSQL Documentation](https://www.postgresqltutorial.com/) is a great resource (and easy to follow).<br>
 > - :star: **[W3 Schools SQL Tutorial](https://www.w3schools.com/sql/)**
+> :star: For extra practice try the [Chinook Query Challenge](https://github.com/210517-Enterprise/demos/tree/main/week2/chinook-challenge)
 
 <br>
 
-## `Rest of the Week`
+## `Study Questions`
 Go over these questions to prepare for QC on June 7th or 8th (exact date TBA).
 
 ### SQL Questions
@@ -70,7 +71,3 @@ Go over these questions to prepare for QC on June 7th or 8th (exact date TBA).
 6. How to execute stored procedures using JDBC?
 
 7. Which interface is responsible for transaction management? `Connection` Interface.  See this resource here about [JDBC and Transaction management](https://www.javatpoint.com/transaction-management-in-jdbc#:~:text=In%20JDBC%2C%20Connection%20interface%20provides%20methods%20to%20manage%20transaction)
-
-
-## `Tuesday`
-:star: For extra practice try the [Chinook Query Challenge](https://github.com/210517-Enterprise/demos/tree/main/week2/chinook-challenge)
