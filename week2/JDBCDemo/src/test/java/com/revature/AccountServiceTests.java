@@ -1,10 +1,19 @@
 package com.revature;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
+import com.revature.models.Account;
+import com.revature.models.Role;
+import com.revature.models.User;
 import com.revature.repositories.AccountDAO;
 import com.revature.services.AccountService;
 
@@ -36,6 +45,28 @@ public class AccountServiceTests {
 	public void teardown() {
 		aservice = null;
 		mockdao = null;
+	}
+	
+	@Test
+	public void testFindByOwnerId_returnAccountsList() {
+		
+		// Create a list of accounts to be in the possesion of the new User we'll create
+		List<Account> bobsAccounts = new ArrayList<Account>();		
+		Account a = new Account(3, 500);
+		bobsAccounts.add(a);
+		
+		// Create a stub that represents a User in our database
+		User bob = new User(4, "bob", "pass", Role.Customer, bobsAccounts); // Stub 
+			
+		int bobsId = bob.getId();
+		
+		// We are essentially programming our "fake dao" to return this as its fake data	
+		when(mockdao.findByOwner(bobsId)).thenReturn(bobsAccounts);
+		
+		List<Account> returnedAccounts = aservice.findByOwner(bobsId);
+		
+		assertEquals(bobsAccounts, returnedAccounts);
+
 	}
 	
 
