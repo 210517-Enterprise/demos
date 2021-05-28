@@ -21,6 +21,37 @@ import com.revature.util.ConnectionUtil;
 // This class will have instance methods
 // whose responsibility is to perform common CRUD operations
 // against a DB
+
+/*
+ * JDBC API:
+ * 
+ * DriverManager class
+ * 	- Some static methods, such as getConnection that we use to connect to a DB
+ * 	- Used to obtain a Connection
+ * 
+ * Connection Interface
+ * 	- Represents a Connection to our DB
+ * 	- Has methods to obtain Statements
+ * 
+ * Statement Interface
+ * 	- Represents a SQL statement that will be performed against the DB
+ * 	- There are sub-interfaces for specific use-cases
+ * 	- PreparedStatement Interface
+ * 		- CallableStatement Interface
+ * 	- Have methods to obtain ResultSets
+ * 
+ * ResultSet Interface
+ * 	- Represents data obtained from the DB
+ * 	- Follows an "Iterator" structure
+ * 		- Is pointing to individual rows
+ * 		- Invoke the .next() method to step forward
+ * 		- Starts at the position BEFORE the first row
+ * 	- Has methods to obtain data from individual columns for that row
+ * 		- getInt
+ * 		- getString
+ * 		- etc
+ */
+
 public class UserDAO implements IUserDAO {
 	
 	private static final Logger log = LoggerFactory.getLogger(UserDAO.class);

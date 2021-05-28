@@ -93,8 +93,6 @@ public class AccountDAO implements IAccountDAO{
 			return new ArrayList<>();
 		}
 		return ownedAccounts;
-		
-		
 	}
 
 	@Override
