@@ -6,6 +6,7 @@ import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.junit.After;
 import org.junit.Before;
@@ -22,6 +23,18 @@ public class UserServiceTests {
 	
 	/*
 	 * ====== MOCKITO & JUNIT =======
+	 * 
+	 * https://semaphoreci.com/community/tutorials/stubbing-and-mocking-with-mockito-2-and-junit
+	 *  
+	 * https://www.red-gate.com/simple-talk/development/dotnet-development/a-tdd-journey-3-mocks-vs-stubs-test-frameworks-assertions-resharper-accelerators/
+	 * 
+	 * 
+	 * Mocking is primarily used in unit testing. An object under test may have dependencies on 
+	 * other (complex) objects. To isolate the behavior of the object you want to replace the other 
+	 * objects by mocks that simulate the behavior of the real objects. 
+	 * 
+	 * This is useful if the real objects are impractical to incorporate into the unit test. 
+	 * In short, mocking is creating objects that simulate the behavior of real objects.
 	 */
 	
 	// declare the class to be tested
@@ -32,30 +45,35 @@ public class UserServiceTests {
 	// into thinking that its connecting with the DB but its not
 	private UserDAO mockdao;
 	
-	@Before // what happens before each test case is run
+	User dummyUser = new User();// of course you would fill in the extra fields
+	
+	@Before // what happens before EACH test case is run
 	public void setup() {
 		
 		// initialize each service object and mock our dao layer
 		uservice = new UserService();
 		
-		mockdao = mock(UserDAO.class); // this is a bare-bones shell instance of the class...we will define its behavior later
-									// so that it doesn't actually call the Database....
-		/*
-		 * Mocking it primarily used in unit testing.  An object under test conditions
-		 * may have deendencies on other complex object.
-		 * 
-		 * We isolate the behavior of the object by replacing the object it DEPENDS ON with a "Mock:
-		 */
+		mockdao = mock(UserDAO.class); // When Mockito creates a mock, it does so from the lass of a Type,
+									   // not from an actual instance. The mock simply creates a bare-bones
+									   // shell instance of the Class, entirely instrumented to track interactions with it.
+		
 		
 		// here we set the UserDAO of the service to the one that we've mocked
-		uservice.userDAO = mockdao; // this refers to the instance of the data access object that belongs to the service class
+		// "userDAO" refers to the instance of the data access object that belongs to the service class 
+		uservice.userDAO = mockdao; 
 		
+		
+		// acccess your User varible, set some fields
+		dummyUser.setAccounts(new ArrayList<>());
+		dummyUser.setId(0);
+		// etc.. This is a way of resuing the same stub object
 	}
 	
-	@After
+	@After // what happens after each test is run
 	public void teardown() {
 		uservice = null;
 		mockdao = null;
+		dummyUser = null;
 	}
 	
 	// Let's verify that when we insert a user, a primary key is returned -- ****answer at 11:25am EST****** 
@@ -63,27 +81,30 @@ public class UserServiceTests {
 	public void testRegisterUser_returnsNewPk() {
 		
 		// create a dummy User (this user is simulating one that's generated from the console)
+		User bob = new User(0, "spongebob", "secretPass", Role.Admin, new ArrayList<>());
 		
-		// Generate some random number that will the hard coded PK returned by the mockdao's insert method
+		// Generate some random number that will be the hard coded PK returned by the mockdao's insert method
+		Random rand = new Random();
+		int fakePk = rand.nextInt(100); // this is just a way of generating a random number everytime I run the test
 		
 		// we will mock the insert method, but we need to hard code the PK that's returned
-		when(mockdao.insert(u)).theReturn(?);
+		when(mockdao.insert(bob)).thenReturn(fakePk); // we're intercepting the actual behavior and return of the method
 		
-		// assert equal, that the ID of the user returned from the register method, is equal to the fake PK
+		// We're testing, does our register method properly call our DAO layer
+		User registeredUser = uservice.register(bob); // This registeredUser will have all the same fields of our
+													  // User object we created in line 79 (bob), EXCEPT for the changed ID
+		
+		// assert equal, that the ID of the user returned from the register method, is equal to the HARD CODED fake PK
 		// that we tell our mockdao's insert method to return.....
-		
-		assertEquals(returnedUser.getId(), fakePk);
-		
-		
-		
+		assertEquals(registeredUser.getId(), fakePk);
+		// Is it good practice to have 2 assertions in a test?
+		//  https://stackoverflow.com/questions/762512/is-it-bad-practice-to-have-more-than-one-assertion-in-a-unit-test
+		assertEquals(registeredUser.getPassword(), bob.getPassword()); // this would complicate our test because the name of the
+																	   // test ONLY refers to the PK that is generated.
 	}
 	
-	
-	
-	
-	
 	// Let's test: if we try to insert a user with an id that's NOT 0, do we throw an exception?
-	@Test(expected=RegisterUserFailedException.class) // the instance of RegisterUserFailedException isn't available,														// so this is how we access that class' information
+	@Test(expected=RegisterUserFailedException.class) // the instance of RegisterUserFailedException isn't available, so we have to call the class with .class														// so this is how we access that class' information
 	public void testRegisterUser_idGreaterThanZero_throwsException() { // Name Tests: WHAT are we testing? WHAT is the input Data? WHAT do we expect out of it
 		// First create a "Bad User" stub...
 		List<Account> bobsAccounts = new ArrayList<Account>();
