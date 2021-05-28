@@ -70,7 +70,8 @@ You should research and be able to answer the following questions at the ned of 
 
 6. How to execute stored procedures using JDBC?
 
-7. Which interface is responsible for transaction management? `Connection` Interface.  See this resource here about [JDBC and Transaction management](https://www.javatpoint.com/transaction-management-in-jdbc#:~:text=In%20JDBC%2C%20Connection%20interface%20provides%20methods%20to%20manage%20transaction)
+7. Which interface is responsible for transaction management? 
+    > `Connection` Interface.  See this resource here about [JDBC and Transaction management](https://www.javatpoint.com/transaction-management-in-jdbc#:~:text=In%20JDBC%2C%20Connection%20interface%20provides%20methods%20to%20manage%20transaction)
 
 ### AWS & Cloud Computing Questions
 1. what are the benefits of cloud services?
