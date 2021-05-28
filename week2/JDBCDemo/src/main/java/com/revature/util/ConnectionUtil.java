@@ -45,7 +45,9 @@ public class ConnectionUtil {
 		}
 		
 		// How to constuct your JDBC URL pulled straight from the postgres documentation
-		// jdbc:postgresql://host:port/database
+		// jdbc:postgresql://host:port/database -> If you're hosting it locally: jdbc:postgresql://localhost:5432/postgres?currentSchema=myschema
+		// -> If you're hosting it locally: jdbc:postgresql://localhost:5432/postgres?currentSchema=myschema
+		// IF YOU SHCEMA HAS CAPITAL LETTERS jdbc:postgresql://localhost:5432/postgres?currentSchema="mySchema"
 		// rememeber that your HOST and your currentSchema will be different
 		String url = System.getenv("DB_URL");
 		String username = System.getenv("DB_USERNAME");

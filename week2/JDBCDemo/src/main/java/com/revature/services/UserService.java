@@ -60,6 +60,15 @@ public class UserService {
 		return u;
 	}
 	
+	public User login(String username, String password) {
+		
+		// call a method in your layer that returns a user object that verifies both the username and password match that User
+		// returned from the DB.
+		
+		return null;
+		
+	}
+	
 	public List<User> findAllUsersAsList() {
 		return userDAO.findAll();
 	}
@@ -73,6 +82,8 @@ public class UserService {
 				
 		users.forEach((u) -> System.out.println(u));
 	}
+	
+	
 	
 	
 
