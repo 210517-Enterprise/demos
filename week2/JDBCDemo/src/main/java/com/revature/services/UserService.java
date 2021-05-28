@@ -60,6 +60,10 @@ public class UserService {
 		return u;
 	}
 	
+	public List<User> findAllUsersAsList() {
+		return userDAO.findAll();
+	}
+	
 	public void findAll() {
 		// You don't ALWAYS need to provide extra logic...but it makes you a more sophisticated programmer.
 		// userDAO.findALL();
