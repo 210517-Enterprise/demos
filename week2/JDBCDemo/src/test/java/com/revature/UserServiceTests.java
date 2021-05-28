@@ -58,7 +58,7 @@ public class UserServiceTests {
 		mockdao = null;
 	}
 	
-	// Let's verify that when we insert a user, a primary key is returned
+	// Let's verify that when we insert a user, a primary key is returned -- ****answer at 11:25am EST****** 
 	@Test
 	public void testRegisterUser_returnsNewPk() {
 		
@@ -70,8 +70,9 @@ public class UserServiceTests {
 		when(mockdao.insert(u)).theReturn(?);
 		
 		// assert equal, that the ID of the user returned from the register method, is equal to the fake PK
-		
 		// that we tell our mockdao's insert method to return.....
+		
+		assertEquals(returnedUser.getId(), fakePk);
 		
 		
 		
