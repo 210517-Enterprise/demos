@@ -1,7 +1,7 @@
 # Week 2: SQL & JDBC Study Questions
 You should research and be able to answer the following questions at the ned of each day:
 
-> - Use Google and [class notes](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md)<br>
+> - Use Google and [SQL class notes](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md). [AWS notes here](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/aws.md)<br>
 > - The [PostgreSQL Documentation](https://www.postgresqltutorial.com/) is a great resource (and easy to follow).<br>
 > - :star: **[W3 Schools SQL Tutorial](https://www.w3schools.com/sql/)**
 > :star: For extra practice try the [Chinook Query Challenge](https://github.com/210517-Enterprise/demos/tree/main/week2/chinook-challenge)
@@ -9,7 +9,7 @@ You should research and be able to answer the following questions at the ned of 
 <br>
 
 ## `Study Questions`
-Go over these questions to prepare for QC on June 7th or 8th (exact date TBA).
+> Go over these questions to prepare for QC on June 7th or 8th (exact date TBA).
 
 ### SQL Questions
 1.  Explain what SQL is. What are some SQL RDBMS Vendors? *What is an RDBMS*?
@@ -71,3 +71,14 @@ Go over these questions to prepare for QC on June 7th or 8th (exact date TBA).
 6. How to execute stored procedures using JDBC?
 
 7. Which interface is responsible for transaction management? `Connection` Interface.  See this resource here about [JDBC and Transaction management](https://www.javatpoint.com/transaction-management-in-jdbc#:~:text=In%20JDBC%2C%20Connection%20interface%20provides%20methods%20to%20manage%20transaction)
+
+### AWS & Cloud Computing Questions
+1. what are the benefits of cloud services?
+
+2. What are the 3 models of Cloud computing?
+
+3. What is AWS RDS? What type of service is this? Iaas, Paas, Saas?
+
+4. What is the relationship between a Region and an Availability Zone?
+
+5. What are Security Groups?
