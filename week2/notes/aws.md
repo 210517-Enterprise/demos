@@ -112,4 +112,4 @@ Different Cloud Models that offer different portions of the Software Infrastruct
     - Consumers: SREs, System Administrators, (Sometimes regular developers)
 - Not exhaustive
     - DataBase as a Service
-        - RDS
+        - RDS ... although RDS can also be condidered PaaS
