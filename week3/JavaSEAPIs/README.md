@@ -1,6 +1,6 @@
 # Week 3: Java SE API's
 
-## `Monday`
+## `Tuesday`
 Topics covered:
 
 - :star: [Hackerrank Challenge](https://www.hackerrank.com/210517-enterprise-hr1) due Thursday 10:00am EST.
