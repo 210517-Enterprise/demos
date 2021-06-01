@@ -1,5 +1,5 @@
 package com.revature.lambdas;
-
+// Simple POJO -- nothing special
 public class Employee {
 	
 	private String name;
