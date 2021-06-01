@@ -62,11 +62,10 @@ public class UserService {
 	
 	public User login(String username, String password) {
 		
-		// call a method in your layer that returns a user object that verifies both the username and password match that User
-		// returned from the DB.
+		// call a method in your layer that returns a user object that verifies both 
+		// the username and password match that User returned from the DB.
 		
 		return null;
-		
 	}
 	
 	public List<User> findAllUsersAsList() {
