@@ -1,5 +1,11 @@
 # Week 3: Java SE API's
 
+## `Wednesday`
+Self Study:
+- Stream API
+- :star: [Stream Practice](https://classroom.github.com/a/P6is3AcF)
+  > *Not graded, no due date -- for your prepareation for Stream interview questions and to self-study stream operations*
+
 ## `Tuesday`
 Topics covered:
 
