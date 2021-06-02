@@ -6,6 +6,8 @@ Self Study:
 - :star: [Stream Practice](https://classroom.github.com/a/P6is3AcF)
   > *Not graded, no due date -- for your prepareation for Stream interview questions and to self-study stream operations*
 
+<br>
+
 ## `Tuesday`
 Topics covered:
 
