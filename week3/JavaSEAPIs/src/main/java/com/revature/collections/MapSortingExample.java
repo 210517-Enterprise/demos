@@ -1,11 +1,13 @@
 package com.revature.collections;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class MapSortingExample {
 	
@@ -36,6 +38,9 @@ public class MapSortingExample {
 		System.out.println("Unsorted Map: " + olympics);
 	
 		Map<String, Integer> sortedMapByKeys = sortByKeys(olympics);
+		System.out.println("Sorted Map by Keys: " + sortedMapByKeys);
+		
+		Map<String, Integer> sortedMapByValues = sortByKeys(olympics);
 		System.out.println("Sorted Map by Keys: " + sortedMapByKeys);
 	}
 
@@ -70,17 +75,30 @@ public class MapSortingExample {
 	public static <K extends Comparable, V extends Comparable> Map<K, V> sortByValues(Map<K, V> map) {
 		
 		// copy the entry set of the map parameter to a Linked List......
-		List<Map.Entry<K,V>> . . .
+		List<Map.Entry<K,V>> entries = new LinkedList<Map.Entry<K, V>>(map.entrySet());
 		
 		// call the Collections.sort method from the utility class.
-		Collections.sort(yourNewEntriesList, either create an anonymous class that implements Comparator);
-				
-		// override the the compare method.
+		Collections.sort(entries, new Comparator<Map.Entry<K, V>>()  {
+
+			// override the the compare method.
+			@Override
+			public int compare(Entry<K, V> o1, Entry<K, V> o2) {
+				return o1.getValue().compareTo(o2.getValue());
+			} 
+		});
+			
+		// Lambda way of doing it (instead of above with anonymous class).
+		Collections.sort(entries, (e1, e2) -> e1.getValue().compareTo(e2.getValue()));
+
 		
-		// instantiate the new Map, loop thtough and apply the new keys and values with entry.getKey(), entry.getValue()
 		
+		// instantiate the new Map, loop through and apply the new keys and values with entry.getKey(), entry.getValue()
+		Map<K, V> sortedMap = new LinkedHashMap<K, V>();
 		
-		
+		for(Map.Entry<K, V> entry : entries) {
+			sortedMap.put(entry.getKey(), entry.getValue());
+		}
+	
 		return sortedMap;
 	}
 	
