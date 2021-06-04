@@ -12,6 +12,8 @@ What to expect on **Monday** ?
 - 10:00am Quiz: regarding Java SE API's Relfection, and Collections.
 - one-on-ones all day
 - begin Multithreading on Tuesday
+- QC date/time: **TBA** (will be updated by end of today 6/4)
+
 
 <br>
 
