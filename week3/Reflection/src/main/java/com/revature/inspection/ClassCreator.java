@@ -2,6 +2,7 @@ package com.revature.inspection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.revature.model.User;
@@ -30,11 +31,21 @@ public class ClassCreator {
 		System.out.println(u);
 		
 		//  There are a lot of ways to iterate the the data that reflection allows us to collect. (Like constructors)
-		for(Constructor<?> c : constructors ) {
-			if(c.getParameterTypes().length == 0) {
-				noArgConstructor = c;
+		for (Constructor<?> constructor : constructors) {
+			if (constructor.getParameterTypes().length == 0) {
+
+				noArgConstructor = constructor;
 				u = (User) noArgConstructor.newInstance();
-				u.setUsername("something");
+				System.out.println(u);
+
+				u.setId(10);
+				u.setUsername("someone");
+				u.setPassword("secr3t");
+				System.out.println(u);
+			} else {
+				u = (User) constructor.newInstance(1, "spongebob", "p4ssw0rd", new ArrayList<>());
+
+				System.out.println(u);
 			}
 		}
 		
