@@ -2,9 +2,8 @@
 
 ## `Friday`
 To prep for Monday:
-- Complete [this Hackerrank Problem](https://www.hackerrank.com/210570-enterprise-hr2) and walk me through your solution on Monday.
-- Study SQL, AWS, and Java SE API's (think `Reflection`, `Stream API`, `Collection` Class implementations, `Optional` class).
-- Begin researching how to build your own `ORM` library. (This will be your next project which is assigned on either Monday or Tuesday).
+- Complete [this Hackerrank Problem](https://www.hackerrank.com/210570-enterprise-hr2)
+- Work on algorithms and Hackerrank.
 
 <br>
 
