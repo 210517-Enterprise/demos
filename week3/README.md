@@ -3,17 +3,15 @@
 ## `Friday`
 To prep for Monday:
 - Complete [this Hackerrank Problem](https://www.hackerrank.com/210570-enterprise-hr2)
-- Work on algorithms and Hackerrank.
+- Work on algorithms and Hackerrank - practice not relying on your IDE)
 - QC Code audit at 2pm on Monday
 
 <br>
 
 What to expect on **Monday** ?
 - 10:00am Quiz: regarding Java SE API's Relfection, and Collections.
-- one-on-ones all day
-- begin Multithreading on Tuesday
-- QC date/time: **TBA** (will be updated by end of today 6/4)
-
+- QC at 2pm (60 min to solve 3 coding challenges)
+- begin Multithreading on **Tuesday**
 
 <br>
 
