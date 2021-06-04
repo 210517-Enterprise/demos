@@ -1,5 +1,11 @@
 # Week 3: Java SE API's
 
+## `Friday`
+To prep for Monday:
+- Complete [this Hackerrank Problem](https://www.hackerrank.com/210570-enterprise-hr2) and walk me through your solution on Monday.
+- Study SQL, AWS, and Java SE API's (think `Reflection`, `Stream API`, `Collection` Class implementations, `Optional` class).
+- Research how to build your own `ORM`. (This will be your next project which is assigned on either Monday or Tuesday).'
+
 ## `Thursday`
 - :star: Remember that the [20 Java Problems](https://classroom.github.com/a/DNzxX6Hm) are due tomorrow. 🕙
 - :star: If you haven't attempted yet, please try completing the custom [ArrayList, MergeSort, and BubbleSort Challenge](https://classroom.github.com/a/6-0WFWWc) (It has a list of resources to time complexity)
