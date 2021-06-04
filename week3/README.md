@@ -3,8 +3,7 @@
 ## `Thursday`
 - :star: Remember that the [20 Java Problems](https://classroom.github.com/a/DNzxX6Hm) are due tomorrow. 🕙
 - :star: If you haven't attempted yet, please try completing the custom [ArrayList, MergeSort, and BubbleSort Challenge](https://classroom.github.com/a/6-0WFWWc) (It has a list of resources to time complexity)
-- :star: Watch: [Breadth First Search](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/) and read through [this code](https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/graphtheory/BreadthFirstSearchRecursive.java) -- *it helps to rewrite it in your IDE to familiarize yourself with the concept*.
-  - Attempt the practice problems   
+- :star: Watch: [Breadth First Search](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/) and read through [this code](https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/graphtheory/BreadthFirstSearchRecursive.java) -- *it helps to rewrite it in your IDE to familiarize yourself with the concept*. 
 - Collections: Set, Maps, Queue
 - Hash Functions
 - Map Sorting
