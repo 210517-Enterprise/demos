@@ -6,7 +6,8 @@ To prep for Monday:
 - Study SQL, AWS, and Java SE API's (think `Reflection`, `Stream API`, `Collection` Class implementations, `Optional` class).
 - Research how to build your own `ORM`. (This will be your next project which is assigned on either Monday or Tuesday).'
 <br>
-What to expect Monday?
+What to expect on **Monday**?
+
 - 10:00am Quiz: regarding Java SE API's Relfection, and Collections.
 - one-on-ones all day
 - begin Multithreading on Tuesday
