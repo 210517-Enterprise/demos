@@ -1,4 +1,4 @@
-package com.revaure.proxy;
+package com.revature.proxy;
 
 import java.lang.reflect.Proxy;
 

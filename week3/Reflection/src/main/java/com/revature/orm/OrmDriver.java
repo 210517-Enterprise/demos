@@ -1,4 +1,4 @@
-package com.reavture.orm;
+package com.revature.orm;
 
 import java.util.List;
 

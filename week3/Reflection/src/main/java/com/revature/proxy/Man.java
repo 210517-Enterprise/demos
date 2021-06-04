@@ -1,4 +1,4 @@
-package com.revaure.proxy;
+package com.revature.proxy;
 
 // Let's pretend this class and its interface comes from some other JAR (someone else's library)
 // we can't edit this code

@@ -1,4 +1,4 @@
-package com.revaure.proxy;
+package com.revature.proxy;
 // from some extrernal library
 public interface Person {
 	
