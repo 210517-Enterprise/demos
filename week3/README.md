@@ -4,6 +4,7 @@
 To prep for Monday:
 - Complete [this Hackerrank Problem](https://www.hackerrank.com/210570-enterprise-hr2)
 - Work on algorithms and Hackerrank.
+- QC Code audit at 2pm on Monday
 
 <br>
 
