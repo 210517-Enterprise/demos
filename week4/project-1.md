@@ -32,3 +32,8 @@ Your first team project will be to create a custom object relational mapping (OR
 ## Presentation
 - [ ] Finalized version of library must be pushed to personal repository within this organization by the presentation date (June 28th, 2021)
 - [ ] 10-15 minute live demonstration of the implemented features using a demo application to showcase the ORM's functionality
+
+## Team Workflow Tips
+- [ ] Practice Git SCM with your team with the [Git Workshop](https://github.com/210517-Enterprise/demos/tree/main/week4/git-workshop)
+- [ ] Use a [kanban board](https://www.atlassian.com/agile/kanban/boards) like [Trello](https://trello.com/en-US) for task management amongst your team.
+- [ ] Conduct daily [stand-up](https://www.atlassian.com/agile/scrum/standups) meetings.   
