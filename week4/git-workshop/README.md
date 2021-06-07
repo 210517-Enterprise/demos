@@ -8,7 +8,7 @@
 
 ## Git Haiku
 
-This is an exercise that works best with 4-5 people working from a single git repo. The aim is to demonstrate in a simple fashion how Github treats file merges, and how merge conflicts arise.
+This is an exercise that works best with 3-4 people working from a single git repo. The aim is to demonstrate in a simple fashion how Github treats file merges, and how merge conflicts arise.
 Your group is going to practice git flow, and get a little creative at the same time!
 
 <br>
