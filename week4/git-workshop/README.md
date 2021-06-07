@@ -75,7 +75,9 @@ The second round begins in the same way. This time, the group works on the one-l
     * The second attempt to merge another person's pull request will, however, cause an error. Github will instruct you that it cannot automatically merge the request, and that you will need to solve the problem on your local branch.
 
 > This is because github sees four pull requests, attempting to compare to one main/master file (Let's call it M), but the moment the first pull request is merged, M ceases to exist - replaced by an updated one-line-test.md file that we'll call M1. <br>
+> 
 > The second pull request expects to be compared to M, but that doesn't exist anymore, and github can tell that it is attempting to overwrite a line. <br>
+> 
 > In a computer program, this could cause a serious error, since the person creating the second pull request might have no idea that they were attempting to overwrite M1, instead of M.
   
 3. Now each team member is going to have to pull the new main down to their local main branch, merge the main with their local branch, and push the result.
