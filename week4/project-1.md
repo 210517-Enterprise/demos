@@ -30,5 +30,5 @@ Your first project will be to create a custom object relational mapping (ORM) fr
 - Create a new repository within this organization (naming convention: `orm_name_p1`; with `orm_name` being replaced by the name of your custom library)
 
 ## Presentation
-- [ ] finalized version of library must be pushed to personal repository within this organization by the presentation date (February 19th, 2021)
+- [ ] Finalized version of library must be pushed to personal repository within this organization by the presentation date (June 28th, 2021)
 - [ ] 10-15 minute live demonstration of the implemented features using a demo application to showcase the ORM's functionality
