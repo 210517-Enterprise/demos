@@ -42,9 +42,9 @@ Your group is going to practice git flow, and get a little creative at the same 
 
 3 Each group member then writes a haiku on their assigned three lines between the hello world message and goodbye world message.
 
-    - A [haiku](https://en.wikipedia.org/wiki/Haiku) is a three line Japanese poetry form, with five syllables on the first line, seven on the second, and five on the final line.
-
-    - If your creative energies ebb, you can always google for Haiku generators online, or just use [this one](http://www.everypoet.com/haiku/default.htm). :point_left:
+> A [haiku](https://en.wikipedia.org/wiki/Haiku) is a three line Japanese poetry form, with five syllables on the first line, seven on the second, and five on the final line.
+>
+> If your creative energies ebb, you can always google for Haiku generators online, or just use [this one](http://www.everypoet.com/haiku/default.htm). :point_left:
 
 4. Once each group member has penned their masterpiece, they should save it and `git push` it to a remote branch on the repo.
 
@@ -86,4 +86,4 @@ The second round begins in the same way. This time, the group works on the one-l
 
 ### Hopefully after this, you will understand why ***it is important to check the most up to date main branch before pushing to a remote branch, and creating a pull request to the main branch.***
 
-* You can run this test a second time, with each person waiting to pull the updated main, overwrite it in their local branch, and pushing to a remote branch to create a pull request to the main. As you will see, a little communication and co-ordination goes a long way!
+4. You can run this test a second time, with each person waiting to pull the updated main, overwrite it in their local branch, and pushing to a remote branch to create a pull request to the main. As you will see, a little communication and co-ordination goes a long way!
