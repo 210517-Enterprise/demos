@@ -93,7 +93,7 @@
     + Functional interfaces only have one method, and can be used in conjuntion with lambdas
 
 2. What are lambdas?
-  + Like anonymous functions, they allow implementation of functional interfaces directly without creating a class
+    + Like anonymous functions, they allow implementation of functional interfaces directly without creating a class
 
 3. What is try-with-resources? What interface must the resource implement to use this feature?
     + Try-with-resources allows for automatically closing resources in a try/catch block using `try(resource) {...}` syntax. Must implement the `AutoCloseable` interface
