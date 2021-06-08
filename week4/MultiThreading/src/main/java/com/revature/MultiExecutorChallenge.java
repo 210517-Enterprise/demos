@@ -1,6 +1,9 @@
 package com.revature;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /*
  * ===========================================================
@@ -23,14 +26,56 @@ import java.util.List;
 public class MultiExecutorChallenge {
 	
 	// add any necessary member variables here
+	private final List<Runnable> tasks;
 	
 	public MultiExecutorChallenge(List<Runnable> tasks) {
 		// complete some code here
+		this.tasks = tasks;
 	}
 	
 	public void executeAll() {
 		// complete your code here
+		List<Thread> threads = new ArrayList<>(tasks.size()); // create an ArrayList the same size as our member List "tasks"
+		
+		for(Runnable task : tasks) {
+			Thread thread = new Thread(task);
+			threads.add(thread);
+		}
+		
+		for (Thread t : threads) {
+			t.start();
+		}
+		
 	}
+	
+
+	/*ExecutorService executor;
+	
+	List<Runnable> tasksToExecute;
+
+	public MultiExecutorChallenge(List<Runnable> tasks) {
+		executor = Executors.newFixedThreadPool(tasks.size());
+		tasksToExecute = tasks;
+	}
+
+	public void executeAll() {
+		tasksToExecute.forEach(t -> executor.execute(t));
+	}
+*/
 	
 	// ideally in some main method, when we call executeAll, all of the tasks passed into the constructor get executed *concurrently*
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
