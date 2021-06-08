@@ -5,7 +5,7 @@ public class Resource {
 	/*
 	 * Synchronized prevents different threads from altering the same data at the same time.
 	 */
-	public void populate() {
+	public synchronized void populate() {
 
 		for (int i = 0; i < 15; i++) {
 
