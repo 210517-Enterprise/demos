@@ -1,5 +1,7 @@
 # Week 4: Multithreading & HTTP
 
+<br>
+
 ## `Tuesday`
 1. What is multi-threading?
     + Handling multiple threads / paths of execution in your program.
@@ -24,7 +26,7 @@
 - Here is a [list of possible QC questions that will be asked on Monday](https://github.com/210517-Enterprise/demos/blob/main/week4/qc-questions.md).
     + Topics: SQL, Threads, Advanced Java, Functional Interfaces, HTTP
   
-
+<br>
 
 ## `Monday`
 - [Project 1 Assignment](https://github.com/210517-Enterprise/demos/blob/main/week4/project-1.md): 🕑: *Due Monday June 28th, 2021*
