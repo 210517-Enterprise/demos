@@ -21,7 +21,7 @@
 5. What is synchronized keyword?
     + Only allowing one thread access to the method or variable at a time - enforces thread-safety
 
-- Here is a [list of possible QC questions that will be asked on Monday]().
+- Here is a [list of possible QC questions that will be asked on Monday](https://github.com/210517-Enterprise/demos/blob/main/week4/qc-questions.md).
     + Topics: SQL, Threads, Advanced Java, Functional Interfaces, HTTP
   
 
