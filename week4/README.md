@@ -22,7 +22,7 @@
     + Only allowing one thread access to the method or variable at a time - enforces thread-safety
 
 - Here is a [list of possible QC questions that will be asked on Monday]().
-    + Topics: SQL, JDBC, Threads, Advanced Java (Lambdas & Functional Interfaces)
+    + Topics: SQL, Threads, Advanced Java, Functional Interfaces, HTTP
   
 
 
