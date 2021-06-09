@@ -1,5 +1,15 @@
 # Week 4: Multithreading & HTTP
 
+## `Wednesday`
+:star: Use [these custom ORM examples](https://github.com/210517-Enterprise/demos/tree/main/week4/custom-orm-examples) to assist you in designing your own ORM framework.
+:star: Use [this](https://github.com/210517-Enterprise/demos/blob/main/week4/p1-sample-readme.md) as a template/guideline for your own Project 1's README.md file.
+
+1. Why is JDBC pooling important?
+
+2. What does `.wait()` do to a thread? `.notify()`?
+
+3. What is a [Semaphore](https://www.geeksforgeeks.org/semaphore-in-java/)?
+
 <br>
 
 ## `Tuesday`
