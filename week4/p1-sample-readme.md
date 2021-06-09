@@ -16,12 +16,13 @@ List of features ready and TODOs for future development
 * Easy to use and straightforward user API.  
 * No need for SQL, HQL, or any databse specific language.  
 * Straightforward and simple Annotation based for ease of use. 
+* etc...
 
 To-do list: [`for future iterations`]
 * Mapping of join columns inside of entities.    
 * Implement of aggregate functions.  
 * Allow ORM to build table based on Annotations in Entities.  
-* <something>
+* etc...
 
 ## Getting Started  
 Currently project must be included as local dependency. to do so:
