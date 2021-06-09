@@ -23,10 +23,16 @@ public class JoinExampleDriver {
 		}
 		
 		// Iterate over each thread and start them.....
-		for(Thread t : threads) {
-			t.setDaemon(true); // Setting a thread as a Daemon allows the program to exit even if the thread isn't done executing
-			t.start();
-		}
+		for(Thread t : threads)
+			try {
+				{
+					t.setDaemon(true); // Setting a thread as a Daemon allows the program to exit even if the thread isn't done executing
+					t.start();
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		
 		// Now that we invoke join, the main thread will not exit the program until each Factorial thread is done
 		for(Thread t : threads) {
