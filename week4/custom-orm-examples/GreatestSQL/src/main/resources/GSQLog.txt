@@ -1,0 +1,10 @@
+
+======================================
+21-02-18: 16:19:56
+	org.postgresql.util.PSQLException: Can't use query methods that take a query string on a PreparedStatement.
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:119)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeUpdate(DelegatingStatement.java:234)
+	at org.apache.commons.dbcp2.DelegatingStatement.executeUpdate(DelegatingStatement.java:234)
+	at ObjectUpdater.updateObject(ObjectUpdater.java:64)
+	at GSQL.UpdateObjectInDB(GSQL.java:65)
+	at TestObjectUpdater.main(TestObjectUpdater.java:25)
