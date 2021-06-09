@@ -5,7 +5,7 @@ public class ProducerConsumer {
 	public static void main(String[] args) {
 		
 		/*
-		 * Producer and Consumer problem (also called a bounded-buffer problem.
+		 * Producer and Consumer problem (also called a bounded-buffer problem).
 		 * The goal is for the Producer to generate data which the consumer removes one at a time.
 		 */
 		Holder data = new Holder();
