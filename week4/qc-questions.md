@@ -3,7 +3,7 @@
 > - [SQL](#sql)
 > - [Functional Interfaces](#advanced-java)
 > - [Threads](#threads)
-> - HTTP
+> - [HTTP](#http)
 
 <br>
 
@@ -108,7 +108,7 @@
 
 <br>
 
-## HTTP - Hypertext Transfer Protocol
+## HTTP
 1. What is HTTP?
 
 2. What is the difference between `GET` and `POST` HTTP verbs?
