@@ -1,9 +1,11 @@
 ## HTTP Study Guide:
-> *Resources:*
+> *Resources:* :mag:
 > - [MDN Overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 > - [What is HTTP and How does it work?](https://whatis.techtarget.com/definition/HTTP-Hypertext-Transfer-Protocol)
 
-- Hyper Text Transfer Protocol
+<br>
+
+- HyperText Transfer Protocol
 
 - Primary networking protocol used for client-server communication
   - The internet (world-wide-web) 
