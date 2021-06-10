@@ -80,14 +80,6 @@
     + Topics: SQL, JDBC, Threads, Advanced Java (Lambdas & Functional Interfaces)
   
 <br>
- 
-## Design patterns
-1. What are Singleton / Factory design patterns?
-     + Singleton - allows for creation of only 1 object. Method for retrieving object returns reference to the same object in memory. Implement via private constructor
-
-    + Factory - abstracts away instantiation logic, usually used in conjunction with singleton pattern
-
-<br>
 
 ## Advanced Java
 1. What are functional interfaces?
@@ -168,3 +160,13 @@
     + `getDeclaredClasses`
  
  2. What is a Dynamic Proxy?
+
+<br>
+ 
+## Design patterns
+1. What are Singleton / Factory design patterns?
+     + Singleton - allows for creation of only 1 object. Method for retrieving object returns reference to the same object in memory. Implement via private constructor
+
+    + Factory - abstracts away instantiation logic, usually used in conjunction with singleton pattern
+
+<br>
