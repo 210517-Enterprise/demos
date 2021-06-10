@@ -36,6 +36,7 @@ public class App {
 																			  // text file
     	// Step 3. pass it to startServer() method -- we have yet to create this.
         startServer(text);
+        
     }
 
     public static void startServer(String text) throws IOException {
