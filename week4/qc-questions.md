@@ -66,6 +66,10 @@
 8. Why does `HashTable` not take `null` key?
    + The hash table hashes the keys given as input, and the `null` value cannot be hashed
 
+<hr>
+:star: :star: :star: Below are topics that you should know, but won't be focused on heavily on Monday :star: :star: :star:
+<hr>
+
 ## JDBC
 1. What is JDBC?
     + A Java API used to execute queries on various databases. Uses JDBC drivers to connect with the database
