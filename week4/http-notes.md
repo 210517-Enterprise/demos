@@ -24,6 +24,8 @@
     within the body. (Although, you definitely still can)
   - **POST** is generally used to send/update information on the url/endpoint, which means
     that the server os expecting the message to have information in the body.
+    
+ ### Check out this [HTTP Verbs guide]().
 
 - HTTP responses have a status code that represent the status of the request. We'll talk
   more about them in a moment, but we have seen examples such as 200 OK, and 201 CREATED *see the **HTTP Status Codes** listed below***
