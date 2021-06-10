@@ -1,16 +1,17 @@
 package com.revature;
 import static spark.Spark.*;
-// This is how we import the framework
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 /*
+ * This is how we import the framework...
+ * 
  * If we statically import, we can access the 
  * static members of a class directly without 
  * class name or any object - like get(), post()...
  */
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 // Creating a lightweight HTTP server using Spark Micro-Framework https://sparkjava.com/documentation
 public class SparkServer {
