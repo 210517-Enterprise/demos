@@ -17,7 +17,7 @@
 
 - What is the anatomy of an HTTP **response**?
 
-- What's in the `Header` and `Body` of both a reposne and request HTTP message?
+- What's in the `Header` and `Body` of both a response and request HTTP message?
 
 <br>
 
