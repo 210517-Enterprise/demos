@@ -1,13 +1,13 @@
 # Upcoming QC Questions for Monday June 14th:
 > Topics: <br>
-> - [SQL](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md)
-> - Functional Interfaces
-> - Threads
+> - [SQL](#sql)
+> - [Functional Interfaces](#advanced-java)
+> - [Threads](#threads)
 > - HTTP
 
 <br>
 
-### SQL
+## SQL
 *Review the SQL notes [here](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md)*.
 
 1.  Explain what SQL is. What are some SQL RDBMS Vendors? *What is an RDBMS*?
