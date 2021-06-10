@@ -55,7 +55,7 @@
 
 <br>
 
-## Advanced Java (Functional Interfaces, etc...)
+## Advanced Java
 1. What are functional interfaces?
     + Functional interfaces only have one method, and can be used in conjuntion with lambdas
 
