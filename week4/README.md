@@ -1,5 +1,17 @@
 # Week 4: Multithreading & HTTP
 
+## `Thursday`
+- :star: review this [HTTP Study Guide]() (You will be asked about HTTP on Monday.
+
+- What is HTTP?
+
+- What are the separate levels of HTTP status codes? (*i.e* What does 100, 200, 300, 400, 500 level mean?)
+
+- What is the anatomry of an HTTP **request**?
+
+- What is the anatomy of an HTTP **response**?
+
+
 ## `Wednesday`
 :star: Use [these custom ORM examples](https://github.com/210517-Enterprise/demos/tree/main/week4/custom-orm-examples) to assist you in designing your own ORM framework.<br>
 :star: Use [this](https://github.com/210517-Enterprise/demos/blob/main/week4/p1-sample-readme.md) as a template/guideline for your own Project 1's README.md file.
