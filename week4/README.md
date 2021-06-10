@@ -1,6 +1,8 @@
 # Week 4: Multithreading & HTTP
 > *You will be asked about these QC questions on Monday at 2pm EST QC*.
 
+<br>
+
 ## `Thursday`
 - :star: review this [HTTP Study Guide]() (You will be asked about HTTP on Monday.
 
@@ -13,7 +15,6 @@
 - What is the anatomy of an HTTP **response**?
 
 <br>
-
 
 ## `Wednesday`
 :star: Use [these custom ORM examples](https://github.com/210517-Enterprise/demos/tree/main/week4/custom-orm-examples) to assist you in designing your own ORM framework.<br>
