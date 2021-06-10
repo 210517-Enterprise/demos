@@ -4,7 +4,7 @@
 <br>
 
 ## `Thursday`
-- :star: review this [HTTP Study Guide]() (You will be asked about HTTP on Monday.
+- :star: review this [HTTP Study Guide]() *You will be asked about HTTP on Monday*.
 
 - What is HTTP?
 
