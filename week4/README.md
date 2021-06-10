@@ -1,5 +1,6 @@
 # Week 4: Multithreading & HTTP
-> *You will be asked about these QC questions on Monday at 2pm EST QC*.
+> *You will be asked about these QC questions on Monday at 2pm EST QC*. <br>
+> Below are questions you hsould be reviewing daily.  They are all included on the [collective list of QC questions](https://github.com/210517-Enterprise/demos/blob/main/week4/qc-questions.md) you'll be asked about on Monday 6/14 at 2pm EST and in 1-on-1's with me.
 
 <br>
 
