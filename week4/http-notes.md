@@ -1,4 +1,8 @@
 ## HTTP Study Guide:
+> *Resources:*
+> - [MDN Overview of HTTP]:(https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+> - [What is HTTP and How does it work?](https://whatis.techtarget.com/definition/HTTP-Hypertext-Transfer-Protocol)
+
 - Hyper Text Transfer Protocol
 
 - Primary networking protocol used for client-server communication
@@ -12,8 +16,9 @@
 - All HTTP messages are composed of a **header** and a **body** which contains different
   pieces of information.. 
     - The header normally represents the metadata about the request. 
-    - The body represents the data in the message, or the message itself.
-    -
+    - The body represents the data in the message, or the message itself.https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+
+> - []-
 - **GET vs POST**
   - **GET** is utilized to retrieve data. We're retrieving data from some url, or endpoint,
     and normally clients and servers are not expecting these messages to contain content
