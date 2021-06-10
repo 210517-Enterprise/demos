@@ -55,12 +55,15 @@ public class App {
         /*
 		 * Step 5. Create a context which assigns a handler object to a specific http
 		 * route. This handler handles each incoming http request and sends a response.
+		 * 
+		 * Here we're saysing that, when a user sends a get request to localhost:8000/search ...
+		 * we have handler object fire.  But only for the context we've defined at "search".
 		 */
         server.createContext("/search", new WordCountHandler(text));  // we will create this handler class soon.
 
 		/*
 		 * Step 6. Create the executor which will schedule each incoming http request to
-		 * a pool of threads. Set the deault thread pool to 1.
+		 * a pool of threads.  You can play around with the thread pool size and view the throughput effect.
 		 */
         Executor executor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
         
