@@ -1,6 +1,6 @@
 # Upcoming QC Questions for Monday June 14th:
 > Topics: <br>
-> - SQL
+> - [SQL](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md)
 > - Functional Interfaces
 > - Threads
 > - HTTP
