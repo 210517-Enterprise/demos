@@ -1,42 +1,4 @@
-# Measuring Throughput with Apache Jmeter
-> *What's Throughput?*
->  - Throughput is The **number of tasks** completed in a given period of time, measured in tasks per time unit.  (Throughput = # of tasks / time). `Throughput = N/T`.
->
-> - **By servicing each task on a different thread, in parallell, we improve throughput by `N`.**
-> - `N` = # of threads *or* cores in cpu
-
-<br>
-
-### Thread Pooling
-Creating the thread once and re-using them for future tasks, instead of recreating and restarting thehm. Thread Pools us achieve optimal throughput. 
-
-- Once threads are created, they sit in a pool.
-- Tasks are lined up in a queue and distributed to each thread within the pool.
-    - If all threads within pool are busy, the tasks wait in the queue for one to free up.
-
-> JDK comes with a few implementations of thread pools, including `Fixed Thread Pool Executor` which creates a thread pool with a fixed # of threads in the pool.
-
-```java
-int numberOfThreads = 4;
-Executor executor = Executor.newFixedThreadPool(numberOfThreads);
-
-Runnable task = ...;
-executor.execute(task);
-```
-<br>
-
-### Optimizing for Throughput: HTTP Server + Measure Throughput with Apache Jmeter :chart_with_upwards_trend:
-
-- Http Server will send a flow of requests as input.
-- Http Server will load a large book from the disc (War and Peace).
-- Application acts as a search engine: Client sends us a word like "talk" and the application will search for that word in the book and count how many times that word appears in the novel.
-    - The Http Request: `http://127.0.0.1:8000/search?word=talk` :arrow_right: Http Server
-- Http Server sends the count of how many times that appears as a response to the user.
-    - HttpResponse: `status: 200, body: 3443` :arrow_right:  Client
-
-<br>
-
-### JMeter Testing our Web Server:
+# JMeter Testing our Web Server to measure Throughput:
 [Apache JMeter](https://github.com/jmeter-maven-plugin/jmeter-maven-plugin) is an Apache project that can be used as a load testing tool for analyzing and measuring the performance of a web service.
 
 - Add the plugin to your `pom.xml`:
@@ -108,3 +70,42 @@ executor.execute(task);
     8. Right click on `While Controller` and add two `Listeners` : (1) `View Results Tree` and (2) `Summary Report`.
 
 Note that when you change the thread pool to `1` in your application and run it -- then run JMeter -- the throughput is significantly less than when you change the pool to `4` and run both the tests and app again, concurrently.  This is because, due to more threads, we are able to process more data at a time. **Make sure that you clean your results between test runs**.
+
+<br>
+
+# Measuring Throughput
+> *What's Throughput?*
+>  - Throughput is The **number of tasks** completed in a given period of time, measured in tasks per time unit.  (Throughput = # of tasks / time). `Throughput = N/T`.
+>
+> - **By servicing each task on a different thread, in parallell, we improve throughput by `N`.**
+> - `N` = # of threads *or* cores in cpu
+
+<br>
+
+### Thread Pooling
+Creating the thread once and re-using them for future tasks, instead of recreating and restarting thehm. Thread Pools us achieve optimal throughput. 
+
+- Once threads are created, they sit in a pool.
+- Tasks are lined up in a queue and distributed to each thread within the pool.
+    - If all threads within pool are busy, the tasks wait in the queue for one to free up.
+
+> JDK comes with a few implementations of thread pools, including `Fixed Thread Pool Executor` which creates a thread pool with a fixed # of threads in the pool.
+
+```java
+int numberOfThreads = 4;
+Executor executor = Executor.newFixedThreadPool(numberOfThreads);
+
+Runnable task = ...;
+executor.execute(task);
+```
+<br>
+
+### Optimizing for Throughput: HTTP Server + Measure Throughput with Apache Jmeter :chart_with_upwards_trend:
+
+- Http Server will send a flow of requests as input.
+- Http Server will load a large book from the disc (War and Peace).
+- Application acts as a search engine: Client sends us a word like "talk" and the application will search for that word in the book and count how many times that word appears in the novel.
+    - The Http Request: `http://127.0.0.1:8000/search?word=talk` :arrow_right: Http Server
+- Http Server sends the count of how many times that appears as a response to the user.
+    - HttpResponse: `status: 200, body: 3443` :arrow_right:  Client
+
