@@ -4,7 +4,7 @@
 <br>
 
 ## `Thursday`
-- :star: review this [HTTP Study Guide]() *You will be asked about HTTP on Monday*.
+- :star: review this [HTTP Study Guide](https://github.com/210517-Enterprise/demos/blob/main/week4/http-notes.md) *You will be asked about HTTP on Monday*.
 
 - What is HTTP?
 
@@ -13,6 +13,8 @@
 - What is the anatomry of an HTTP **request**?
 
 - What is the anatomy of an HTTP **response**?
+
+- What's in the `Header` and `Body` of both a reposne and request HTTP message?
 
 <br>
 
