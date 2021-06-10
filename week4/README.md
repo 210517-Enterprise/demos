@@ -1,4 +1,5 @@
 # Week 4: Multithreading & HTTP
+> *You will be asked about these QC questions on Monday at 2pm EST QC*.
 
 ## `Thursday`
 - :star: review this [HTTP Study Guide]() (You will be asked about HTTP on Monday.
@@ -10,6 +11,8 @@
 - What is the anatomry of an HTTP **request**?
 
 - What is the anatomy of an HTTP **response**?
+
+<br>
 
 
 ## `Wednesday`
