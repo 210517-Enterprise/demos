@@ -1,4 +1,24 @@
 # Week 4: Multithreading & HTTP
+> *You will be asked about these QC questions on Monday at 2pm EST QC*. <br>
+> <br>
+> Below are questions you should be reviewing daily.  They are all included on the [collective list of QC questions](https://github.com/210517-Enterprise/demos/blob/main/week4/qc-questions.md) you'll be asked about on Monday 6/14 at 2pm EST and in 1-on-1's with me.
+
+<br>
+
+## `Thursday`
+- :star: review this [HTTP Study Guide](https://github.com/210517-Enterprise/demos/blob/main/week4/notes/http-notes.md) *You will be asked about HTTP on Monday*.
+
+- What is HTTP?
+
+- What are the separate levels of HTTP status codes? (*i.e* What does 100, 200, 300, 400, 500 level mean?)
+
+- What is the anatomry of an HTTP **request**?
+
+- What is the anatomy of an HTTP **response**?
+
+- What's in the `Header` and `Body` of both a reposne and request HTTP message?
+
+<br>
 
 ## `Wednesday`
 :star: Use [these custom ORM examples](https://github.com/210517-Enterprise/demos/tree/main/week4/custom-orm-examples) to assist you in designing your own ORM framework.<br>

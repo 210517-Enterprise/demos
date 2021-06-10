@@ -1,9 +1,84 @@
 # Upcoming QC Questions for Monday June 14th:
 > Topics: <br>
-> - SQL
-> - Functional Interfaces
-> - Threads
-> - HTTP
+> - [SQL](#sql)
+> - [Functional Interfaces](#advanced-java)
+> - [Threads](#threads)
+> - [HTTP](#http)
+
+<br>
+
+## SQL
+*Review the SQL notes [here](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md)*.
+
+1.  Explain what SQL is. What are some SQL RDBMS Vendors? *What is an RDBMS*?
+    
+2.  Draw a simple ERD for modeling Students and Classes
+    
+3.  What are the 5 sublanguages of SQL? Which commands correspond to them?
+    
+4.  What is the difference between DELETE, DROP, and TRUNCATE commands?
+    
+5.  What are some SQL clauses you can use with SELECT statements?
+    
+6.  What is the difference between WHERE and HAVING? *`WHERE` is used to filter rows before grouping and `HAVING` is used to exclude records after grouping. Read more [here]( https://www.java67.com/2019/06/difference-between-where-and-having-in-sql.html#ixzz6kwoJQmXd)*.
+    
+7.  Explain what the ORDER BY and GROUP BY clauses do.
+  - Practice [here](https://www.w3schools.com/sql/sql_orderby.asp).
+    
+8.  Explain the concept of relational integrity.
+    
+9.  List the integrity constraints.
+    
+10.  Define the word “schema”.
+    
+11.  What is a candidate key? What about a surrogate key?
+    
+12.  What conditions lead to orphan records? (*Think about what happens when we delete from a table that a child table is dependent on because it feautres its Primary keys as foreign keys within the table*)
+    
+13.  What are some SQL data types?
+    
+14.  What is normalization? What are the levels? (0 - 3NF)
+    
+15.  What are the properties a transaction must follow? (*A.C.I.D*)
+    
+16.  Explain the different isolation levels. What read phenomena do each prevent?
+    
+17.  What is the difference between joins and set operators?
+    
+18.  What are the types of joins? Explain the differences.
+    
+19.  What is a cascade delete?
+    
+20.  How would you setup a primary key that automatically increments with every INSERT statement?
+    
+21.  What is the difference between scalar and aggregate functions? Give examples of each
+
+<br>
+
+## Advanced Java (Functional Interfaces, etc...)
+1. What are functional interfaces?
+    + Functional interfaces only have one method, and can be used in conjuntion with lambdas
+
+2. What are lambdas?
+    + Like anonymous functions, they allow implementation of functional interfaces directly without creating a class
+
+3. What is try-with-resources? What interface must the resource implement to use this feature?
+    + Try-with-resources allows for automatically closing resources in a try/catch block using `try(resource) {...}` syntax. Must implement the `AutoCloseable` interface
+
+4. How to make numbers in your code more readable?
+    + Use the `_` for numeric literals - must be placed between numbers
+
+5. Which collections cannot hold null values?
+    + `HashTable`, `TreeSet`, `ArrayDeque`, `PriorityQueue`
+
+6. If 2 interfaces have default methods and you implement both, what happens?
+    + The code will NOT compile unless you override the method. However, the code WILL compile if one interface is implemented further up in the class hierarchy than the other - in this case, the closest method implementation in the hierarchy will be called
+
+7. If 2 interfaces have same variable names and you implement both, what happens?
+   + The code will compile unless you make a reference to the variable (this is an ambiguous reference). You must explicitly define the variable by using the interface name: `int a = INTERFACENAME.a;`
+
+8. Why does `HashTable` not take `null` key?
+   + The hash table hashes the keys given as input, and the `null` value cannot be hashed
 
 <br>
 
@@ -30,41 +105,42 @@
 
 - Here is a [list of possible QC questions that will be asked on Monday]().
     + Topics: SQL, JDBC, Threads, Advanced Java (Lambdas & Functional Interfaces)
-  
-<br>
- 
-## Design patterns
-1. What are Singleton / Factory design patterns?
-     + Singleton - allows for creation of only 1 object. Method for retrieving object returns reference to the same object in memory. Implement via private constructor
-
-    + Factory - abstracts away instantiation logic, usually used in conjunction with singleton pattern
 
 <br>
 
-## Advanced Java
-1. What are functional interfaces?
-    + Functional interfaces only have one method, and can be used in conjuntion with lambdas
+## HTTP
+1. What is HTTP?
 
-2. What are lambdas?
-    + Like anonymous functions, they allow implementation of functional interfaces directly without creating a class
+2. What is the difference between `GET` and `POST` HTTP verbs?
+    .  
 
-3. What is try-with-resources? What interface must the resource implement to use this feature?
-    + Try-with-resources allows for automatically closing resources in a try/catch block using `try(resource) {...}` syntax. Must implement the `AutoCloseable` interface
+3. What does it mean for an HTTP verb to be idempotent?
 
-4. How to make numbers in your code more readable?
-    + Use the `_` for numeric literals - must be placed between numbers
+4. What are the contents of an HTTP request?
+    - **HTTP request contents**
+        - HTTP version
+        - URL
+        - HTTP verb / method
+        - Request Headers
+        - Request Body
 
-5. Which collections cannot hold null values?
-    + `HashTable`, `TreeSet`, `ArrayDeque`, `PriorityQueue`
+5. What are the contents of an HTTP response?
+    - **HTTP response contents**
+        - HTTP version
+        - Status code
+        - Response Headers
+        - Response Body
 
-6. If 2 interfaces have default methods and you implement both, what happens?
-    + The code will NOT compile unless you override the method. However, the code WILL compile if one interface is implemented further up in the class hierarchy than the other - in this case, the closest method implementation in the hierarchy will be called
+<br>
+<br>
 
-7. If 2 interfaces have same variable names and you implement both, what happens?
-   + The code will compile unless you make a reference to the variable (this is an ambiguous reference). You must explicitly define the variable by using the interface name: `int a = INTERFACENAME.a;`
+<hr>
 
-8. Why does `HashTable` not take `null` key?
-   + The hash table hashes the keys given as input, and the `null` value cannot be hashed
+## :star: :star: :star: Below are topics that you should know, but won't be focused on heavily on Monday :star: :star: :star:
+
+<hr>
+
+<br>
 
 ## JDBC
 1. What is JDBC?
@@ -111,3 +187,13 @@
     + `getDeclaredClasses`
  
  2. What is a Dynamic Proxy?
+
+<br>
+ 
+## Design patterns
+1. What are Singleton / Factory design patterns?
+     + Singleton - allows for creation of only 1 object. Method for retrieving object returns reference to the same object in memory. Implement via private constructor
+
+    + Factory - abstracts away instantiation logic, usually used in conjunction with singleton pattern
+
+<br>
