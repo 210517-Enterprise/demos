@@ -105,7 +105,32 @@
 
 - Here is a [list of possible QC questions that will be asked on Monday]().
     + Topics: SQL, JDBC, Threads, Advanced Java (Lambdas & Functional Interfaces)
-  
+
+<br>
+
+## HTTP - Hypertext Transfer Protocol
+1. What is HTTP?
+
+2. What is the difference between `GET` and `POST` HTTP verbs?
+    .  
+
+3. What does it mean for an HTTP verb to be idempotent?
+
+4. What are the contents of an HTTP request?
+    - **HTTP request contents**
+        - HTTP version
+        - URL
+        - HTTP verb / method
+        - Request Headers
+        - Request Body
+
+5. What are the contents of an HTTP response?
+    - **HTTP response contents**
+        - HTTP version
+        - Status code
+        - Response Headers
+        - Response Body
+
 <br>
 <br>
 
