@@ -8,7 +8,8 @@
 <br>
 
 ### SQL
-*Review the SQL notes [here]((https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md))*.
+*Review the SQL notes [here](https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md)*.
+
 1.  Explain what SQL is. What are some SQL RDBMS Vendors? *What is an RDBMS*?
     
 2.  Draw a simple ERD for modeling Students and Classes
@@ -51,6 +52,8 @@
 20.  How would you setup a primary key that automatically increments with every INSERT statement?
     
 21.  What is the difference between scalar and aggregate functions? Give examples of each
+
+<br>
 
 ## Threads
  1. What is multi-threading?
