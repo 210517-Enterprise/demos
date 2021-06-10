@@ -136,7 +136,7 @@
 
 <hr>
 
-## :star: :star: :star: Below are topics that you should know, but won't be focused on heavily on Monday :star: :star: :star:
+## :star: Below are topics that you should know, but won't be focused on heavily on Monday :star:
 
 <hr>
 
