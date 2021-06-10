@@ -1,7 +1,9 @@
-### Measuring Throughput with Apache Jmeter
-Throughput is...The **number of tasks** completed in a given period of time, measured in tasks per time unit.  (Throughput = # of tasks / time). `Throughput = N/T`.
-
-- **By service each task on a different thread, in paralles, we improve throughput by `N`.** `N` = # of threads *or* cores in cpu
+# Measuring Throughput with Apache Jmeter
+> *What's Throughput?*
+>  - Throughput is The **number of tasks** completed in a given period of time, measured in tasks per time unit.  (Throughput = # of tasks / time). `Throughput = N/T`.
+>
+> - **By servicing each task on a different thread, in parallell, we improve throughput by `N`.**
+> - `N` = # of threads *or* cores in cpu
 
 <br>
 
