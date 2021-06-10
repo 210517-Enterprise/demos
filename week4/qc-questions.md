@@ -7,6 +7,51 @@
 
 <br>
 
+### SQL
+*Review the SQL notes [here]((https://github.com/210517-Enterprise/demos/blob/main/week2/notes/sql.md))*.
+1.  Explain what SQL is. What are some SQL RDBMS Vendors? *What is an RDBMS*?
+    
+2.  Draw a simple ERD for modeling Students and Classes
+    
+3.  What are the 5 sublanguages of SQL? Which commands correspond to them?
+    
+4.  What is the difference between DELETE, DROP, and TRUNCATE commands?
+    
+5.  What are some SQL clauses you can use with SELECT statements?
+    
+6.  What is the difference between WHERE and HAVING? *`WHERE` is used to filter rows before grouping and `HAVING` is used to exclude records after grouping. Read more [here]( https://www.java67.com/2019/06/difference-between-where-and-having-in-sql.html#ixzz6kwoJQmXd)*.
+    
+7.  Explain what the ORDER BY and GROUP BY clauses do.
+  - Practice [here](https://www.w3schools.com/sql/sql_orderby.asp).
+    
+8.  Explain the concept of relational integrity.
+    
+9.  List the integrity constraints.
+    
+10.  Define the word “schema”.
+    
+11.  What is a candidate key? What about a surrogate key?
+    
+12.  What conditions lead to orphan records? (*Think about what happens when we delete from a table that a child table is dependent on because it feautres its Primary keys as foreign keys within the table*)
+    
+13.  What are some SQL data types?
+    
+14.  What is normalization? What are the levels? (0 - 3NF)
+    
+15.  What are the properties a transaction must follow? (*A.C.I.D*)
+    
+16.  Explain the different isolation levels. What read phenomena do each prevent?
+    
+17.  What is the difference between joins and set operators?
+    
+18.  What are the types of joins? Explain the differences.
+    
+19.  What is a cascade delete?
+    
+20.  How would you setup a primary key that automatically increments with every INSERT statement?
+    
+21.  What is the difference between scalar and aggregate functions? Give examples of each
+
 ## Threads
  1. What is multi-threading?
     + Handling multiple threads / paths of execution in your program.
