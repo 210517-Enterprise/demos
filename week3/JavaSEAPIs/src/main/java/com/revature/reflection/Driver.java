@@ -4,7 +4,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /*
- * What is Reflection?
+ * What is Reflection? **PLEASE NOTE!** There is a full fledged Reflection Project in this week
+ * Please refer to the Reflection Project.
+ * 
  * In OOP languages, Reflection allows inspection of classes, interfaced, fields,
  * and methods at runtime without knowing the names of those members, etc at compile time. 
  */
