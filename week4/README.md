@@ -13,6 +13,8 @@
 - :star: complete [this Hackerrank](www.hackerrank.com/210517-enterprise-hr3) and walk me through your solution on Monday in our 1-on-1.
 - :star: If you have not completed the [Sorting Practice](https://classroom.github.com/a/6-0WFWWc), please do so over the weekend (Bubble Sort, Merge Sort, ArrayList).
 
+<br>
+
 ## `Thursday`
 - :star: review this [HTTP Study Guide](https://github.com/210517-Enterprise/demos/blob/main/week4/notes/http-notes.md) *You will be asked about HTTP on Monday*.
 
