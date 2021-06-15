@@ -2,8 +2,8 @@ package com.revature.indirectservlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,13 +40,62 @@ public class IndirectServlet extends HttpServlet{
 		
 	}
 	
+	 /* Here is a list of major differences between servlet forward and sendRedirect()
+	 * 
+	 * sendRedirect():
+	 * 
+	 * The request is redirected to a different resource 
+	 * The client will see the URL
+	 * change after the redirect 
+	 * A totally new request is created 
+	 * Redirect is normally used  within Post/Redirect/Get web development pattern
+	 * 
+	 * 
+	 * 
+	 * forward():
+	 * 
+	 * The request will be further processed on the server side 
+	 * The client isn't impacted by forward, 
+	 * URL in a browser stays the same 
+	 * Request and response objects will remain the same object after forwarding. 
+	 * Request-scope objects will be still available 
+	 */
+	
+	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
+		/*
+		 *  Request Dispatcher is an interface whose implementation 
+		 *  defines an object which can dispatch the request to any resources on the server.
+		*/
 		
+		// You can forward the request to another html page
+//		RequestDispatcher rdis = request.getRequestDispatcher("resources/html/somepage.html");
 		
+		// You can forward the request to some other servlet
+		RequestDispatcher rdis = request.getRequestDispatcher("/dirserv");
+		
+		// in order to fully redirect the request to another resource, we must forward it...
+		rdis.forward(request, response);
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 

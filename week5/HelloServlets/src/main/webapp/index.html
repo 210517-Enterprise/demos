@@ -37,9 +37,54 @@
 		<form method="GET" action="indirserv">
 
 			<p>Indirect Servlet, GET!</p>
-			<input type="submit" value="Redirect Request to get Response From Other Servlet">
+			<input type="submit"
+				value="Redirect Request to get Response From Other Servlet via sendRedirect()">
 
 		</form>
+
+		<hr>
+
+		<form method="POST" action="indirserv">
+
+			<p>Indirect Servlet, POST!</p>
+			<input type="submit"
+				value="Redirect Request to get Response From Other Servlet via forward()">
+
+		</form>
+
+		<hr>
+
+		<form method="GET" action="sesserv">
+
+			<p>Session Servlet, GET!</p>
+			<input type="submit" value="Push Mud Man to the Session">
+
+		</form>
+
+		<hr>
+
+		<form method="GET" action="helpersesserv">
+
+			<p>Helper Session Servlet, GET!</p>
+			<input type="submit" value="Obtain the villain from the Session">
+
+		</form>
+		
+		<hr>
+
+		<form method="POST" action="sesserv">
+
+			<p>Session Servlet, POST!</p>
+			<input type="text" name="name" placeholder="Enter an evil name" /> <br />
+			<input type="text" name="superpower" placeholder="Enter an evil superpower" /> <br />
+			<input type="number" name="bounty" placeholder="Enter bounty amount ($)" /> <br />
+
+			<input type="submit" value="Push a Custom Villain to the Session">
+			
+		</form>
+
+
+
 
 	</div>
 
