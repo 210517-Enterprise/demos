@@ -1,4 +1,7 @@
 # Week 5: Servlets, AWS, DevOps
+> *Study these questions each day.  On Monday, June 21st, you will be asked [these QC questions]().*
+
+<br>
 
 ## `Tuesday`
 
