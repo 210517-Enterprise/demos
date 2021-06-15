@@ -2,7 +2,7 @@
 > Topics: <br>
 > - [Servlets](#servlets)
 > - AWS
-> DevOps/SDLC
+> - DevOps/SDLC
 > - Docker
 
 <br>
