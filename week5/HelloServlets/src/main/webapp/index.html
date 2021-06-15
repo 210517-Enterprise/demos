@@ -3,6 +3,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Welcome!</title>
+<!-- you may have to remove the ./ in the link  href= "resources/css/styles.css" /> -->
+<link rel="stylesheet" type="text/css" href="./resources/css/styles.css" />
+
 </head>
 <body>
 
@@ -20,7 +23,23 @@
 
 		</form>
 
+		<hr>
 
+		<form method="POST" action="dirserv">
+
+			<p>Direct Servlet, POST!</p>
+			<input type="submit" value="Direct Text Response">
+
+		</form>
+
+		<hr>
+
+		<form method="GET" action="indirserv">
+
+			<p>Indirect Servlet, GET!</p>
+			<input type="submit" value="Redirect Request to get Response From Other Servlet">
+
+		</form>
 
 	</div>
 

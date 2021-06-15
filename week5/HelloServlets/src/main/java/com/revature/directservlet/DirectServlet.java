@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.model.SuperVillain;
+
 public class DirectServlet extends HttpServlet{
 
 	private static final long serialVersionUID = -8429074162983015461L;
@@ -57,6 +60,23 @@ public class DirectServlet extends HttpServlet{
 		
 		log.info("We're inside the doGet() method of the DirectServlet");
 
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		
+		// Instead of sending back text to the client, we will send back an object in JSON format
+		response.setContentType("application/json");
+		
+		
+		// 1. Create a hardcoded super villain
+		SuperVillain vill = new SuperVillain("Lava Man", "fire", 300_000);
+		
+		// 2. send the supervillain as a JSON object to the browser in the response 
+		response.getWriter().write(new ObjectMapper().writeValueAsString(vill));
+		
+		log.info("We're in the post method!");
+		
 	}
 	
 	/*
