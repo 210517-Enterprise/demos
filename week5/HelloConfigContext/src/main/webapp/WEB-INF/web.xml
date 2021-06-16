@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>HelloConfigContext</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+
+	<!-- Here I'm defining the Servlet Context Parameter.  This is a global object
+	that's shared amongst all servlets! Typically we use this to share some
+	initial parameters or configuration info across the WHOLE application.... -->
+	<context-param>
+		<param-name>contextExample</param-name>
+		<param-value>Global pizza chains</param-value>
+	</context-param>
+
+
+	<servlet>
+		<servlet-name>FirstServ</servlet-name>
+		<servlet-class>com.revature.FirstServ</servlet-class>
+		<load-on-startup>-3</load-on-startup> <!-- a negative number indicates the default loading behavior which is LAZY -->
+		
+		<!-- Servlet config is an object containing initial params of configuration information
+		and passed to this specific servlet by the servlet container (web container) -->
+		<init-param>
+			<param-name>configExample</param-name>
+			<param-value>Local pizza chains</param-value>
+		</init-param>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FirstServ</servlet-name>
+		<url-pattern>/firstserv</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>SecondServ</servlet-name>
+		<servlet-class>com.revature.SecondServ</servlet-class>
+		<!-- In order to invoke EAGER initlaization, if we set the load-on-startup 
+			tag to a number > 0 we are able to intialize this servlet (i.e Tomcat the 
+			web container calls the init() method upon the server starting -->
+
+		<!-- When the server starts, any servlet with a load-on-startup element 
+			with a value of >= 0 will be initialized first (init() method is called order 
+			is 0 started first, then 1, then 2..etc -->
+
+		<!-- technically pre initalized servlets respond faster when a request 
+			is made this is because they don't have to run the init() method before the 
+			doGet()/Post() method the server is going to take longer to start up BECAUSE 
+			it has to take extra time to initilialize these servlets -->
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SecondServ</servlet-name>
+		<url-pattern>/secondserv</url-pattern>
+	</servlet-mapping>
+</web-app>
