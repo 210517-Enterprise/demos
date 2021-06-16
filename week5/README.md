@@ -1,5 +1,30 @@
 # Week 5: Servlets, AWS, DevOps
-> *Study these questions each day.  On Monday, June 21st, you will be asked [these QC questions](https://github.com/210517-Enterprise/demos/blob/main/week5/qc-questions.md).*
+> *Study these questions each day.  On Monday, June 21st, you will be asked [these QC questions](https://github.com/210517-Enterprise/demos/blob/main/week5/qc-questions.md).* <br>
+> - :star: AWS Notes [here](https://github.com/210517-Enterprise/demos/blob/main/week5/notes/aws.md)
+> - :star: EC2 & Tomcat guide [here](https://github.com/210517-Enterprise/demos/blob/main/week5/ec2-setup-guide.sh)
+
+<br>
+
+## `Wednesday`
+1. What is the difference between the ServletConfig and ServletContext objects? How do you retrieve these in your servlet?
+
+2. Explain the front controller design pattern.
+
+3. Is eager or lazy loading of servlets the default? How would you change this?
+
+4. what are the benefits of cloud services?
+
+5. What are the 3 models of Cloud computing?
+
+5. What is AWS RDS? What type of service is this? Iaas, Paas, Saas?
+
+6. What is the relationship between a Region and an Availability Zone?
+
+7. What are Security Groups?
+
+8. What is EBS?
+
+8. What is EC2?
 
 <br>
 
@@ -28,8 +53,3 @@
 12.  How would you send text or objects back in the body of the HTTP response from a servlet?
     
 13.  What is the difference between getParameter() and getAttribute() methods?
-
-
-[comment]: <> (What is the difference between the ServletConfig and ServletContext objects? How do you retrieve these in your servlet?)
-[comment]: <> (Explain the front controller design pattern?)
-[comment]: <>  (Is eager or lazy loading of servlets the default? How would you change this?)
