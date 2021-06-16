@@ -8,7 +8,7 @@
 <br>
 
 ## AWS
-1. what are the benefits of cloud services?
+1. What are the benefits of cloud services?
 
 2. What are the 3 models of Cloud computing?
 
