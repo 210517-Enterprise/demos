@@ -1,4 +1,4 @@
-package com.reavture.util;
+package com.revature.util;
 
 import java.io.IOException;
 import java.sql.Connection;
