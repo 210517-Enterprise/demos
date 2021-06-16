@@ -1,9 +1,30 @@
 # Upcoming QC Questions for Monday June 21st:
 > Topics: <br>
 > - [Servlets](#servlets)
-> - AWS
+> - [AWS](#aws)
 > - DevOps/SDLC
 > - Docker
+
+<br>
+
+## AWS
+1. what are the benefits of cloud services?
+
+2. What are the 3 models of Cloud computing?
+
+3. What is AWS RDS? What type of service is this? Iaas, Paas, Saas?
+
+4. What is the relationship between a Region and an Availability Zone?
+
+5. What are Security Groups?
+
+6. Explain what an EC2 is.
+
+7. What is EBS?
+
+8. What's am AMI?
+
+9. What is an RDS?
 
 <br>
 
