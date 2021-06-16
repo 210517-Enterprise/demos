@@ -8,7 +8,7 @@
 
 # /home/ec2-user is where you are (you are ec2-user)
 
-# ====== EC2 SETUP ======
+# ====== EC2 ENVIRONMENT SETUP ======
 # Set up the environment for your EC2 instance
 sudo yum install java-1.8.0-openjdk-devel -y
 sudo yum install maven -y
