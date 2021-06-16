@@ -32,5 +32,5 @@ sudo cp target/YourProject-0.0.1-SNAPSHOT.war /var/lib/tomcat/webapps/
 # Start Tomcat -- by default, Tomcat will run on port 8080
 sudo service tomcat start
 
-# Congrats! Your project is not running.  You can visit it at the following address in your browser:
+# Congrats! Your project is now deployed and running.  You can visit it at the following address in your browser:
 # http://ec2-dns.amazonaws.com:8085/YourProject-0.0.1-SNAPSHOT
