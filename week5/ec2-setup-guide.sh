@@ -1,4 +1,4 @@
-# 1. When you launch your instance, download your .pem key
+# 1. When you launch your instance, download your .pem key.  Drag it into a folder that's easily accessible.
 
 # 2. Right click > GIt Bash into whatever directory holds your .pem key and paste the command below:
 #     ssh -i mynew_key ec2-user@ec2-34-204-200-76.compute-1.amazonaws.com
