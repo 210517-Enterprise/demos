@@ -1,3 +1,5 @@
+# == Before you begin make sure that your EC2 Instance Security groups accept all traffic from SSH, HTTP, and custom TCP Port 8080 ==
+
 # 1. When you launch your instance, download your .pem key.  Drag it into a folder that's easily accessible.
 
 # 2. Right click > GIt Bash into whatever directory holds your .pem key and paste the command below:
