@@ -28,6 +28,12 @@ public class EmployeeService {
 	public static Employee findByUsername(String username) {
 		
 		List<Employee> all = findAll(); // First return ALL Employees
+
+// With Stream api:
+//		Employee filteredEmp = (Employee) all
+//				.stream()
+//				.filter(e -> e.getUsername().equals(username));
+
 		
 		for(Employee e : all) {
 			
@@ -35,7 +41,7 @@ public class EmployeeService {
 				return e;
 			} 
 		}
-
+	
 		return null;
 	}
 	
