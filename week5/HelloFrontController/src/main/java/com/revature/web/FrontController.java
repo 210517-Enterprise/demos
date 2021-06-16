@@ -21,6 +21,7 @@ public class FrontController extends HttpServlet {
 		switch(URI) {
 		case "login":
 			// call a method from a request helper......	
+			RequestHelper.processLogin(request, response);
 			break;
 		case "employees":
 			// call method show all employees -- this means we'll be querying our DB...
