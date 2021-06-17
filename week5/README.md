@@ -2,7 +2,7 @@
 > *Study these questions each day.  On Monday, June 21st, you will be asked [these QC questions](https://github.com/210517-Enterprise/demos/blob/main/week5/qc-questions.md).* <br>
 > - :star: AWS Notes [here](https://github.com/210517-Enterprise/demos/blob/main/week5/notes/aws.md)
 > - :star: EC2 & Tomcat/App Deployment setup guide [here](https://github.com/210517-Enterprise/demos/blob/main/week5/ec2-setup-guide.sh)
-> - :star: Jenkins setup guide (on EC2) [here]()
+> - :star: Jenkins setup guide (on EC2) [here](https://github.com/210517-Enterprise/demos/blob/main/week5/jenkins-setup.sh)
 > - :star: Jenkins Notes [here]()
 
 <br>
