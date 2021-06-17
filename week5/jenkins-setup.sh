@@ -1,6 +1,6 @@
 # First, you should make sure that you've followed the basic setup from the ec2-tomcat-setupguide.sh (go back to week5 directory)
 # If Tomcat is currently installed on your EC2, you should switch its port from 8080 to 8085,
-# so that Jenkins can run on 8085.  Run the follow command:
+# so that Jenkins can run on 8085.  Run the following command:
 
 sudo sed -i 's/<Connector port=\"8080\"/<Connector port=\"8085\"/' /etc/tomcat/server.xml
 
