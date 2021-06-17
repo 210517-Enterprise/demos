@@ -26,6 +26,8 @@
 
 9. What is an RDS?
 
+10. What's the difference between Horizontal and Vertical Scaling? 
+
 <br>
 
 ## Servlets
