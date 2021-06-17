@@ -39,4 +39,12 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 # mvn clean install
 # mvn -Dtest=SomeTestSuiteClass test
 #
-# Save and you're good to go!
+# Save and manually configure build by clicking "Build Now" on the Freestyle Project Dashboard.
+#
+# If you'd like to configure GitHub Webhooks, you can do so by going to your gihub repo > settings > add Webhooks
+# Click "Add" 
+# In the Payload Url enter: http://your.ec2.public.ipv4.address:8080/github-webhook/
+# Change the content to JSON
+# Check to make sure that PUSH triggers the payload request
+#
+# Now, whenever you push, it will trigger a Jenkins build!
