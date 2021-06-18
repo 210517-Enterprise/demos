@@ -59,7 +59,31 @@ CMD ["/usr/games/nsnake"]
 <br>
 
 ## Creating a Tomcat Container to Deploy a WAR
+```sh
+# Basic setup for Tomcat Container
+# Pull from Docker hub and expose to port 8080 of localhost
+docker run -d --name tomcat --rm -it -p 8080:8080 tomcat
 
+# Cd into your project, run Maven package
+mvn package
 
+# While still in root directory of project, hand off the war file to tomcat to deploy
+docker cp target/HelloFrontController-0.0.1-SNAPSHOT.war tomcat:/usr/local/tomcat/webapps
+
+# You can now see your web app hosted within your container if you go to localhost:8080/HelloFrontController-0.0.1-SNAPSHOT
+```
+
+<br>
 
 ## Creating a Postgres Container with Docker
+```sh
+# Minimalist postgres database, default username 'postgres'
+docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=password --name testdb postgres
+
+# Connect. If --name not used earlier, use generated container name or id in place of testdb
+docker exec -it testdb psql -U postgres
+
+# This will take you to psql shell where you can construct a table.
+# You can view this data if you open DBeaver and connect to port 5432 of localhost
+# ! Note that your postgres db engine on your local machine must be turned off in order to view the data from your postgres container !
+```
