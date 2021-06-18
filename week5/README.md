@@ -10,6 +10,7 @@
 
 ## `Friday`
 - Please prepare for 10:00am QC on Monday June 21st by studying [these QC questions](https://github.com/210517-Enterprise/demos/blob/main/week5/qc-questions.md)
+- Study the basics (and some commands) of Docker.  The guide for what we did in class is [here](https://github.com/210517-Enterprise/demos/blob/main/week5/notes/docker.md)
 - :star: [Hackerrank Challenge](https://www.hackerrank.com/210517-enterprise-hr4) for the Weekend
 - Use the time after QC on Monday to work in your groups on your Project
 - See you all on 11:00am Tuesday June 29th.
