@@ -7,7 +7,7 @@
 *Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.*
 
 - The first half of this document contains guides on how to run a Docker container in an EC2.
-- The second half guides you in how to Dockerize your own Angular application.
+- The second half guides you in how to create both a Tomcat or Postgres container running on your local machine (as long as you have Docker Desktop installed).
 
 <br>
 <br>
