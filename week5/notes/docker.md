@@ -1,4 +1,7 @@
-> *I reccomend this resource for understanding the basics of virtualization vs. containerization.  Read:* [What is Docker? In Simple English](https://blog.usejournal.com/what-is-docker-in-simple-english-a24e8136b90b#:~:text=Terms%20definition,all%20out%20as%20one%20package)    🔍
+> *I reccomend this resource for understanding the basics of virtualization vs. containerization.  Read:* [What is Docker? In Simple English](https://blog.usejournal.com/what-is-docker-in-simple-english-a24e8136b90b#:~:text=Terms%20definition,all%20out%20as%20one%20package)    🔍 <br>
+> :star: [Here](https://kodekloud.com/courses/970256/lectures/18323815) is a resource to a Docker Commamds Lab.
+
+<br>
 
 ## Docker
 *Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.*
