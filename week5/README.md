@@ -4,6 +4,7 @@
 > - :star: EC2 & Tomcat/App Deployment setup guide [here](https://github.com/210517-Enterprise/demos/blob/main/week5/ec2-setup-guide.sh)
 > - :star: Jenkins setup guide (on EC2) [here](https://github.com/210517-Enterprise/demos/blob/main/week5/jenkins-setup.sh)
 > - :star: Jenkins Notes [here](https://github.com/210517-Enterprise/demos/blob/main/week5/notes/devops-jenkins.md)
+> - :star: Docker Notes and guide [here](https://github.com/210517-Enterprise/demos/blob/main/week5/notes/docker.md)
 
 <br>
 
