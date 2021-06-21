@@ -78,7 +78,7 @@ docker cp target/HelloFrontController-0.0.1-SNAPSHOT.war tomcat:/usr/local/tomca
 ## Creating a Postgres Container with Docker
 ```sh
 # Minimalist postgres database, default username 'postgres'
-docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=password --name testdb postgres
+docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres --name testdb postgres
 
 # Connect. If --name not used earlier, use generated container name or id in place of testdb
 docker exec -it testdb psql -U postgres
@@ -86,4 +86,6 @@ docker exec -it testdb psql -U postgres
 # This will take you to psql shell where you can construct a table.
 # You can view this data if you open DBeaver and connect to port 5432 of localhost
 # ! Note that your postgres db engine on your local machine must be turned off in order to view the data from your postgres container !
+
+# By default, schema will be set to public, but you can set this to whatever custom schema 
 ```
