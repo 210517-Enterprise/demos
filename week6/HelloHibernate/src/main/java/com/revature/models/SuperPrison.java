@@ -19,7 +19,7 @@ public class SuperPrison {
 	
 	@Id
 	@Column(name="spi_id")
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int spId;
 	
 	@Column(name="sp_name")
@@ -46,6 +46,14 @@ public class SuperPrison {
 		this.spName = spName;
 		this.location = location;
 		this.villList = villList;
+	}
+	
+	
+
+	public SuperPrison(String spName, String location) {
+		super();
+		this.spName = spName;
+		this.location = location;
 	}
 
 	public SuperPrison() {

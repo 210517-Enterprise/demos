@@ -15,7 +15,7 @@ public class Crime {// Annotations change the way a program is treated by a comp
 	
 	@Id // This is how we specify the primary key of a table 
 	@Column(name="crime_id") 
-	@GeneratedValue(strategy=GenerationType.AUTO) // this is how we generate a SERIAL value
+	@GeneratedValue(strategy=GenerationType.IDENTITY) // this is how we generate a SERIAL value
 	private int crimeId;
 	
 	@Column(name="crime_name", unique=true, nullable=false)

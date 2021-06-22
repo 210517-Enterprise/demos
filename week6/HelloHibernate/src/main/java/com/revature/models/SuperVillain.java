@@ -23,7 +23,7 @@ public class SuperVillain {
 	
 	@Id
 	@Column(name="svill_id")
-	@GeneratedValue(strategy=GenerationType.AUTO) // Add SERIAL functionality
+	@GeneratedValue(strategy=GenerationType.IDENTITY) // Add SERIAL functionality
 	private int sVillId;
 	
 	@Column(name="svill_name", unique=true, nullable=false)
