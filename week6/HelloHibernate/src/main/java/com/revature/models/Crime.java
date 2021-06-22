@@ -1,13 +1,28 @@
 package com.revature.models;
 
-public class Crime {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+// The JPA is the Java Persistence API.  JPA is a specification which is used to access, manage, and persist data
+// between Java objects and relational databases -- Hibernate is the implementation of these rules.
+@Entity // Hibernate can see that we have marked this as a JPA specified entity (the Entity annotation comes fromJPA, so Hibernate will manage the construction of a table
+@Table(name="crime")
+public class Crime {// Annotations change the way a program is treated by a compiler
+	
+	@Id // This is how we specify the primary key of a table 
+	@Column(name="crime_id") 
+	@GeneratedValue(strategy=GenerationType.AUTO) // this is how we generate a SERIAL value
 	private int crimeId;
 	
+	@Column(name="crime_name", unique=true, nullable=false)
 	private String crimeName;
 	
+	@Column(name="description")
 	private String description;
-
 	
 	/*
 	 * Give the Crime class 3 different constructors: no args, all args, and an all args w/o id

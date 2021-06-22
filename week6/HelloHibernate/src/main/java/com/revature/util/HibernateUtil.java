@@ -27,7 +27,6 @@ public class HibernateUtil {
 	 * Transaction manages..well...your transactions and cache (must be
 	 * ACID).
 	 * 
-	 * 
 	 * Query is used to write complex CRUD operations using HQL (Hibernate Query
 	 * Language) 
 	 * 

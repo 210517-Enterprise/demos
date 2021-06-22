@@ -59,7 +59,7 @@
 
 		<!-- Class mapping occurs here: The order does not matter for how we list 
 			the classes to be mapped.  Here I will list all of packaged to look for annotations in: -->
-		<mapping class="com.revature.models.Crime" />
+		<mapping class="com.revature.models.Crime" /> <!--  Hibernate will ask the question, do any of these classes have JPA annotations -->
 		<mapping class="com.revature.models.SuperVillain" />
 		<mapping class="com.revature.models.SuperPrison" />
 		

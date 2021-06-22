@@ -2,21 +2,47 @@ package com.revature.models;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+/*
+ * Remember that the JP is a specification ( a set of rules) and Hibernate is the implementation
+ */
+@Entity
+@Table(name="super_villain")
 public class SuperVillain {
 	
+	@Id
+	@Column(name="svill_id")
+	@GeneratedValue(strategy=GenerationType.AUTO) // Add SERIAL functionality
 	private int sVillId;
 	
+	@Column(name="svill_name", unique=true, nullable=false)
 	private String name;
 	
+	@Column(name="superPower")
 	private String superPower;
 	
+	@Column(name="bounty")
 	private double bounty;
 	
 	// This might be a separate joins table because it's a many to many relationship
+	@ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY) // Lazy fetching means that the data won't be loaded into memory until getCrimes() is called.
 	private List<Crime> crimes;
 	
 	// This will be a foreign key pointing to some record of a SuperPrison in our SuperPrisons table
-	private SuperPrison superPrinsonHolder;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinColumn(name="prison_fk")
+	private SuperPrison superPrisonHolder;
 
 	public SuperVillain(int sVillId, String name, String superPower, double bounty, List<Crime> crimes,
 			SuperPrison superPrinsonHolder) {
@@ -26,7 +52,7 @@ public class SuperVillain {
 		this.superPower = superPower;
 		this.bounty = bounty;
 		this.crimes = crimes;
-		this.superPrinsonHolder = superPrinsonHolder;
+		this.superPrisonHolder = superPrinsonHolder;
 	}
 
 	public SuperVillain() {
@@ -40,7 +66,7 @@ public class SuperVillain {
 		this.superPower = superPower;
 		this.bounty = bounty;
 		this.crimes = crimes;
-		this.superPrinsonHolder = superPrinsonHolder;
+		this.superPrisonHolder = superPrinsonHolder;
 	}
 
 	@Override
@@ -90,11 +116,11 @@ public class SuperVillain {
 	}
 
 	public SuperPrison getSuperPrinsonHolder() {
-		return superPrinsonHolder;
+		return superPrisonHolder;
 	}
 
 	public void setSuperPrinsonHolder(SuperPrison superPrinsonHolder) {
-		this.superPrinsonHolder = superPrinsonHolder;
+		this.superPrisonHolder = superPrinsonHolder;
 	}
 
 	@Override

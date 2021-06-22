@@ -3,19 +3,34 @@ package com.revature.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="super_prison")
 public class SuperPrison {
 	
-	// id
+	@Id
+	@Column(name="spi_id")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int spId;
 	
-	// name
+	@Column(name="sp_name")
 	private String spName;
 	
-	// location
+	@Column(name="sp_location")
 	private String location;
 	
 	// villList (List of all of the villains inside this prison
 	// This will be a OneToMany relationship
+	@OneToMany(mappedBy="superPrisonHolder", fetch=FetchType.LAZY)
 	private List<SuperVillain> villList = new ArrayList<SuperVillain>();
 
 	public SuperPrison(int spId, String spName, String location, List<SuperVillain> villList) {
