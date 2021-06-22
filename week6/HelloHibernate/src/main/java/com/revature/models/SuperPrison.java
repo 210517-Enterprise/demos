@@ -1,0 +1,119 @@
+package com.revature.models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SuperPrison {
+	
+	// id
+	private int spId;
+	
+	// name
+	private String spName;
+	
+	// location
+	private String location;
+	
+	// villList (List of all of the villains inside this prison
+	// This will be a OneToMany relationship
+	private List<SuperVillain> villList = new ArrayList<SuperVillain>();
+
+	public SuperPrison(int spId, String spName, String location, List<SuperVillain> villList) {
+		super();
+		this.spId = spId;
+		this.spName = spName;
+		this.location = location;
+		this.villList = villList;
+	}
+
+	public SuperPrison(String spName, String location, List<SuperVillain> villList) {
+		super();
+		this.spName = spName;
+		this.location = location;
+		this.villList = villList;
+	}
+
+	public SuperPrison() {
+		super();
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((location == null) ? 0 : location.hashCode());
+		result = prime * result + spId;
+		result = prime * result + ((spName == null) ? 0 : spName.hashCode());
+		result = prime * result + ((villList == null) ? 0 : villList.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SuperPrison other = (SuperPrison) obj;
+		if (location == null) {
+			if (other.location != null)
+				return false;
+		} else if (!location.equals(other.location))
+			return false;
+		if (spId != other.spId)
+			return false;
+		if (spName == null) {
+			if (other.spName != null)
+				return false;
+		} else if (!spName.equals(other.spName))
+			return false;
+		if (villList == null) {
+			if (other.villList != null)
+				return false;
+		} else if (!villList.equals(other.villList))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "SuperPrison [spId=" + spId + ", spName=" + spName + ", location=" + location + ", villList=" + villList
+				+ "]";
+	}
+
+	public int getSpId() {
+		return spId;
+	}
+
+	public void setSpId(int spId) {
+		this.spId = spId;
+	}
+
+	public String getSpName() {
+		return spName;
+	}
+
+	public void setSpName(String spName) {
+		this.spName = spName;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public List<SuperVillain> getVillList() {
+		return villList;
+	}
+
+	public void setVillList(List<SuperVillain> villList) {
+		this.villList = villList;
+	}
+
+	
+}
