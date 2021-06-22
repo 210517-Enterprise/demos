@@ -85,7 +85,16 @@ docker exec -it testdb psql -U postgres
 
 # This will take you to psql shell where you can construct a table.
 # You can view this data if you open DBeaver and connect to port 5432 of localhost
-# ! Note that your postgres db engine on your local machine must be turned off in order to view the data from your postgres container !
+# ! Note that your postgres db engine on your local machine must be turned off in 
+# order to view the data from your postgres container !
+ 
+# Go to Services -> turn off postgres
 
-# By default, schema will be set to public, but you can set this to whatever custom schema 
+# By default, schema will be set to public, but you can set this to whatever custom schema you
+# want to view in psql shell with the following commands:
+
+SET search_path TO myschema;
+
+\l - to display databases
+\c - connect to new database
 ```
