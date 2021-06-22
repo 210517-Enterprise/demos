@@ -7,26 +7,31 @@ import org.hibernate.cfg.Configuration;
 public class HibernateUtil {
 	
 	/*
-	 * Creating the HibernateUtil.java Helper File:
+	 * Creating the HibernateUtil.java Helper File
 	 * 
-	 * To use Hibernate, you need to create a helper class that handles the startup
-	 * and access to Hibernate's SessionFactory to obtain a Session Object.
+	 * To use Hibernate, you need to create a helper class that handles startup
+	 * and access Hibernate's SessionFactory to obtain a Session object
+	 * 
 	 * 
 	 * (interface)
-	 * Session
+	 * Session manages the connection to DB and provides CRUD operations (create, read, update, delete)
 	 * 
 	 * (class)
-	 * Configuration
+	 * Configuration's job is to gather info from the hiberate.cfg.xml file and then build the Session Factory.
 	 * 
 	 * (interface)
-	 * SessionFactory
+	 * Session Factory's job is to create sessions and store info on how
+	 * to make connections to your DB
 	 * 
-	 * (interface)
-	 * Transaction
+	 * (interface) 
+	 * Transaction manages..well...your transactions and cache (must be
+	 * ACID).
 	 * 
-	 * (Interface)
-	 * Query/Criteria API
 	 * 
+	 * Query is used to write complex CRUD operations using HQL (Hibernate Query
+	 * Language) 
+	 * 
+	 * Criteria is for programmatically writing Select queries
 	 */
 	
 	// The Session interface comes from Hibernate and allows us all of the methods
@@ -41,9 +46,11 @@ public class HibernateUtil {
 	private static SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 	
 	/*
-	 * We create a getSession() method which is going to be called in our DAO layer.
-	 * MAKE SURE THIS IS PUBLIC!
+	 *  We create a getSession() method which is going to be called in our DAO layer
+	 *  This method obtains a JDBC connection which we can use to perform a 
+	 *  transaction against our DB
 	 */
+
 	public static Session getSession() {
 		
 		if (ses == null) {
@@ -54,34 +61,13 @@ public class HibernateUtil {
 		
 	}
 	
+	// This closes an active session.
 	public static void closeSes() {
 		ses.close();
 		sf.close();
 	}
-	
 	/*
 	 * By closing the session, you free up the connections from the connection pool
 	 * so that it can be used by a new thread or within another operation.
 	 */
-	
-	
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
