@@ -40,7 +40,7 @@
 		
 		<!--  hbm2ddl.auto is a special property that exports schema DDL to the database when the
 		SessionFactory is created. -->
-		<property name="hibernate.hbm2ddl.auto">CREATE</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
 		<!-- CREATE VALIDATE, UPDATE, NONE -->
 		
 		<!-- CREATE: drops all existing tables and objects with the names provided 
