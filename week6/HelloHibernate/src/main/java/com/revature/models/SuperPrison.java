@@ -18,7 +18,7 @@ import javax.persistence.Table;
 public class SuperPrison {
 	
 	@Id
-	@Column(name="spi_id")
+	@Column(name="sp_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int spId;
 	
