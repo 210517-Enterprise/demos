@@ -20,6 +20,8 @@ Session methods:
 
 - How do you enable L2 caching? (basic overview)
 
+<br>
+
 ## `Tuesday`
 - What is an ORM?
 
