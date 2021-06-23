@@ -2,6 +2,7 @@ package com.revature.models;
 
 import java.util.List;
 
+import javax.persistence.Cacheable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +18,7 @@ import javax.persistence.Table;
 /*
  * Remember that the JP is a specification ( a set of rules) and Hibernate is the implementation
  */
+@Cacheable
 @Entity
 @Table(name="super_villain")
 public class SuperVillain {

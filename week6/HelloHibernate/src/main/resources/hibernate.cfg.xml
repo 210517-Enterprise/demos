@@ -13,36 +13,39 @@
 
 <hibernate-configuration>
 
-	<!--  Remember: ctrl + a, then ctrl + shift + f will auto format for you -->
+	<!-- Remember: ctrl + a, then ctrl + shift + f will auto format for you -->
 	<session-factory>
-	
-		<!--  JDBC Properties -->
+
+		<!-- JDBC Properties -->
 		<property name="hibernate.connection.username">postgres</property>
 		<property name="hibernate.connection.password">postgres</property>
 		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
-		
-		<!--  Driver Properties which are specific to what type of DB you want to connect to -->
+
+		<!-- Driver Properties which are specific to what type of DB you want to 
+			connect to -->
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-		<!--  You are loading the sepcific Driver class from the postgres dependency to connect to your DB -->
+		<!-- You are loading the sepcific Driver class from the postgres dependency 
+			to connect to your DB -->
 		<property name="hibernate.connection.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-		
-		<!--  This is just a property that we can set to true or false if we want to see the output
-		of all the SQL expressions that Hibernate is writing for us when we run the program. -->
-		<property name="hibernate.show_sql">true</property>
-		<property name="hibernate.format_sql">true</property>
-		
-		<!--  Connection Pool properties: (Default size of connection pool is 20 The 
-			connection pool is a method of speeding up DB calls. Every time Hibernate 
+
+		<!-- This is just a property that we can set to true or false if we want 
+			to see the output of all the SQL expressions that Hibernate is writing for 
+			us when we run the program. -->
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.format_sql">false</property>
+
+		<!-- Connection Pool properties: (Default size of connection pool is 20 
+			The connection pool is a method of speeding up DB calls. Every time Hibernate 
 			starts up, 20 connections are established to our DB This way, when a session 
 			is created (an operation against our DB), it is much faster than just plain 
 			JDBC -->
 		<property name="hibernate.connection.pool_size">10</property>
-		
-		<!--  hbm2ddl.auto is a special property that exports schema DDL to the database when the
-		SessionFactory is created. -->
+
+		<!-- hbm2ddl.auto is a special property that exports schema DDL to the 
+			database when the SessionFactory is created. -->
 		<property name="hibernate.hbm2ddl.auto">create</property> <!--Make sure this is lowercase -->
 		<!-- CREATE VALIDATE, UPDATE, NONE -->
-		
+
 		<!-- CREATE: drops all existing tables and objects with the names provided 
 			in annotations, and then Hibernate will recreate the schema for us (CREATE 
 			isn't the best for production, but useful for development -->
@@ -57,14 +60,19 @@
 		<!-- NONE: hibernate will not do anything (no removals, no addition) -->
 
 
+		<!-- Later we'll talk about caching and add a caching property below -->
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+		<property name="hibernate.cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property>
+
 		<!-- Class mapping occurs here: The order does not matter for how we list 
-			the classes to be mapped.  Here I will list all of packaged to look for annotations in: -->
-		<mapping class="com.revature.models.Crime" /> <!--  Hibernate will ask the question, do any of these classes have JPA annotations -->
+			the classes to be mapped. Here I will list all of packaged to look for annotations 
+			in: -->
+		<mapping class="com.revature.models.Crime" /> <!-- Hibernate will ask the question, do any of these classes have JPA annotations -->
 		<mapping class="com.revature.models.SuperVillain" />
 		<mapping class="com.revature.models.SuperPrison" />
-		
-		<!--  Later we'll talka bout cahcing and add a caching property below -->
-		
+
+
+
 	</session-factory>
 
 </hibernate-configuration>
