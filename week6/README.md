@@ -1,5 +1,7 @@
 # Week 6: Hibernate ORM
 
+<br>
+
 ## `Wednesday`
 - Name the differences between all the Session Methods
 
