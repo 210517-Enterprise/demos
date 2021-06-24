@@ -1,5 +1,7 @@
 # Week 6: Hibernate ORM
+*You should do in depth research on all of the following topics featured in this week's curriculum:*
 
+<img src="https://github.com/210517-Enterprise/demos/blob/main/week6/curriculum/image.png"/>
 <br>
 
 ## `Thursday`
