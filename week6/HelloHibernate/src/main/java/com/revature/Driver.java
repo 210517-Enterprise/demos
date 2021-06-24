@@ -8,7 +8,7 @@ import org.hibernate.Session;
 import com.revature.dao.CrimeDAO;
 import com.revature.dao.SuperPrisonDAO;
 import com.revature.dao.SuperVillainDAO;
-import com.revature.models.Crime;
+import com.revature.models.Crimes;
 import com.revature.models.SuperPrison;
 import com.revature.models.SuperVillain;
 import com.revature.util.HibernateUtil;
@@ -144,9 +144,9 @@ public class Driver {
 	public static void initialValues() {
 		
 		// Create some Crime Objects
-		Crime c1 = new Crime("Arson", "setting something ablaze");
-		Crime c2 = new Crime("Freeze", "covering a whole city in ice");
-		Crime c3 = new Crime("Time Manipulation", "freeze time, rob banks");
+		Crimes c1 = new Crimes("Arson", "setting something ablaze");
+		Crimes c2 = new Crimes("Freeze", "covering a whole city in ice");
+		Crimes c3 = new Crimes("Time Manipulation", "freeze time, rob banks");
 		
 		// create a crimeDao
 		CrimeDAO cdao = new CrimeDAO();
@@ -156,7 +156,7 @@ public class Driver {
 		cdao.insert(c2);
 		cdao.insert(c3);
 	
-		List<Crime> crimes = new ArrayList<Crime>();
+		List<Crimes> crimes = new ArrayList<Crimes>();
 		crimes.add(c1);
 		crimes.add(c2);
 		crimes.add(c3);

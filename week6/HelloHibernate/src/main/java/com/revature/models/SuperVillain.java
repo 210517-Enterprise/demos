@@ -39,14 +39,14 @@ public class SuperVillain {
 	
 	// This might be a separate joins table because it's a many to many relationship
 	@ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY) // Lazy fetching means that the data won't be loaded into memory until getCrimes() is called.
-	private List<Crime> crimes;
+	private List<Crimes> crimes;
 	
 	// This will be a foreign key pointing to some record of a SuperPrison in our SuperPrisons table
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="prison_fk")
 	private SuperPrison superPrisonHolder;
 
-	public SuperVillain(int sVillId, String name, String superPower, double bounty, List<Crime> crimes,
+	public SuperVillain(int sVillId, String name, String superPower, double bounty, List<Crimes> crimes,
 			SuperPrison superPrinsonHolder) {
 		super();
 		this.sVillId = sVillId;
@@ -61,7 +61,7 @@ public class SuperVillain {
 		super();
 	}
 
-	public SuperVillain(String name, String superPower, double bounty, List<Crime> crimes,
+	public SuperVillain(String name, String superPower, double bounty, List<Crimes> crimes,
 			SuperPrison superPrinsonHolder) {
 		super();
 		this.name = name;
@@ -109,11 +109,11 @@ public class SuperVillain {
 		this.bounty = bounty;
 	}
 
-	public List<Crime> getCrimes() {
+	public List<Crimes> getCrimes() {
 		return crimes;
 	}
 
-	public void setCrimes(List<Crime> crimes) {
+	public void setCrimes(List<Crimes> crimes) {
 		this.crimes = crimes;
 	}
 

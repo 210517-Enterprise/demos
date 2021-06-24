@@ -3,7 +3,7 @@ package com.revature.dao;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import com.revature.models.Crime;
+import com.revature.models.Crimes;
 import com.revature.util.HibernateUtil;
 
 /*
@@ -22,7 +22,7 @@ public class CrimeDAO {
 	
 	// We will create just an insert method for Crime class
 	
-	public void insert(Crime crime) {
+	public void insert(Crimes crime) {
 		
 		Session ses = HibernateUtil.getSession(); // 1. capture the session
 		

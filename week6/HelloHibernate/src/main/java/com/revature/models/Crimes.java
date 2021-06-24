@@ -11,7 +11,7 @@ import javax.persistence.Table;
 // between Java objects and relational databases -- Hibernate is the implementation of these rules.
 @Entity // Hibernate can see that we have marked this as a JPA specified entity (the Entity annotation comes fromJPA, so Hibernate will manage the construction of a table
 @Table(name="crime")
-public class Crime {// Annotations change the way a program is treated by a compiler
+public class Crimes {// Annotations change the way a program is treated by a compiler
 	
 	@Id // This is how we specify the primary key of a table 
 	@Column(name="crime_id") 
@@ -27,19 +27,19 @@ public class Crime {// Annotations change the way a program is treated by a comp
 	/*
 	 * Give the Crime class 3 different constructors: no args, all args, and an all args w/o id
 	 */
-	public Crime() {
+	public Crimes() {
 		
 		
 	}
 	
-	public Crime(int crimeId, String crimeName, String description) {
+	public Crimes(int crimeId, String crimeName, String description) {
 		super();
 		this.crimeId = crimeId;
 		this.crimeName = crimeName;
 		this.description = description;
 	}
 
-	public Crime(String crimeName, String description) {
+	public Crimes(String crimeName, String description) {
 		super();
 		this.crimeName = crimeName;
 		this.description = description;
@@ -96,7 +96,7 @@ public class Crime {// Annotations change the way a program is treated by a comp
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Crime other = (Crime) obj;
+		Crimes other = (Crimes) obj;
 		if (crimeId != other.crimeId)
 			return false;
 		if (crimeName == null) {
