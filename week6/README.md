@@ -4,9 +4,15 @@
 
 ## `Thursday`
 -  Self-Study Hibernate concepts
+  - There are some other questions that may be asked of you in QC on Tuesday:
+    - What is `NamedQuery`? [Resource here](https://howtodoinjava.com/hibernate/hibernate-named-query-tutorial/)
+    
 -  Prepare for Presentations next Monday 10:00am EST
+
 -  Hibernate quiz on Tuesday Morning
+
 -  1-on-1's on Tuesday Morning
+
 -  **QC at 2:00pm EST Tuesday** (*Review all Hibernate concepts lsited on curriculum on RevPro*)
 
 <br>
