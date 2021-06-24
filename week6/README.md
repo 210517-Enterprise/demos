@@ -5,7 +5,7 @@
 -  Prepare for Presentations next Monday 10:00am EST
 -  Hibernate quiz on Tuesday Morning
 -  1-on-1's on Tuesday Morning
--  QC at 2:00pm EST Tuesday** (*Review all Hibernate concepts lsited on curriculum on RevPro*)
+-  **QC at 2:00pm EST Tuesday** (*Review all Hibernate concepts lsited on curriculum on RevPro*)
 
 <br>
 
