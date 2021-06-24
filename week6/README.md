@@ -5,7 +5,7 @@
 ## `Thursday`
 -  Self-Study Hibernate concepts
   - There are some other questions that may be asked of you in QC on Tuesday:
-    - What is `NamedQuery`? Resource <a href="https://howtodoinjava.com/hibernate/hibernate-named-query-tutorial/" target="_blank">here</a> 👈
+    - What is a `NamedQuery` in Hibernate? Resource <a href="https://howtodoinjava.com/hibernate/hibernate-named-query-tutorial/" target="_blank">here</a> 👈
     
 -  Prepare for Presentations next Monday 10:00am EST
 
