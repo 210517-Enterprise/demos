@@ -54,3 +54,7 @@ Session methods:
 - What are the **`Session` methods**?
 
 - What is `Transaction`?
+
+- What is **`SessionFactory`**?
+
+- How do we configure **`SessionFactory`**
