@@ -1,5 +1,7 @@
 # Week 6: Hibernate ORM
 
+<br>
+
 ## `Thursday`
 -  Self-Study Hibernate concepts
 -  Prepare for Presentations next Monday 10:00am EST
