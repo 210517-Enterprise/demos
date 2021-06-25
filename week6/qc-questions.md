@@ -1,6 +1,6 @@
 # Hibernate QC Questions
 
-<img src="https://github.com/210517-Enterprise/demos/blob/main/week6/curriculum/hibernate.png">
+<img src="https://github.com/210517-Enterprise/demos/blob/main/week6/imgs/hibernate.png">
 
 1.  What is Hibernate? What is JPA?
     
