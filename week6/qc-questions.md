@@ -1,4 +1,4 @@
-# Hibernate
+# Hibernate QC Questions
 
 <img src="https://github.com/210517-Enterprise/demos/blob/main/week6/curriculum/hibernate.png">
 
