@@ -38,11 +38,11 @@
     
 18.  What are the configuration options for Hibernate?
     
-  *  How to specify the SQL dialect?
+      *  How to specify the SQL dialect?
 
-  *  What data must be specified for the SessionFactory?
+      *  What data must be specified for the SessionFactory?
 
-  *  What is hbm2ddl?
+      *  What is hbm2ddl?
     
 19.  How would you configure Hibernate to print to the console all SQL statements run?
     
