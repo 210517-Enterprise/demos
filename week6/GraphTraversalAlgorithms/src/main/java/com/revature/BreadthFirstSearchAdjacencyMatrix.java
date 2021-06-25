@@ -5,15 +5,34 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class BFSAdjacencyMatrix {
+/*
+ * Breadth First Search is graph traversal algorithm.
+ *  
+ * In this algorithm, lets say we start with node i, then we will visit neighbors of i, then neighbors of neighbours of i and so on. 
+ * It is very much similar to which is used in binary tree. 
+ * 
+ * We use queue to traverse graph. 
+ * We put first node in queue. 
+ * It repeatedly extracts node and put its neighbors in the queue. 
+ * 
+ * Only difference with respect to binary tree is that we need to track if node have been visited before or not since our structure of elements is non linear. 
+ * It can be easily done with help of boolean variable visited in the node. 
+ * 
+ * If node have been already visited then we won’t visit it again.
+ */
+public class BreadthFirstSearchAdjacencyMatrix {
 	
 	private Queue<Node> queue;
 	static ArrayList<Node> nodes = new ArrayList<Node>();
 	
-	public BFSAdjacencyMatrix() {
+	public BreadthFirstSearchAdjacencyMatrix() {
 		queue = new LinkedList<Node>();
 	}
 	
+	/*
+	 * We will invoke this method in the bfs() method on each node starting from the root node
+	 * to collect a List of all Nodes.
+	 */
 	public ArrayList<Node> findNeighbors(int adjacency_matrix[][], Node x) {
 		
 		int nodeIndex = -1;
@@ -26,7 +45,6 @@ public class BFSAdjacencyMatrix {
 				nodeIndex = i;
 				break;
 			}
-			
 		}
 		
 		if (nodeIndex != -1) {
@@ -39,7 +57,6 @@ public class BFSAdjacencyMatrix {
 			}
 		}
 		return neighbors;
-		
 	}
 	
 	public void bfs(int adjacency_matrix[][], Node node) {
@@ -55,7 +72,11 @@ public class BFSAdjacencyMatrix {
 			
 			System.out.print(element.data + ", ");
 			
-			// b). find the neighbors of the popped node and check if their visited
+			/*
+			 *  b). find the neighbors of the popped node and check if their visited/nut null
+			 *  	by instead passing our findNeighbors method.
+			 */
+			
 			List<Node> neighbors = findNeighbors(adjacency_matrix, element);
 			
 			for(int i=0; i<neighbors.size(); i++) {
@@ -71,9 +92,7 @@ public class BFSAdjacencyMatrix {
 		}
 	}
 	
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		// Build a representation of the graph in the image
 		Node node40 = new Node(40);
@@ -83,7 +102,6 @@ public class BFSAdjacencyMatrix {
 		Node node60 = new Node(60);
 		Node node70 = new Node(70);
 		Node node50 = new Node(50);
-		
 		
 		nodes.add(node40);
 		nodes.add(node10);
@@ -104,16 +122,10 @@ public class BFSAdjacencyMatrix {
 			{0,0,0,0,0,0,0}	 // Node 6: 70
 		};
 		
-		
-		BFSAdjacencyMatrix bfsamExample = new BFSAdjacencyMatrix();
+		BreadthFirstSearchAdjacencyMatrix bfsamExample = new BreadthFirstSearchAdjacencyMatrix();
 		
 		System.out.println("Traversing graph using adjacency matrix to map relations/edges");
 		bfsamExample.bfs(adjacency_matrix, node40);
-		bfsamExample.bfs(adjacency_matrix, node40);  // the isVissited property is set to true so can't traverse again
-		
-		
 		
 	}
-	
-
 }
