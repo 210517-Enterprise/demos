@@ -1,5 +1,7 @@
 # Hibernate
 
+<img src="https://github.com/210517-Enterprise/demos/blob/main/week6/curriculum/hibernate.png">
+
 1.  What is Hibernate? What is JPA?
     
 2.  What is the benefit of using Hibernate over JDBC?
