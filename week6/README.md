@@ -4,6 +4,13 @@
 <img src="https://github.com/210517-Enterprise/demos/blob/main/week6/imgs/image.png"/>
 <br>
 
+## `Friday`
+- Graph Traversal: `Breadth First Search`
+
+- Solve this [Hackerrank Problem](www.hackerrank.com/210517-enterprise-hr5) before Monday
+
+<br>
+
 ## `Thursday`
 -  Self-Study Hibernate concepts
   - There are some other questions that may be asked of you in QC on Tuesday:
