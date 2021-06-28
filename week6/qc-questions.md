@@ -22,7 +22,7 @@
     
 10.  Under what circumstances would your program throw a LazyInitializationException?
     
-11.  What are the 4 ways to make a query using Hibernate?
+11.  What are the 3 ways to make a query using Hibernate?
     
 12.  What is HQL? What makes it different from SQL?
     
