@@ -4,6 +4,7 @@
 
 ## `Tuesday`
 - :star: Watch this YouTube video: 📹 [*What is Spring Really About?*](https://www.youtube.com/watch?v=gq4S-ovWVlM)
+- :star: Watch this YouTube video 📹 on the basics of [Dependency Injection](https://www.youtube.com/watch?v=GB8k2-Egfv0)
 
 - :star: Study [Spring Overview](https://www.javatpoint.com/spring-tutorial)
   - *What are the benefits of Spring?* 
