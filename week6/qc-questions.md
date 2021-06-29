@@ -1,6 +1,6 @@
 # Hibernate QC Questions
 
-<img src="https://github.com/210517-Enterprise/demos/blob/main/week6/curriculum/hibernate.png">
+<img src="https://github.com/210517-Enterprise/demos/blob/main/week6/imgs/hibernate.png">
 
 1.  What is Hibernate? What is JPA?
     
@@ -22,7 +22,7 @@
     
 10.  Under what circumstances would your program throw a LazyInitializationException?
     
-11.  What are the 4 ways to make a query using Hibernate?
+11.  What are the 3 ways to make a query using Hibernate?
     
 12.  What is HQL? What makes it different from SQL?
     
