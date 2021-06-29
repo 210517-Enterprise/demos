@@ -8,4 +8,4 @@
 - :star: Study [Spring Overview](https://www.javatpoint.com/spring-tutorial)
   - *What are the benefits of Spring?* 
 
-- :star: 📹 Watch [this YouTube video]: [*What is Spring Really About?*](https://www.youtube.com/watch?v=gq4S-ovWVlM)
+- :star: Watch this YouTube video: 📹 [*What is Spring Really About?*](https://www.youtube.com/watch?v=gq4S-ovWVlM)
