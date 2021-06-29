@@ -10,3 +10,5 @@
   - *What are the benefits of Spring?* 
 
 - :star: Study the [Spring `IoC` Container](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html)
+
+- Here's a great [code-along demo to build a Spring Data JPA Project](https://www.youtube.com/watch?v=z3HnFBzn7DI) 👈
