@@ -1,7 +1,7 @@
 # Week 7: REST and Spring 🍃
 
 ## `Wednesday`
-- What is REST?
+- What is [REST](https://www.codecademy.com/articles/what-is-rest)?
 
 - What makes an API RESTful?
   - *i.e **What are the 6 constraints of REST?***
