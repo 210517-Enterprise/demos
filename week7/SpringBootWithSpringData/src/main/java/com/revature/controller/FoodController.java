@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -31,7 +33,7 @@ public class FoodController {
 	// using Property Expressions
 	
 	
-	// here will have some methods that provide some type of fucntionality when a user hits som end point
+	// here will have some methods that provide some type of fucntionality when a user hits some end point
 
 	// When a user hits this end point with a GRT request we'll return all foods in the db
 	@GetMapping("/all")
@@ -39,6 +41,25 @@ public class FoodController {
 		
 		return (List<Food>) foodRepo.findAll();// a findAll() invocation from the Food Repo
 		
+		
+	}
+	
+	
+	@GetMapping("/pizza")
+	public @ResponseBody Food getPizza() {
+		
+		return foodRepo.findByDishName("pizza");
+		
+	}
+	
+	
+	// This will a method to insert a food object into our db using a POST method and return a "success message"
+	@PostMapping("/add")
+	public @ResponseBody String addFood(@RequestBody Food f) {
+		
+		Food returned = foodRepo.save(f);
+		
+		return "Success";
 		
 	}
 	
