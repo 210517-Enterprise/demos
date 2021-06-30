@@ -1,5 +1,20 @@
 # Week 7: REST and Spring 🍃
 
+## `Wednesday`
+- What is REST?
+
+- What makes an API RESTful?
+  - *i.e **What are the 6 constraints of REST?***
+
+- What is a Spring Bean?
+
+- List the 3 ways that Spring allows us to configure our container and beans.
+  - Classic XML configuration
+  - Annotation-driven configuration with `@Componenet`, `@Controller`, and other stereotype annotations.
+  - Java configuration with `@Configuration` and `@Bean`
+
+  > *Remember that many modules provide their own preconfigured Beans*
+
 <br>
 
 ## `Tuesday`
