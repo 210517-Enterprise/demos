@@ -13,7 +13,8 @@
   - Annotation-driven configuration with `@Componenet`, `@Controller`, and other stereotype annotations.
   - Java configuration with `@Configuration` and `@Bean`
 
-  > *Remember that many modules provide their own preconfigured Beans*
+- What does the `ApplicationContext` do?
+  - How does `ApplicationContext` differ from `BeanFactory`?  
 
 <br>
 
