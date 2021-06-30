@@ -20,7 +20,7 @@
     <!--  SETTER INJECTION setting certain properties of a class upon instantiation -->
     <bean name="MotdServiceBean" class="com.revature.service.MotdServiceBean" init-method="initMotds">
   	
-    	<property name="defaultMotdIndex"> <value>4</value> </property>
+    	<property name="defaultMotdIndex"> <value>0</value> </property>
     
     </bean>
     
