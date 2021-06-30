@@ -1,4 +1,20 @@
-# Week 7: Spring 🍃
+# Week 7: REST and Spring 🍃
+
+## `Wednesday`
+- What is [REST](https://www.codecademy.com/articles/what-is-rest)?
+
+- What makes an API RESTful?
+  - *i.e **What are the 6 constraints of REST?***
+
+- What is a Spring Bean?
+
+- List the 3 ways that Spring allows us to configure our container and beans.
+  - Classic XML configuration
+  - Annotation-driven configuration with `@Componenet`, `@Controller`, and other stereotype annotations.
+  - Java configuration with `@Configuration` and `@Bean`
+
+- What does the `ApplicationContext` do?
+  - How does `ApplicationContext` differ from `BeanFactory`?  
 
 <br>
 
