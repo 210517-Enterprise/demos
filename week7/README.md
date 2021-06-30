@@ -1,4 +1,4 @@
-# Week 7: Spring 🍃
+# Week 7: REST and Spring 🍃
 
 <br>
 
