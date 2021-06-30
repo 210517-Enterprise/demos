@@ -1,4 +1,4 @@
-# Week 7: Spring Framework
+# Week 7: Spring 🍃
 
 <br>
 
