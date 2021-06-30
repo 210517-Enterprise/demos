@@ -7,15 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.model.Hero;
-import com.revature.repository.HeroRepositoryImpl;
+import com.revature.repository.HeroRepository;
 
 @Service("heroService")
-public class HeroService {
+public class HeroService implements IHeroService {
 	
 	private Logger log = Logger.getLogger(HeroService.class);
 	
 	@Autowired 
-	private HeroRepositoryImpl heroRepo;
+	private HeroRepository heroRepo;
+;
 	
 	public HeroService() {
 		log.trace("Injection using Autowried Hero Repo Impl in the HeroService");

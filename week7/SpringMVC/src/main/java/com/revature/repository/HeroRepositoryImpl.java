@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.model.Hero;
 
-@Repository("heroRepo") // the repository annotation indicates that this class provides a mechanism for CRUD operations of this particular obj
+@Repository("heroRepository") // the repository annotation indicates that this class provides a mechanism for CRUD operations of this particular obj
 @Transactional // This annotation tells Spring how this class is associates with our DB sessions.
 public class HeroRepositoryImpl implements HeroRepository{
 
