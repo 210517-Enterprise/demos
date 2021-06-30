@@ -3,10 +3,29 @@
   <display-name>SpringMVC</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	
+  	<param-value>/WEB-INF/application-context.xml</param-value>
+  
+  </context-param>
+  
+  
+  <!--  We need to add something called the Context Load Listener which will read and parse our applicaiton context xml file -->
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  	<!--  This allows Tomcat to start up the instantiation of our spring beans -->
+  </listener>
+  
+  <servlet>
+  	<servlet-name>dispatcher</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>dispatcher</servlet-name>
+  	<url-pattern>/*</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

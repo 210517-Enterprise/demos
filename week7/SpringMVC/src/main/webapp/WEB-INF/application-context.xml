@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+		
+		
+	<!--  We want to enable our application to read all Spring MVC specific annotations PostMapping, etc... -->
+		<mvc:annotation-driven/>
+		
+		<tx:annotation-driven/>
+		
+		<!--  Context scanning: scan all packages to be managed by this file..(the IoC container) -->
+		<context:component-scan base-package="com.revature.repository"></context:component-scan>
+		<context:component-scan base-package="com.revature.service"></context:component-scan>
+		<context:component-scan base-package="com.revature.controller"></context:component-scan>
+		
+		
+		<!--  data source bean (JDBC creds) -->
+		<bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		
+			<property name="driverClassName" value="org.postgresql.Driver"></property>
+			
+			<property name="url" value="jdbc:postgresql://localhost:5432/postgres"></property>
+			
+			<property name="username" value="postgres"></property>
+			
+			<property name="password" value="postgres"></property>
+		</bean>
+		
+		<!--  We inject our dataSource bean into a sessionFactory bean -->
+		
+		<bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		
+			<property name="dataSource" ref="dataSource"></property>
+			
+			<!--  Annotation mapping -->
+			<property name="packagesToScan" value="com.revature.model"></property>
+			
+			<property name="hibernateProperties">
+
+				<props>
+					<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+					<prop key="show_sql">true</prop>
+					<prop key="hibernate.hbm2ddl.auto">create</prop>
+					<!-- customize this -->
+					<prop key="hibernate.default_schema">public</prop>
+				</props>
+			</property>
+		</bean>
+		
+		<!-- Here we are manually injecting the transaction manager into the SessionFactory 
+		Bean -->
+	<!-- This will make all sessions capable of a transaction -->
+	<bean name="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+
+	</bean>
+		
+</beans>
