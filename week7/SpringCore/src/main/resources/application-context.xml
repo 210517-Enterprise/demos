@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!--  This is XML Schema-based configuration https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/xsd-configuration.html-->
+    
+    <!--  Spring Configurations tell the IOC container how beans are to be created and how they are dependent on eachother -->
+    
+    <!--  We call this the application context or IoC container -->
+    
+    <!--  CONSTRUCTOR INJECTION -->
+    <bean name="MainBean" class="com.revature.MainBean">
+    	
+    	<constructor-arg name="motdServiceBean" ref="MotdServiceBean" />
+    	
+    </bean>
+    
+    <!--  SETTER INJECTION setting certain properties of a class upon instantiation -->
+    <bean name="MotdServiceBean" class="com.revature.service.MotdServiceBean" init-method="initMotds">
+  	
+    	<property name="defaultMotdIndex"> <value>4</value> </property>
+    
+    </bean>
+    
+    
+</beans>
