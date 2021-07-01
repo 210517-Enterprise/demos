@@ -19,7 +19,7 @@ When you're presenting, you're welcome to provide a brief slideshow demonstratin
 - Register
 - Anything else
 
-## Extra Credit
+## Stretch Goals
 - Deploy on an EC2
 - Set up a Jenkins Pipeline for the Project to manage CI/CD
 
