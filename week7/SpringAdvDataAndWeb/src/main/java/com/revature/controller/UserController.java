@@ -39,7 +39,7 @@ public class UserController {
 	}
 	
 	// insert
-	@PostMapping
+	@PostMapping("/add")
 	public ResponseEntity<User> insert(@Valid @RequestBody User u) {
 		
 		return ResponseEntity.ok(userService.insert(u));
