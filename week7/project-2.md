@@ -25,7 +25,7 @@ When you're presenting, you're welcome to provide a brief slideshow demonstratin
 
 <br>
 
-## ⁉️## ⁉️ What's Due Tuesday July 6th by 10am? ⁉️ ⁉️
+## ⁉️ ⁉️ What's Due Tuesday July 6th by 10am? ⁉️ ⁉️
 - **Project Proposal** - you're welcome to use the word document provided in this directory or make a copy of [this google doc](https://docs.google.com/document/d/1F2UKzwIcsxWdGlY5bIsM6XfOyx2NAPiL0VXWOLcLTkk/edit?usp=sharing)
 
   > Slack this document to me.  The proposal is a brief description of your application, team members, and Team Lead.
