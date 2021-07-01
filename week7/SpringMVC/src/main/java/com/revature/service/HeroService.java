@@ -15,8 +15,8 @@ public class HeroService implements IHeroService {
 	private Logger log = Logger.getLogger(HeroService.class);
 	
 	@Autowired 
-	private HeroRepository heroRepo;
-;
+	private HeroRepository heroRepo; // Autowire the INTERFACE of the implementation class
+	
 	
 	public HeroService() {
 		log.trace("Injection using Autowried Hero Repo Impl in the HeroService");

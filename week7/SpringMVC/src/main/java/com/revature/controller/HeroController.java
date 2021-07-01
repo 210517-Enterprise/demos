@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,19 +17,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.revature.ajax.ClientMessage;
 import com.revature.model.Hero;
-import com.revature.service.HeroService;
+import com.revature.service.IHeroService;
 
 @Controller("heroController")
 public class HeroController implements IHeroController{
 
 	@Autowired
-	private HeroService heroService;
+	private IHeroService heroService;
 	
 	
 	// findHero post method  
 	@PostMapping("/findHero")
 	public @ResponseBody Hero returnHero(@RequestBody Hero hero, HttpServletRequest request) {
-		request.getSession();
+		request.getSession(); // do what you want with that data 
 		return heroService.getHero(hero.getName());
 	}
 	
