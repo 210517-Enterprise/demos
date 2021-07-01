@@ -6,6 +6,10 @@
 - What makes an API RESTful?
   - *i.e **What are the 6 constraints of REST?***
 
+- What is the `Applicaiton Context`?
+
+- :star: Watch this [YouTube video on Spring MVC](https://www.youtube.com/watch?v=xkDBaldNki4)
+
 - What is a Spring Bean?
 
 - List the 3 ways that Spring allows us to configure our container and beans.
