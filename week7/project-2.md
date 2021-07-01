@@ -22,18 +22,21 @@ When you're presenting, you're welcome to provide a brief slideshow demonstratin
 
 ## Extra Credit
 - Deploy on an EC2
-- Set up a Jenkins Pipeline for the Project
+- Set up a Jenkins Pipeline for the Project to manage CI/CD
 
-## ⁉️ What's Due Friday March 19th by 11am? ⁉️
+<br>
+
+## ⁉️ What's Due Monday March 19th by 11am? ⁉️
 - **Project Proposal** - you're welcome to use the word document provided in this directory or make a copy of [this google doc](https://docs.google.com/document/d/1F2UKzwIcsxWdGlY5bIsM6XfOyx2NAPiL0VXWOLcLTkk/edit?usp=sharing)
-  > Slack this document to Sophia.  The proposal is a brief description of your application, team members, and Team Lead.
+
+  > Slack this document to me.  The proposal is a brief description of your application, team members, and Team Lead.
   > The *Team Lead* represents the point of contact for the team and will be reporting updates in every morning's standup.
-- You will have you your first Stand-Up at 10:00am that morning, introducing your project idea and speaking on your planning process.
+- **You will have you your first Stand-Up at 10:00am EST on Monday, introducing your project idea and speaking on your planning process**.
 
 ## Agile Scrum Guidelines
 For software teams, the stand-up is like the team’s huddle. It’s even commonly known as the daily scrum, and reinforces “we” to keep everyone aware of the team’s landscape and progress.
-- Every morning, at 10:00am you will have a Daily Standup of about 5-10 minutes.
-- At the end, each **Lead** will report to the Scrum Master (Sophia) about the current status of the project and any blockers you're facing or have resolved
+- Every day you should have a stand-up meeeting with your team.
+- Each morning, your Team Lead will present on the current status of the project and any blockers you're facing or have resolved the day before and what you're doing that day.
 
 ### In your Team Standups Use the 3 question agenda:
 *Lead asks each attendee to answer these questions.*
@@ -47,6 +50,3 @@ For software teams, the stand-up is like the team’s huddle. It’s even common
 - Use a [Kanban Board](https://www.atlassian.com/agile/kanban/boards) like [Trello](https://trello.com/?&aceid=&adposition=&adgroup=105703214328&campaign=9843285532&creative=437184392320&device=c&keyword=trello&matchtype=e&network=g&placement=&ds_kids=p53016490704&ds_e=GOOGLE&ds_eid=700000001557344&ds_e1=GOOGLE&gclid=Cj0KCQiA2af-BRDzARIsAIVQUOfgZifIwr-ClvNLXs4m9zn7VFhTU4bXoVdq1iBVe7SNfiXGeVVNKlgaAsHAEALw_wcB&gclsrc=aw.ds)
 - Use a [Burndown Chart](http://www.agilenutshell.com/burndown)
 
-<h2>If Software were Built Like Cars...(Waterfall vs. Agile)</h2>
-
-<img src="software-dev-with-cars.jpg">
