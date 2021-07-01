@@ -1,6 +1,6 @@
 # Project-2 Requirements
 Within groups of 4 or 5, you are required to develop an application using the following mandatory technologies.
-#### Presentation Date: Wednesday March 31st, 2020
+#### Presentation Date: Monday July 19th, 2021
 You will present this application as if you were pitching it to a board or to investors.
 When you're presenting, you're welcome to provide a brief slideshow demonstrating the technologies involved in the app, it's features, and the Agile Development Process you undewent to develop it.
 
