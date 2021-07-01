@@ -4,7 +4,7 @@ Within groups of 4 or 5, you are required to develop an application using the fo
 You will present this application as if you were pitching it to a board or to investors.
 When you're presenting, you're welcome to provide a brief slideshow demonstrating the technologies involved in the app, it's features, and the Agile Development Process you undewent to develop it.
 
-## Required Technologies
+## Required Technologies for RESTful Wep Application
 - Spring Boot (With Spring Data and Spring Web)
 - JavaScript, HTML, CSS (or React)
 - Consume a RESTful API
