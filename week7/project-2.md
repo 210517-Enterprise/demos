@@ -5,11 +5,10 @@ You will present this application as if you were pitching it to a board or to in
 When you're presenting, you're welcome to provide a brief slideshow demonstrating the technologies involved in the app, it's features, and the Agile Development Process you undewent to develop it.
 
 ## Required Technologies
-- Spring MVC
-- Angular
+- Spring Boot (With Spring Data and Spring Web)
+- JavaScript, HTML, CSS (or React)
 - Consume a RESTful API
 - Amazon RDS
-- Hibernate
 - GitHub (*Each team must maintain a repository to which all members contribute*)
 - Unit Tests & Logging
 - Roadmap Presentation
@@ -26,17 +25,18 @@ When you're presenting, you're welcome to provide a brief slideshow demonstratin
 
 <br>
 
-## ⁉️ What's Due Monday March 19th by 11am? ⁉️
+## ⁉️## ⁉️ What's Due Tuesday July 6th by 10am? ⁉️ ⁉️
 - **Project Proposal** - you're welcome to use the word document provided in this directory or make a copy of [this google doc](https://docs.google.com/document/d/1F2UKzwIcsxWdGlY5bIsM6XfOyx2NAPiL0VXWOLcLTkk/edit?usp=sharing)
 
   > Slack this document to me.  The proposal is a brief description of your application, team members, and Team Lead.
   > The *Team Lead* represents the point of contact for the team and will be reporting updates in every morning's standup.
-- **You will have you your first Stand-Up at 10:00am EST on Monday, introducing your project idea and speaking on your planning process**.
+
+<br>
 
 ## Agile Scrum Guidelines
 For software teams, the stand-up is like the team’s huddle. It’s even commonly known as the daily scrum, and reinforces “we” to keep everyone aware of the team’s landscape and progress.
 - Every day you should have a stand-up meeeting with your team.
-- Each morning, your Team Lead will present on the current status of the project and any blockers you're facing or have resolved the day before and what you're doing that day.
+- Each morning at 10:00am, your Team Lead will present on the current status of the project and any blockers you're facing or have resolved the day before and what you're doing that day.
 
 ### In your Team Standups Use the 3 question agenda:
 *Lead asks each attendee to answer these questions.*
