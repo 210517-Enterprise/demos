@@ -15,7 +15,7 @@ public class HeroService implements IHeroService {
 	private Logger log = Logger.getLogger(HeroService.class);
 	
 	@Autowired 
-	private HeroRepository heroRepo; // Autowire the INTERFACE of the implementation class
+	private HeroRepository heroRepo; // Autowire the INTERFACE
 	
 	
 	public HeroService() {
@@ -35,8 +35,5 @@ public class HeroService implements IHeroService {
 	public Hero getHero(String name) {
 		return heroRepo.findByName(name);
 	}
-	
-	
-	
 
 }
