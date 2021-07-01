@@ -8,6 +8,6 @@ import com.revature.model.Address;
 
 public interface AddressDAO extends JpaRepository<Address, Integer>{
 	
-	public Set<Address> findByOwnerUsername(String username);
+	public Set<Address> findByOwnersUsername(String username);
 
 }

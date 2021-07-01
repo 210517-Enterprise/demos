@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-public abstract class ApiValidationError extends ApiSubError{
+public class ApiValidationError extends ApiSubError{
 
 	private String object; // the type
 	private String field; // field name
