@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-//@Table(name="addresses") // this just add
+//@Table(name="addresses") // this just add's the name of the table -- otherwise the mapped table takes on the name of the class.
 @Data @NoArgsConstructor @AllArgsConstructor
 @EqualsAndHashCode(exclude = {"owners"}) @ToString(exclude= {"owners"}) // this prevents recursive loop which happens in objects with a bi-directional relationhship
 public class Address { // automatically hibernate will generate a table with the name of this class in lowercase
@@ -31,7 +31,7 @@ public class Address { // automatically hibernate will generate a table with the
 	private int id;
 	
 	private String street; // hibernate will automatically do this for us! "12 Main st."
-	private String secondary;  // "Apt. A"
+	private String secondary;  //"Apt. A"
 	
 	@Length(min = 2, max=2)
 	private String state;
