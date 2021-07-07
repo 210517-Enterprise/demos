@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello JS</title>
+</head>
+<body>
+    <h1>Hello JavaScript Example!</h1>
+
+    <!-- I want to print some p element 50 times "Some repetative statement"-->
+    <p>Some repetative statment</p>
+
+
+    <!-- It's importnatnt to alwasys put the script tag at the bottom -->
+    <script>
+    
+        for(var i=0; i<50; i++) {
+            
+            document.write("<br><br>");
+            document.write("Some repetative statment");
+        }
+
+        console.log("look at this console log!");
+        console.warn("pineapples do NOT go on pizza");
+        console.error("oh no something has gone horribly wrong");
+
+
+        // This a single line comment in JS
+        /*
+        This is a multi
+        line
+        comment
+        */
+
+        /**
+        * This would be a documentation comment
+        which automatically populates the *'s in a .js file
+        */
+
+        /*
+            What's a scripting language?
+                a snippet of code that automates some functionality.  It is NOT a complete applciation or program...it's just a snippet of code.
+
+
+            What's JavaScript?
+                JavaSciprt is a programming/scripting language originally designed to provide functionality to web pages.
+                ; effectivelymaking those web pages more dynamic. it allows website clients to run code from their machines
+                instead of always returning to a server for new information or calculations.
+
+                Traditional languages like C++ are always compiled BEFORE they're run into executable binary form.  
+
+                Scripting languages in contrast are executed line by line by an interpreter.
+
+                Google Chrome's interpreter is called the V8 engine. Firefox is called Spider Monkey.
+                In 2009, someone ripped out Chrome's V8 Engine and wrapped in a C++ shell, and thus Node was born,
+                which allows you to execute javascript outside of the browser.
+
+                Some feature os JS:
+                    - It is Opbject Oriented
+                    - Supports fucntional programming
+                    - Loosely typed
+                        - a variable can hold ANY datatype
+                    - It's dynamic (you can control JS during runtime)
+                        > you can modify the structure of objects while the program is running
+                    - JS is designed for DOM manipulation
+                        > The DOM Document Object Model is a virtual representation of the HTML page, rendered by the browser
+                    - Generally JS is interpreted by 1 of 2 things: by the borwser, or node.js
+        */
+    </script>
+    <script src=""></script>
+</body>
+</html>
