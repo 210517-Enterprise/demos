@@ -1,6 +1,6 @@
-# READ THIS FIRST 🛑 🛑 🛑
+# 🛑 🛑 🛑 READ THIS FIRST 🛑 🛑 🛑
 Below are a list of **HTML, CSS,** and **JavaScript** questions. <br>
-These aren't "light study suggestions".  I highly reccomend you study ***each and every question on this page plus the following resource:*** <br>
+I highly reccomend you study ***each and every question on this page plus the following resource:*** <br>
 JavaScript is dense.  **[Here are more questions to study](https://github.com/210517-Enterprise/demos/blob/main/week8/js-questions.md)**. *There is some overlap*.
 
 > Check out this [JavaScript Cheatsheet](https://github.com/mbeaudru/modern-js-cheatsheet) for more resources.<br>
