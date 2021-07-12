@@ -16,5 +16,6 @@ buildNumber.properties
 **/*.class
 **/.settings
 **/logs/*
+.vscode
 
 .metadata/
