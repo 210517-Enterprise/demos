@@ -1,11 +1,11 @@
-export default function HelloWorld(props) {
+export default function HelloWorld({ noun, location, korak }) {
   return (
     <>
       <h1>
-        Hello {props.noun} from {props.location}!
+        Hello {noun} from {location}!
       </h1>
 
-      {props.korak ? <p>Yahaha! You found me!</p> : <p>Keep looking, bud.</p>}
+      {korak ? <p>Yahaha! You found me!</p> : <p>Keep looking, bud.</p>}
     </>
   );
 }

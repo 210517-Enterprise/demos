@@ -1,6 +1,6 @@
 # Practice 1
-## Fetch and Display Pokemon Data from the PokeAPI
-> https://pokeapi.co
+## Fetch and Display Pokemon Data from the GithubAPI
+> https://api.github.com/users/
 
 1. Fetch data with useEffect and load the data into a state variable.
 2. Use JSX to render at least 6 properties from the data in the browser.
