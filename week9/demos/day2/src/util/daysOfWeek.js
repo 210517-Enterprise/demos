@@ -7,3 +7,5 @@ export const weekDays = [
 ];
 
 export const weekend = ["Saturday", "Sunday"];
+
+export const daysOfWorkWeek = weekDays.map((day, i) => ({ id: i, name: day }));

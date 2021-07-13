@@ -5,7 +5,7 @@ export default function DaysDisplay(props) {
 
       <ul>
         {props.days.map((day) => (
-          <li>{day}</li>
+          <li key={day.id}>{day.name}</li>
         ))}
       </ul>
     </>
