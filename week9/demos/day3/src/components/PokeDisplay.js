@@ -9,8 +9,8 @@ export default function PokeDisplay({ name }) {
       .then(updateData);
   }, [name]);
 
-  return data === null ? (
-    <p>Loading Data</p>
+  return data === null || data.sprites === undefined ? (
+    <p>[Pokemon Goes Here]</p>
   ) : (
     <>
       <h1>{data.name}</h1>
@@ -18,7 +18,7 @@ export default function PokeDisplay({ name }) {
       <h2>Abilities</h2>
       <ul>
         {data.abilities.map((ability) => {
-          return <li>{ability.ability.name}</li>;
+          return <li key={ability.ability.name}>{ability.ability.name}</li>;
         })}
       </ul>
     </>

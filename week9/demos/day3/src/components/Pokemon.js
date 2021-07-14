@@ -1,23 +1,25 @@
 import PokeDisplay from "./PokeDisplay";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import React from "react";
 
 //to provide a search bar for users to query the api and display a pokemon
 export default function Pokemon() {
-  const [input, updateInput] = useState(null);
-  const inputRef = React.createRef();
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => updatePokemonName(data.pokemonName);
+
+  const [pokemonName, updatePokemonName] = useState("");
+
   return (
     <>
-      <input
-        id="text-bar"
-        type="text"
-        placeholder="Enter a pokemon name"
-        ref={inputRef}
-      ></input>
-      <button onClick={() => updateInput(inputRef.current.value)}>
-        Submit
-      </button>
-      <PokeDisplay name={input} />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <label>
+          Pokemon Name
+          <input {...register("pokemonName", { required: true })} />
+        </label>
+        <input type="submit" />
+      </form>
+      <PokeDisplay name={pokemonName} />
     </>
   );
 }
