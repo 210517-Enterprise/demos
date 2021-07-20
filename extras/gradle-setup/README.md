@@ -1,4 +1,5 @@
 # Install Gradle
+> *The following steps guide you through installing gradle on Windows 10.  If you're installing it on Mac please go [here](https://kodejava.org/how-do-i-install-gradle-in-os-x/).*
 
 1. Go to [Gradle's installation page]() and click `Binary-only` under **Installing Manually**.
 
