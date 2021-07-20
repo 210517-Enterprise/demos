@@ -15,6 +15,9 @@ sudo yum install maven -y
 sudo yum install git -y
 sudo amazon-linux-extras install tomcat8.5 -y
 
+# install cowsay and play around if you want :p
+sudo yum install cowsay -y
+
 # Make a new directory to hold your project to host
 mkdir projects
 cd projects
