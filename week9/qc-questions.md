@@ -2,19 +2,46 @@
 
 1.  What is React? Is it a library or framework? What’s the difference between those?
     
+    React is technically a JavaScript library. Generally, libraries are used to perform specific operations in your application, whereas frameworks provide a skeleton for the entire application to function in a specific way. Frameworks are typically much more dependent on abstractions and provide generic functionality out of the box.
+    
 2.  What does it mean to be component-based? What does a component represent?
+
+    Component-based refers to an application design process that breaks the application down into reusible components. A component represents a building block for the UI and can be functional or logical by design.
     
 3.  Tell me how you would start up a new React project? What does ‘create react app’ setup for you?
+
+    You could run the command 'npx create-react-app [application name]'. Out of the box, create-react-app provides us with some boilerplating for a base level react app. It configures our project hierarchy, connects our App.js component to the DOM through the index.js ReactDOM.Render method and also configures our package.json with some defaults.
     
 4.  How would you create a component?
+
+    If you were creating function components in JSX, you could create a js file and in that file write 'export function ComponentName(){}'. Inside the brackets you would write whatever logic you want the component to perform. Typically returning some HTML as JavaScript thanks to JSX.
     
 5.  What are “props”? What is state? What data should be put in which?
     
 6.  What is the lifecycle of a component?
+
+    1. Mounting
+      * constructor
+      * render
+      * componentDidMount
+    2. Updating
+      * render
+      * componentDidUpdate
+    3. Unmounting
+      * componentWillUnmount
     
 7.  What is the difference between a functional and a class component?
+
+    The difference is purely in its declaration. Both methods produce the same result.
+    1. A functional declaration
+        * function FunctionalComponent(){ return \<h1>some text\</h1>;}
+    2. A class declaration
+        * class ClassComponent extends React.Component {render(){return \<h1>some text\</h1> }}
     
 8.  What is the purpose of a container component? What about a higher-order component?
+
+    1. Container Component
+    2. High-Order Component
     
 9.  What is the virtual DOM?
     
