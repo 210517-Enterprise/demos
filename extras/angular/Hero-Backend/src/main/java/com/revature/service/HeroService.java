@@ -1,5 +1,7 @@
 package com.revature.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +20,16 @@ public class HeroService {
 		return hero.getId() != 0; // checking did we indeed insert a hero into the db? true or false
 	}
 	
+	public List<Hero> getAllHeroes() {
+		return heroRepo.findAll();
+	}
+	
+	public Hero getHero(String name) {
+		return heroRepo.findByName(name);
+	}
+	
+	public Hero getHero(int id) {
+		return heroRepo.getById(id);
+	}
 
 }

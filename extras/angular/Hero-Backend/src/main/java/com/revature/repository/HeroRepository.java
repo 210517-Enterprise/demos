@@ -6,5 +6,6 @@ import com.revature.model.Hero;
 
 public interface HeroRepository extends JpaRepository<Hero, Integer>{
 
+	Hero findByName(String name);
 	
 }
