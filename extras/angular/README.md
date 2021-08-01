@@ -325,14 +325,147 @@ const routes: Routes = [
 
 > `router-outlet` in Angular works as a placeholder which is used to load the different components dynamically based on the activated component or current route state.  This will load whatever component we have specified to be rendered based on the url.
 <br>
-:tada: You should see this in your browser!
+:tada: `Main` Component is finished; You should see this in your browser!
 <br>
+
 <img src="imgs\main_1.png">
 
+<br>
 
+## Step 8: Build an HTTP Service
+Our other component's will have functions that make an HTTP request to our server.  In Angular, we modularize this responsibility in the form of a [**Service**](https://angular.io/guide/architecture-services).
+
+> A **Service** is a broad category encompassing any value, function, or feature that an application needs. A service is typically a class with a narrow, well-defined purpose. It should do something specific and do it well. Angular distinguishes components from services to increase modularity and reusability.
 
 <br>
 
-## Step 8: 
+We will use **Dependency Injection** to inject an HTTP Service into our components.
 
+1. Within `src/app` create a directory called `services`:
+```
+cd src/app
+mkdir services
+```
 
+2. **Generate a Service with the Angular CLI**: Similar to how we generated a component with the CLI, we will generate a service called `hero-service`. Run:
+```
+cd src/app/services
+ng g s hero
+```
+
+3. Open `hero.service.ts` (there is a unit testing file, and a typscript file). At the top, import `import { HttpClient, HttpHeaders } from '@angular/common/http';`.
+
+4. Import the url to the api we'll be hitting with the HttpClient as well with `import { HERO_URL } from './../../environments/environment';`
+
+5. We will use constructor injection to inject the HttpClient dependency into this custom service.  Your `hero.service.ts` file should look as follows:
+
+<br>
+
+```ts
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HERO_URL } from './../../environments/environment';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class HeroService {
+
+  constructor(private http: HttpClient) { }
+}
+```
+
+<br>
+
+## Step 9: Declare `HttpClientModule` as an import within `app.module.ts`
+
+- Open `src/app/app.module.ts` and add `HttpClientModule`.  You should also import it at the top with `import { HttpClientModule } from '@angular/common/http';`.
+
+Your `app.module.ts` file should look like this:
+
+```ts
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { MainComponent } from './components/main/main.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    MainComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+<br>
+
+## Step 10: Create `Hero` & `ClientMessage` Models
+Since we will be creating/retrieving `Hero` and `ClientMessage` models, we need to create a class within our Angular App to represent the object that we'll be using our Hero Service to perform CRUD operations on.
+
+1. In `src/app` create a directory called `models`:
+```
+cd src/app
+mkdir models
+```
+
+> *models* are technically `classes` in Angular.
+
+2. `cd` into `models` directory and generate a `Hero` class like so:
+```
+cd models
+ng generate class hero --type=model
+```
+
+3. Create one for `ClientMessage`, too.
+```
+cd models
+ng generate class client-message --type=model
+```
+
+4. In `hero.model.ts` write the following code:
+
+<br>
+
+```ts
+export class Hero {
+
+    id: number;
+    name: string;
+    superPower: string;
+    hasCape: boolean;
+
+    constructor(id: number, name: string, superPower: string, hasCape: boolean) {
+        this.id = id;
+        this.name = name;
+        this.superPower = superPower;
+        this.hasCape = hasCape;
+    }
+}
+```
+<br>
+
+5. In `client-message.model.ts` write the following code:
+
+<br>
+
+```ts
+export class ClientMessage {
+
+    message: string;
+
+    constructor(message: string) {
+        this.message = message;
+    }
+}
+```
