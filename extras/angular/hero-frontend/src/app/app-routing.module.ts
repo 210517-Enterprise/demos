@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'all', component: AllComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'find', component: FindComponent },
+  // the path value is correlated to your routerLink...the only difference is a "/"
 ];
 
 @NgModule({
