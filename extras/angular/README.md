@@ -324,8 +324,11 @@ const routes: Routes = [
 <br>
 
 > `router-outlet` in Angular works as a placeholder which is used to load the different components dynamically based on the activated component or current route state.  This will load whatever component we have specified to be rendered based on the url.
+
 <br>
+
 :tada: `Main` Component is finished; You should see this in your browser!
+
 <br>
 
 <img src="imgs\main_1.png">
@@ -469,3 +472,127 @@ export class ClientMessage {
     }
 }
 ```
+
+<br>
+
+## Step 11: Complete the `HeroService`
+
+1. Return to `hero.service.ts`. Add a properties to our `HeroService` class called `httpOptions` like so:
+
+<br>
+
+```ts
+export class HeroService {
+
+  constructor(private http: HttpClient) { }
+
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type' : 'application/json'})
+  }
+}
+```
+
+<br>
+
+2. At the top of `hero.service.ts` import the following (this includes the models we'll be dealing with between client and server):
+
+<br>
+
+```ts
+import { HERO_URL } from './../../environments/environment';
+import { ClientMessage } from './../models/client-message.model';
+import { Hero } from './../models/hero.model';
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+// Remember to add HTTPClient to your imports[] in your app.module.ts!
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+```
+
+<br>
+
+3. We will now create several methods:
+  - `registerHero()` : Sends a **post** request to our server, inserting a `Hero`.
+  - `findHero()` : Sends a **post** request to our server, retrieving a `Hero` by name.
+  - `findAllHeroes()` : Sends a **get** request to our server, retrieving an array of `Hero`s.
+  -  `handleError<T>()` : A custom error handling method chained to the above methods incase something goes wrong.
+
+<br>
+
+`hero.service.ts` should look like this:
+
+<br>
+
+```ts
+import { HERO_URL } from './../../environments/environment';
+import { ClientMessage } from './../models/client-message.model';
+import { Hero } from './../models/hero.model';
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+// Remember to add HTTPClient to your imports[] in your app.module.ts if you havn't already!
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class HeroService {
+
+  constructor(private http: HttpClient) { }
+
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type' : 'application/json'})
+  }
+
+  /*
+  * POST
+   */
+  public registerHero(hero: Hero): Observable<ClientMessage>  {
+    // this will return a client message if we are successfully able to POST a hero to our server 
+    return this.http.post<ClientMessage>(`${HERO_URL}register`, hero, this.httpOptions)
+                                                                      // adding httpOptions constructs asks our 
+                                                                      // server to return the client-message as JSON.
+    
+    //.pipe(catchError...) is only necessary for handling errors tht could occur
+    .pipe(
+      catchError(this.handleError<any>('cannot register hero!'))
+    )
+  }
+
+  /*
+  * POST
+  */
+  public findHero(hero: Hero): Observable<Hero> {
+
+    return this.http.post<Hero>(`${HERO_URL}findHero`, hero, this.httpOptions)
+    .pipe(
+      catchError(this.handleError<Hero>('getHero', undefined))
+    )
+  }
+
+  /*
+  * GET
+  */
+  public findAllHeroes(): Observable<Hero[]> {
+
+    return this.http.get<Hero[]>(`${HERO_URL}findAll`) 
+    .pipe(
+      catchError(this.handleError<Hero[]>('getHeroes', []))
+    )
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error); // log it to the console if something goes wrong
+
+      // Let the app keep running by returning an empty result.
+      return of(result as T);
+    }
+  }
+}
+```
+
+<br>
+
+## Step 12:
+
