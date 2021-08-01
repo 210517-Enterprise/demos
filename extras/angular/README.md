@@ -86,7 +86,7 @@ ng g c main
     - `main.component.html` : HTML Template of the component
     - `main.component.css` :  the component's private extrenal styling sheet
     - `main.component.ts` :  where we define the module, its properties, lifehooks, etc.
-    - `main.comoponent.spec.ts` : unit testing file
+    - `main.component.spec.ts` : unit testing file
 
 You will also notice that a file called `src/app/app.module.ts` has been updated. This is called your **`AppModule`**, or your [*root module*](https://angular.io/guide/architecture-modules) - it serves as a "registry" of all of your app's components.  This is the file that tells Angular how to construct your application.
 
@@ -167,4 +167,104 @@ a {
 a:hover {
     color: gray;
 }
+```
+
+<br>
+
+2. Add an image to the `src/assets` directory. You may download it from here, or use any image you want.  I named it `superhero.png`.
+
+3. **Add Bootstrap** by navigating to `src/index.html`.  Within the `<head>` tag, paste the Bootstrap CDN link (I'm using version 3.7.7).  Your `index.html` file should look like so:
+
+<br>
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HeroFrontend</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<!-- Bootstrap CSS CDN -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- add Bootstrap minified JavaScript-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+```
+
+<br>
+
+*Remember that Angular is a framework which allows us to create “Single Page Applications”, and it (`index. html`) is **the single page which was provided by the server**.*
+
+> The `<app-root></app-root>` within the `<body>` tag of `index.html` represents the **selector** of the app component.  This selector id is found in the meta-data of the component, specifically in the `app.component.ts` file under the `@Component` tag.
+
+<br>
+
+## Step 6: Build the `main` component typesript file & html template:
+
+1. Go to `main.component.ts`.  You can delete the `constructor` and `ngOnInit` life-cycle hook. Instead we will give the `MainComponent` two properties: a title and image.  `main.component.ts` should look like the following:
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css']
+})
+export class MainComponent {
+
+  title = 'Super Hero Portal';
+  image = 'assets/superhero.jpg';
+}
+```
+
+<br>
+
+2. Go to `main.component.html` and paste the following code.
+
+>  Notice the `{{ }}` around `image` and title. This is **One-way Data Binding** in which we are capturing the properties we declared in the component (`main.component.ts`) and rendering them to the view.
+
+```html
+<div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">{{ title }}</span>
+    </div>
+
+    <!-- the Main component will have an img property and a title property that we're displaying in the html template-->
+    <div class="panel-body">
+        <img class="image-center" src={{image}}/>
+        <div class="list-group">
+
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+                <strong>Find</strong> a Superhero
+            </div>
+
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+                <strong>Register</strong> a Superhero
+            </div>
+
+            
+            <div class="list-group-item">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+                <strong>Fetch</strong> all Superheroes
+            </div>
+
+        </div>
+    </div>
+</div>
 ```
