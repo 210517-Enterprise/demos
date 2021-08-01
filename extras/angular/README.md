@@ -668,6 +668,47 @@ constructor(private heroService: HeroService) { }
 
 <br>
 
+`all.component.ts` should look like this:
+
+<br>
+
+```ts
+import { Component, OnInit } from '@angular/core';
+import { ClientMessage } from './../../models/client-message.model';
+import { Hero } from './../../models/hero.model';
+import { HeroService } from './../../services/hero.service';
+
+@Component({
+  selector: 'app-all',
+  templateUrl: './all.component.html',
+  styleUrls: ['./all.component.css']
+})
+export class AllComponent implements OnInit {
+
+  title = 'All Heroes';
+  public heroes: Hero[] = [];
+  public clientMessage: ClientMessage = new ClientMessage('Sorry, no heroes to display');
+
+  constructor(private heroService: HeroService) { }
+
+  ngOnInit(): void {
+      // we will set the heroes array = to all of the heroes fetched from the server
+    this.findAllHeroesFromService();
+  }
+
+  public findAllHeroesFromService(): void {
+    // in this method we call on our service to fetch the heroes array and set it equal to 
+    // our heroes property
+    this.heroService.findAllHeroes().subscribe(data => this.heroes = data)
+  }
+
+}
+
+
+```
+
+<br>
+
 ## Step 13: Complete `all.component.html` template
 Write the following code into `all.component.html` :
 
@@ -709,3 +750,6 @@ Write the following code into `all.component.html` :
 
 > *Notice the `*ngFor Directive`.  **`NgFor`** is a built-in template directive that makes it easy to iterate over something like an array or an object and create a template for each item. To learn more about directives in Angular, go [here](https://www.digitalocean.com/community/tutorials/angular-ngfor-directive#:~:text=NgFor%20is%20a%20built%2Din,a%20template%20for%20each%20item.&text=of%20users%20means%20that%20we,ngFor%20creates%20a%20parent%20template.).*
 
+<br>
+
+## Step 13: 
