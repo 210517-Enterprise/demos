@@ -8,6 +8,7 @@ import { MainComponent } from './components/main/main.component';
 import { AllComponent } from './components/all/all.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FindComponent } from './components/find/find.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FindComponent } from './components/find/find.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
