@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { AllComponent } from './components/all/all.component';
+import { RegisterComponent } from './components/register/register.component';
+import { FindComponent } from './components/find/find.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    AllComponent
+    AllComponent,
+    RegisterComponent,
+    FindComponent
   ],
   imports: [
     BrowserModule,

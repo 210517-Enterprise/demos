@@ -752,4 +752,207 @@ Write the following code into `all.component.html` :
 
 <br>
 
-## Step 13: 
+## Step 13: Add `AllComponent` to `app-routing.module.ts`
+Your `app-routing.module.ts` file should look like this:
+
+<br>
+
+```ts
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { MainComponent } from './components/main/main.component';
+ // import the AllComponent!
+import { AllComponent } from './components/all/all.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
+  { path: 'main', component: MainComponent },
+  // add the AllComponent!
+  { path: 'all', component: AllComponent },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+```
+
+<br>
+
+## Step 14: Build the `RegisterComponent`
+
+1. Create the `register` component:
+```
+cd src/app/components
+ng g c register
+```
+
+Your `register.component.ts` file should look like this:
+
+<br>
+
+```ts
+import { ClientMessage } from './../../models/client-message.model';
+import { Hero } from './../../models/hero.model';
+import { HeroService } from './../../services/hero.service';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent {
+
+  title = 'Register Hero'
+
+  // Constructor Injection
+  constructor(private heroService: HeroService) { }
+
+  // For databinding
+  public hero: Hero = new Hero(0, '', '', false);
+
+  // Client message to the user
+  public clientMessage: ClientMessage = new ClientMessage('');
+
+  public registerHeroFromService(): void {
+
+    this.heroService.registerHero(this.hero).subscribe(data => this.clientMessage = data, 
+      error => this.clientMessage.message = 'SOMETHING WENT WRONG!');
+      
+  }
+}
+```
+
+<br>
+
+2. **Build the `RegisterComponent` html template**: Your `register.component.html` file should look like this:
+
+<br>
+
+```html
+<div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">{{ title }}</span>
+    </div>
+    
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+
+                <div class="form-group">
+                    <!-- Here I want to take input from the user, and change the property of the hero object in my ts file 
+                         This is called 2-way property binding which is achieved with [()] -->
+                    <input [(ngModel)]="hero.name" placeholder="Name" class="form-control">
+                    <input [(ngModel)]="hero.superPower" placeholder="Superpower" class="form-control">
+                    <input [(ngModel)]="hero.hasCape" placeholder="Do they have a cape?" class="form-control">
+                </div>
+
+                <div>
+                    <button class ="btn btn-primary btn-center" (click)="registerHeroFromService()">REGISTER HERO!</button>
+                </div>
+                <div>
+                        {{ clientMessage.message }}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+<br>
+
+## Step 14: Add `RegisterComponent` to `app-routing.module.ts`
+Within `app-routing.module.ts`, add both `  { path: 'register', component: RegisterComponent }` to the `Routes` array, and `import { RegisterComponent } from './components/register/register.component';` at the top with the other imports.
+
+<br>
+
+## Step 15: Build and Route the `FindComponent`
+
+1. Create the `find` component:
+```
+cd src/app/components
+ng g c find
+```
+
+2. Your `find.component.ts` file should look like this:
+
+<br>
+
+```ts
+import { ClientMessage } from './../../models/client-message.model';
+import { Hero } from './../../models/hero.model';
+import { HeroService } from './../../services/hero.service';
+import { Component } from '@angular/core';
+
+
+@Component({
+  selector: 'app-find',
+  templateUrl: './find.component.html',
+  styleUrls: ['./find.component.css']
+})
+export class FindComponent {
+
+  title = 'Find Hero';
+
+  // Capture user input -- we will have an empty hero object like in register.component.ts
+  public hero: Hero = new Hero(0, '', '', false)
+
+  // Present the recieved hero -- set it to empty values at first
+  public recievedHero: Hero = new Hero(0, '', '', false)
+
+  // Message to the User.
+  public clientMessage: ClientMessage = new ClientMessage('');
+
+  constructor(private heroService: HeroService) { }
+
+  public findHeroFromService(): void {
+
+    this.heroService.findHero(this.hero).subscribe(data => this.recievedHero = data, // make sure you are setting your data equal here
+      error => this.clientMessage.message = 'SOMETHING WENT WRONG');
+  }
+}
+```
+
+<br>
+
+3. Your `find.component.html` file should look like this:
+
+<br>
+
+```html
+<div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">{{ title }}</span>
+    </div>
+
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="form-group">
+                    
+                    <!-- here we take in some usre input and bind it to our component.ts hero property
+                    This repreents the hero object that we include in our post request to our server.  -->
+                    <input [(ngModel)]="hero.name" placeholder="Hero's name" class="form-control" />
+
+                </div>
+
+                <div>
+                    <button class="btn btn-primary btn-center" (click)="findHeroFromService()">FIND HERO!</button>
+                </div>
+
+                <div *ngIf="recievedHero.name">
+                    {{ recievedHero.superPower }} 
+                </div>
+                <div>
+                    {{ clientMessage.message }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+3. **Add `FindComponent` to `app-routing.module.ts`**: Within `app-routing.module.ts`, add both `  { path: 'find', component: FindComponent }` to the `Routes` array, and `import { FindComponent } from './components/find/find.component';` at the top with the other imports.
