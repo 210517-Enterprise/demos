@@ -326,7 +326,7 @@ const routes: Routes = [
 > `router-outlet` in Angular works as a placeholder which is used to load the different components dynamically based on the activated component or current route state.  This will load whatever component we have specified to be rendered based on the url.
 <br>
 :tada: You should see this in your browser!
-
+<br>
 <img src="imgs\main_1.png">
 
 
