@@ -26,7 +26,7 @@ public class Hero {
 	private String superPower;
 	
 	@Column(name="h_has_cape")
-	private boolean hasCape;
+	private boolean hasCape;_
 	
 	public Hero(String name, String superPower, boolean hasCape) {
 		super();
