@@ -597,5 +597,115 @@ export class HeroService {
 
 <br>
 
-## Step 12:
+## Step 12: Build the `All` Component and inject `HeroService` to retrieve Heroes
+
+1. Generate the `AllComponent` like so:
+```
+cd src/app/components
+ng g c all
+```
+
+<br>
+
+2. At the top of `all.component.ts` import the appropriate models and services being used:
+
+<br>
+
+```ts
+import { ClientMessage } from './../../models/client-message.model';
+import { Hero } from './../../models/hero.model';
+import { HeroService } from './../../services/hero.service';
+```
+
+<br>
+
+3. `AllComponent` will have 3 properties:
+
+<br>
+
+```ts
+  title = 'All Heroes';
+  public heroes: Hero[] = [];
+  public clientMessage: ClientMessage = new ClientMessage('Sorry, no heroes to display');
+```
+
+<br>
+
+4. User constructor injection to inject the `HeroService`:
+
+<br>
+
+```ts
+constructor(private heroService: HeroService) { }
+```
+
+<br>
+
+5. Under `ngOnInit()`, initialize the `heroes` with all hero objects fetched from the server:
+
+<br>
+
+```ts
+  ngOnInit(): void {
+      // we will set the heroes array = to all of the heroes fetched from the server
+    this.findAllHeroesFromService();
+  }
+```
+
+<br>
+
+6. `AllComponent` will have one method which is `findAllHeroesFromService()`.  This will call the GET method from the `HeroService` and be featured in the html template.
+
+<br>
+
+```ts
+  public findAllHeroesFromService(): void {
+    // in this method we call on our service to fetch the heroes array and 
+    // set it equal to our heroes[] property
+    this.heroService.findAllHeroes().subscribe(data => this.heroes = data)
+  }
+```
+
+<br>
+
+## Step 13: Complete `all.component.html` template
+Write the following code into `all.component.html` :
+
+<br>
+
+```html
+<div>
+    <div class="panel-heading">
+        <span class="label label-default label-center">{{ title }}</span>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div class="list-group-item">
+                <div *ngFor="let h of heroes" class="list-group-item">
+                    <!-- the "heroes" part of our *ngFor directive represents the heores array in our .ts file.
+                         the "h" represents each individual object within the array -->
+
+                    <strong>ID</strong>: {{ h.id }}
+                    <strong>Name</strong>: {{ h.name }}
+                    <strong>Power</strong>: {{ h.superPower }}
+                    <strong>Has Cape?</strong>: {{ (h.hasCape) ? 'Yes' : 'No' }} <!-- Here I'm using a ternary operator-->
+
+                </div>
+
+                <div>
+                    <button class="btn btn-primary btn-center" (click)="findAllHeroesFromService()">GET THE HEROES!</button>
+                </div>
+
+                <div *ngIf="heroes.length == 0">
+                    {{ clientMessage.message }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+<br>
+
+> *Notice the `*ngFor Directive`.  **`NgFor`** is a built-in template directive that makes it easy to iterate over something like an array or an object and create a template for each item. To learn more about directives in Angular, go [here](https://www.digitalocean.com/community/tutorials/angular-ngfor-directive#:~:text=NgFor%20is%20a%20built%2Din,a%20template%20for%20each%20item.&text=of%20users%20means%20that%20we,ngFor%20creates%20a%20parent%20template.).*
 
