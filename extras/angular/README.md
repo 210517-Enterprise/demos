@@ -171,7 +171,7 @@ a:hover {
 
 <br>
 
-2. Add an image to the `src/assets` directory. You may download it from here, or use any image you want.  I named it `superhero.png`.
+2. Add an image to the `src/assets` directory. You may download it from [here](https://github.com/210517-Enterprise/demos/blob/main/extras/angular/hero-frontend/src/assets/superhero.jpg), or use any image you want.  I named it `superhero.png`.
 
 3. **Add Bootstrap** by navigating to `src/index.html`.  Within the `<head>` tag, paste the Bootstrap CDN link (I'm using version 3.7.7).  Your `index.html` file should look like so:
 
