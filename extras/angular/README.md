@@ -843,7 +843,8 @@ export class RegisterComponent {
 
                 <div class="form-group">
                     <!-- Here I want to take input from the user, and change the property of the hero object in my ts file 
-                         This is called 2-way property binding which is achieved with [()] -->
+                         This is called 2-way property binding which is achieved with [()].  You will need to add FormsModule
+                         to the import[] of app.module.ts -->
                     <input [(ngModel)]="hero.name" placeholder="Name" class="form-control">
                     <input [(ngModel)]="hero.superPower" placeholder="Superpower" class="form-control">
                     <input [(ngModel)]="hero.hasCape" placeholder="Do they have a cape?" class="form-control">
@@ -861,6 +862,14 @@ export class RegisterComponent {
     </div>
 </div>
 ```
+
+> :exclamation: ***Note***: Your app will not compile properly. You will need to add `FormsModule` to the import[] of app.module.ts in order to use two-way property binding.
+
+<br>
+
+3. Go to `app.module.ts`.  In the top, `import { FormsModule } from '@angular/forms';`.
+
+4. Within `imports: [...]` add: `FormsModule`.
 
 <br>
 
@@ -956,3 +965,88 @@ export class FindComponent {
 ```
 
 3. **Add `FindComponent` to `app-routing.module.ts`**: Within `app-routing.module.ts`, add both `  { path: 'find', component: FindComponent }` to the `Routes` array, and `import { FindComponent } from './components/find/find.component';` at the top with the other imports.
+
+<br>
+
+## Step 15: Almost done -- add a Nav bar with `NavComponent`
+
+1. Create the `nav` component:
+```
+cd src/app/components
+ng g c nav
+```
+
+<br>
+
+> The `nav` component is only responsible for one thing: providing a place for the user to click which will route them to that component.  We will only modify `nav.component.html`.
+
+2. Write the following code in `nav.component.html`:
+
+```html
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" routerLink="/"><strong>Heroes</strong></a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+
+                <!-- routerLink: When applied to an element in a template, makes that element a link that initiates navigation to a route. -->
+                <li><a routerLink="/register">Register</a></li>
+                <li><a routerLink="/find">Find</a></li>
+                <li><a routerLink="/all">All</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+```
+
+<br>
+
+> Notice the use of `routerLink`. In Angular, RouterLink is a directive for navigating to a different route declarative.  [Resource](https://www.digitalocean.com/community/tutorials/angular-navigation-routerlink-navigate-navigatebyurl).
+> This means that is we are to click on one of those words, it will trigger the assocaited route of the component as we've specified in the `Routes[]` of `app-routing.module.ts`.
+
+<br>
+
+3. Go to **`app.component.html`** and write the following code.  Mainly we are just appending our `NavComponent` to the top of the page, and any rendered components that get invoked.
+
+```html
+<!-- up here we will render our NavComponent by calling its selector-->
+<app-nav></app-nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="panel panel-default">
+  
+        <!-- we inject our routed component here-->
+          <router-outlet></router-outlet>
+
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+<br>
+
+<br>
+
+## Module Complete! :tada:
+Go ahead and run the Spring Boot backend app (which you can clone and run [here](https://github.com/210517-Enterprise/demos/tree/main/extras/angular/Hero-Backend)) and then run your Angular app.  You should be able to register and retrieve `hero` objects whose properties are rendered to the view.
+
+<br>
+<br>
+
+### Resources
+- [Angular Documentation](https://angular.io/docs)
+- [Official Angular Tutorial: Tour of Heroes](https://angular.io/tutorial)
+- [30 min YouTube Angular tutorial for the basics](https://www.youtube.com/watch?v=i7KaVFOXNUQ)
