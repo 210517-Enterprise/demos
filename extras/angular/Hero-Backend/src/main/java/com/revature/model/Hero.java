@@ -14,6 +14,7 @@ import lombok.Data;
 @Entity
 @Table(name="hero")
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class Hero {
 
