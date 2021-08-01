@@ -97,6 +97,8 @@ Before we begin developing our components out, let's import bootstrap and add gl
 
 1. In `src/styles.css` add the following CSS rules:
 
+<br>
+
 ```css
 /* You can add global styles to this file, and also import other style files */
 .panel-body  {
@@ -237,6 +239,8 @@ export class MainComponent {
 
 >  Notice the `{{ }}` around `image` and title. This is **One-way Data Binding** in which we are capturing the properties we declared in the component (`main.component.ts`) and rendering them to the view.
 
+<br>
+
 ```html
 <div>
     <div class="panel-heading">
@@ -268,3 +272,67 @@ export class MainComponent {
     </div>
 </div>
 ```
+
+<br>
+
+:tada: You have completed the `main` Component ts file and html template! Now you need to render it.
+
+<br>
+
+## Step 7: View the `main` Component through *Routing*:
+You may have notice that you have built out the main component with it's associated properties in the `main.componenet.ts` and it's html template, but nothing appears on the screen when you render the app. We must add a `router-outlet` to the root `app` component.
+
+1. Open `src/app/app-routing-module.ts`. In the empty array called `Routes`, add the following:
+
+<br>
+
+```ts
+// Make sure you import MainComponent at the top
+import { MainComponent } from './components/main/main.component';
+
+const routes: Routes = [
+
+  // This means that an empty url will render the main component
+  { path: '', redirectTo: 'main', pathMatch: 'full' }, 
+
+  // This means that localhost:4200/main will render the main component
+  { path: 'main', component: MainComponent },
+];
+```
+
+<br>
+
+2. Now navigate to `app.component.html` (which should currently be empty) and add the following code:
+
+<br>
+
+```html
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="panel panel-default">
+  
+        <!-- we inject our route here-->      
+          <router-outlet></router-outlet>
+
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+<br>
+
+> `router-outlet` in Angular works as a placeholder which is used to load the different components dynamically based on the activated component or current route state.  This will load whatever component we have specified to be rendered based on the url.
+<br>
+:tada: You should see this in your browser!
+
+<img src="imgs\main_1.png">
+
+
+
+<br>
+
+## Step 8: 
+
+
