@@ -581,6 +581,9 @@ export class HeroService {
     )
   }
 
+  /*
+  * CUSTOM ERROR HANDLER
+  */
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error); // log it to the console if something goes wrong
