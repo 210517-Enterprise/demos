@@ -16,8 +16,12 @@ Follow this read-through tutorial to build the UI to hit the [backend Spring Boo
 - [Step 10: Create `Hero` & `ClientMessage` Models](#step10)
 - [Step 11: Complete the `HeroService`](#step11)
 - [Step 12: Build `AllComponent` and inject `HeroService` to retrieve Heroes](#step12)
-- [Step 13: Complete `all.component.html` template](#step13)
-- [Step 14: Add AllComponent to app-routing.module.ts](#step14)
+- [Step 13: Complete `AllComponent` HTML template](#step13)
+- [Step 14: Add `AllComponent` to `app-routing.module.ts`](#step14)
+- [Step 15: Build the `RegisterComponent`](#step15)
+- [Step 16: Add `RegisterComponent to app-routing.module.ts`](#step16)
+- [Step 17: Build and Route the `FindComponent`](#step17)
+- [Step 18: Add a Nav bar with NavComponent](#step18)
 
 <br>
 
