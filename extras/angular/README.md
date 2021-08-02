@@ -5,7 +5,19 @@ Follow this read-through tutorial to build the UI to hit the [backend Spring Boo
 <br>
 
 - [Step 1: Angular Prerequisites & Project Initialization](#step1)
-
+- [Step 2: Gut the initial boilerplate code](#step2)
+- [Step 3: Add the API URl to your Angular App](#step3)
+- [Step 4: Generate custom components using the Angular CLI](#step4)
+- [Step 5: Add styles & image assets](#step5)
+- [Step 6: Build the `MainComponent` typesript module & html template](#step6)
+- [Step 7: Implement *Routing* to view the `MainComponent`](#step7)
+- [Step 8: Build an HTTP Service](#step8)
+- [Step 9: Declare `HttpClientModule` as an import within `app.module.ts`](#step9)
+- [Step 10: Create `Hero` & `ClientMessage` Models](#step10)
+- [Step 11: Complete the `HeroService`](#step11)
+- [Step 12: Build `AllComponent` and inject `HeroService` to retrieve Heroes](#step12)
+- [Step 13: Complete `all.component.html` template](#step13)
+- [Step 14: Add AllComponent to app-routing.module.ts](#step14)
 
 <br>
 
@@ -219,7 +231,7 @@ a:hover {
 
 <br>
 
-## Step 6: Build the `main` component typesript file & html template:  <a name="step6"></a>
+## Step 6: Build the `main` component typesript module & html template:  <a name="step6"></a>
 
 1. Go to `main.component.ts`.  You can delete the `constructor` and `ngOnInit` life-cycle hook. Instead we will give the `MainComponent` two properties: a title and image.  `main.component.ts` should look like the following:
 
