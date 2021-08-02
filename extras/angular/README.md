@@ -894,12 +894,12 @@ export class RegisterComponent {
 
 <br>
 
-## Step 14: Add `RegisterComponent` to `app-routing.module.ts`
+## Step 16: Add `RegisterComponent` to `app-routing.module.ts`  <a name="step16"></a>
 Within `app-routing.module.ts`, add both `  { path: 'register', component: RegisterComponent }` to the `Routes` array, and `import { RegisterComponent } from './components/register/register.component';` at the top with the other imports.
 
 <br>
 
-## Step 16: Build and Route the `FindComponent`  <a name="step16"></a>
+## Step 17: Build and Route the `FindComponent`  <a name="step17"></a>
 
 1. Create the `find` component:
 ```
@@ -989,7 +989,7 @@ export class FindComponent {
 
 <br>
 
-## Step 17: Almost done -- add a Nav bar with `NavComponent`  <a name="step17"></a>
+## Step 18: Almost done -- add a Nav bar with `NavComponent`  <a name="step18"></a>
 
 1. Create the `nav` component:
 ```
