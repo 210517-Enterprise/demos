@@ -4,24 +4,24 @@ Follow this read-through tutorial to build the UI to hit the [backend Spring Boo
 
 <br>
 
-- [Step 1: Angular Prerequisites & Project Initialization](#step1)
-- [Step 2: Gut the initial boilerplate code](#step2)
-- [Step 3: Add the API URl to your Angular App](#step3)
-- [Step 4: Generate custom components using the Angular CLI](#step4)
-- [Step 5: Add styles & image assets](#step5)
-- [Step 6: Build the `MainComponent` typesript module & html template](#step6)
-- [Step 7: Implement *Routing* to view the `MainComponent`](#step7)
-- [Step 8: Build an HTTP Service](#step8)
-- [Step 9: Declare `HttpClientModule` as an import within `app.module.ts`](#step9)
-- [Step 10: Create `Hero` & `ClientMessage` Models](#step10)
-- [Step 11: Complete the `HeroService`](#step11)
-- [Step 12: Build `AllComponent` and inject `HeroService` to retrieve Heroes](#step12)
-- [Step 13: Complete `AllComponent` HTML template](#step13)
-- [Step 14: Add `AllComponent` to `app-routing.module.ts`](#step14)
-- [Step 15: Build the `RegisterComponent`](#step15)
-- [Step 16: Add `RegisterComponent to app-routing.module.ts`](#step16)
-- [Step 17: Build and Route the `FindComponent`](#step17)
-- [Step 18: Add a Nav bar with NavComponent](#step18)
+- Step 1: [Angular Prerequisites & Project Initialization](#step1)
+- Step 2: [Gut the initial boilerplate code](#step2)
+- Step 3: [Add the API URl to your Angular App](#step3)
+- Step 4: [Generate custom components using the Angular CLI](#step4)
+- Step 5: [Add styles & image assets](#step5)
+- Step 6: [Build the `MainComponent` typesript module & html template](#step6)
+- Step 7: [Implement *Routing* to view the `MainComponent`](#step7)
+- Step 8: [Build an HTTP Service](#step8)
+- Step 9: [Declare `HttpClientModule` as an import within `app.module.ts`](#step9)
+- Step 10: [Create `Hero` & `ClientMessage` Models](#step10)
+- Step 11: [Complete the `HeroService`](#step11)
+- Step 12: [Build `AllComponent` and inject `HeroService` to retrieve Heroes](#step12)
+- Step 13: [Complete `AllComponent` HTML template](#step13)
+- Step 14: [Add `AllComponent` to `app-routing.module.ts`](#step14)
+- Step 15: [Build the `RegisterComponent`](#step15)
+- Step 16: [Add `RegisterComponent to app-routing.module.ts`](#step16)
+- Step 17: [Build and Route the `FindComponent`](#step17)
+- Step 18: [Add a Nav bar with NavComponent](#step18)
 
 <br>
 
@@ -56,7 +56,7 @@ ng serve -o
 
 <br>
 
-## Step 2: Gut the initial boilerplate code
+## Step 2: Gut the initial boilerplate code <a name="step2"></a>
 
 - In your VsCode file explorer, navigate to `src/app`.  We will create our models, components, and services within this directory.
     - *`app.component` is your root component, similar to `App.js` in React.*
