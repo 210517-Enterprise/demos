@@ -4,7 +4,7 @@ Follow this read-through tutorial to build the UI to hit the [backend Spring Boo
 
 <br>
 
-- [Step 1: Angular Prerequisites](#step1)
+- [Step 1: Angular Prerequisites & Project Initialization](#step1)
 
 
 <br>
@@ -49,7 +49,7 @@ ng serve -o
 
 <br>
 
-## Step 3: Add the API URl to your Angular App
+## Step 3: Add the API URl to your Angular App  <a name="step3"></a>
 
 - Navigate to `src/environments` and paste `export const HERO_URL = `http://localhost:8081/api/heroes/`;` into `environment.ts`.  The file should look like so:
 
@@ -63,7 +63,7 @@ export const HERO_URL = `http://localhost:8081/api/heroes/`;
 
 <br>
 
-## Step 4: Generate custom components using the Angular CLI
+## Step 4: Generate custom components using the Angular CLI  <a name="step4"></a>
 This single-page application will consist of 5 main components:
 
 - **`main` Component** : Represents the home page with a welcome header and image
@@ -97,7 +97,7 @@ You will also notice that a file called `src/app/app.module.ts` has been updated
 
 <br>
 
-## Step 5: Add styles & image assets
+## Step 5: Add styles & image assets  <a name="step5"></a>
 Before we begin developing our components out, let's import bootstrap and add global styles.
 
 1. In `src/styles.css` add the following CSS rules:
@@ -219,7 +219,7 @@ a:hover {
 
 <br>
 
-## Step 6: Build the `main` component typesript file & html template:
+## Step 6: Build the `main` component typesript file & html template:  <a name="step6"></a>
 
 1. Go to `main.component.ts`.  You can delete the `constructor` and `ngOnInit` life-cycle hook. Instead we will give the `MainComponent` two properties: a title and image.  `main.component.ts` should look like the following:
 
@@ -284,7 +284,7 @@ export class MainComponent {
 
 <br>
 
-## Step 7: View the `main` Component through *Routing*:
+## Step 7: View the `main` Component through *Routing*:  <a name="step7"></a>
 You may have notice that you have built out the main component with it's associated properties in the `main.componenet.ts` and it's html template, but nothing appears on the screen when you render the app. We must add a `router-outlet` to the root `app` component.
 
 1. Open `src/app/app-routing-module.ts`. In the empty array called `Routes`, add the following:
@@ -340,14 +340,14 @@ const routes: Routes = [
 
 <br>
 
-## Step 8: Build an HTTP Service
+## Step 8: Build an HTTP Service  <a name="step8"></a>
 Our other component's will have functions that make an HTTP request to our server.  In Angular, we modularize this responsibility in the form of a [**Service**](https://angular.io/guide/architecture-services).
 
 > A **Service** is a broad category encompassing any value, function, or feature that an application needs. A service is typically a class with a narrow, well-defined purpose. It should do something specific and do it well. Angular distinguishes components from services to increase modularity and reusability.
 
 <br>
 
-We will use **Dependency Injection** to inject an HTTP Service into our components.
+#### We will use *Dependency Injection* to inject an HTTP Service into our components.
 
 1. Within `src/app` create a directory called `services`:
 ```
@@ -385,7 +385,7 @@ export class HeroService {
 
 <br>
 
-## Step 9: Declare `HttpClientModule` as an import within `app.module.ts`
+## Step 9: Declare `HttpClientModule` as an import within `app.module.ts`  <a name="step9"></a>
 
 - Open `src/app/app.module.ts` and add `HttpClientModule`.  You should also import it at the top with `import { HttpClientModule } from '@angular/common/http';`.
 
@@ -418,7 +418,7 @@ export class AppModule { }
 
 <br>
 
-## Step 10: Create `Hero` & `ClientMessage` Models
+## Step 10: Create `Hero` & `ClientMessage` Models  <a name="step10"></a>
 Since we will be creating/retrieving `Hero` and `ClientMessage` models, we need to create a class within our Angular App to represent the object that we'll be using our Hero Service to perform CRUD operations on.
 
 1. In `src/app` create a directory called `models`:
@@ -480,7 +480,7 @@ export class ClientMessage {
 
 <br>
 
-## Step 11: Complete the `HeroService`
+## Step 11: Complete the `HeroService`  <a name="step11"></a>
 
 1. Return to `hero.service.ts`. Add a properties to our `HeroService` class called `httpOptions` like so:
 
@@ -602,7 +602,7 @@ export class HeroService {
 
 <br>
 
-## Step 12: Build the `All` Component and inject `HeroService` to retrieve Heroes
+## Step 12: Build the `All` Component and inject `HeroService` to retrieve Heroes  <a name="step12"></a>
 
 1. Generate the `AllComponent` like so:
 ```
@@ -714,7 +714,7 @@ export class AllComponent implements OnInit {
 
 <br>
 
-## Step 13: Complete `all.component.html` template
+## Step 13: Complete `all.component.html` template  <a name="step13"></a>
 Write the following code into `all.component.html` :
 
 <br>
@@ -757,7 +757,7 @@ Write the following code into `all.component.html` :
 
 <br>
 
-## Step 13: Add `AllComponent` to `app-routing.module.ts`
+## Step 13: Add `AllComponent` to `app-routing.module.ts`  <a name="step13"></a>
 Your `app-routing.module.ts` file should look like this:
 
 <br>
@@ -785,7 +785,7 @@ export class AppRoutingModule { }
 
 <br>
 
-## Step 14: Build the `RegisterComponent`
+## Step 14: Build the `RegisterComponent`  <a name="step14"></a>
 
 1. Create the `register` component:
 ```
@@ -883,7 +883,7 @@ Within `app-routing.module.ts`, add both `  { path: 'register', component: Regis
 
 <br>
 
-## Step 15: Build and Route the `FindComponent`
+## Step 15: Build and Route the `FindComponent`  <a name="step15"></a>
 
 1. Create the `find` component:
 ```
@@ -973,7 +973,7 @@ export class FindComponent {
 
 <br>
 
-## Step 15: Almost done -- add a Nav bar with `NavComponent`
+## Step 16: Almost done -- add a Nav bar with `NavComponent`  <a name="step16"></a>
 
 1. Create the `nav` component:
 ```
