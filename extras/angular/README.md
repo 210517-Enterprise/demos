@@ -4,7 +4,12 @@ Follow this read-through tutorial to build the UI to hit the [backend Spring Boo
 
 <br>
 
-## Step 1: Angular Prerequisites & Project Initialization
+- [Step 1: Angular Prerequisites](#step1)
+
+
+<br>
+
+## Step 1: Angular Prerequisites & Project Initialization <a name="step1"></a>
 
 1. You must have Node.JS installed on your machine.  If you don't, [go here to download the LTS](https://nodejs.org/en/download/).
 
