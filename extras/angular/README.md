@@ -769,7 +769,7 @@ Write the following code into `all.component.html` :
 
 <br>
 
-## Step 13: Add `AllComponent` to `app-routing.module.ts`  <a name="step13"></a>
+## Step 14: Add `AllComponent` to `app-routing.module.ts`  <a name="step14"></a>
 Your `app-routing.module.ts` file should look like this:
 
 <br>
@@ -797,7 +797,7 @@ export class AppRoutingModule { }
 
 <br>
 
-## Step 14: Build the `RegisterComponent`  <a name="step14"></a>
+## Step 15: Build the `RegisterComponent`  <a name="step15"></a>
 
 1. Create the `register` component:
 ```
@@ -895,7 +895,7 @@ Within `app-routing.module.ts`, add both `  { path: 'register', component: Regis
 
 <br>
 
-## Step 15: Build and Route the `FindComponent`  <a name="step15"></a>
+## Step 16: Build and Route the `FindComponent`  <a name="step16"></a>
 
 1. Create the `find` component:
 ```
@@ -981,11 +981,11 @@ export class FindComponent {
 </div>
 ```
 
-3. **Add `FindComponent` to `app-routing.module.ts`**: Within `app-routing.module.ts`, add both `  { path: 'find', component: FindComponent }` to the `Routes` array, and `import { FindComponent } from './components/find/find.component';` at the top with the other imports.
+4. **Add `FindComponent` to `app-routing.module.ts`**: Within `app-routing.module.ts`, add both `  { path: 'find', component: FindComponent }` to the `Routes` array, and `import { FindComponent } from './components/find/find.component';` at the top with the other imports.
 
 <br>
 
-## Step 16: Almost done -- add a Nav bar with `NavComponent`  <a name="step16"></a>
+## Step 17: Almost done -- add a Nav bar with `NavComponent`  <a name="step17"></a>
 
 1. Create the `nav` component:
 ```
