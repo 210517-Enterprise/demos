@@ -105,7 +105,7 @@
 - Tell me about yourself
 - Tell me about a project
 - What is Jenkins?
-- What is Maven?
+- What is Maven? artifactId vs groupId?
 - When you run a Maven build twice, is it faster the second time and why? 
 - What is a feature in Java that you learned that was interesting?
 - What's the difference between an annotation and an aspect?
