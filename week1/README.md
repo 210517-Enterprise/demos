@@ -134,6 +134,8 @@ System.out.println(s1.equals(s2));  // f
 
 - What is autoboxing / unboxing?
 
+- What is casting? Can you explain the difference between widening and narrowing?
+
 - Tell me the full syntax of the `main` method. What is its purpose?
 
 <br>
