@@ -12,17 +12,35 @@ For example, as a developer you’ve most likely worked with git before. A commo
 ## Response 2 :sunglasses:
 *“So I’ve used git for almost all of my projects. It’s a really useful **distributed version control system** for managing **source code** - I’ve used it **on the command line to add, commit, and push** code to an **online repository**, usually **GitHub**, as well as switch between different **feature branches** that my team members and I work on. I like it because it **smooths the process of collaborating** on the same codebase and **merging or integrating changes**.”*
 
-Note a few problems in the first response: the use of filler words (“ummm”, “ahh”) - you should remove these as much as possible. Don’t lower your voice and trail off at the end of sentences, it implies uncertainty. Also note the vague words that are **bolded** - it doesn’t answer **how** git is helpful, how it is easy to work with, or how it lets you keep track of “stuff” (whatever that is). Finally, the only technical word mentioned is “pushing” code.
+<br>
 
-In contrast, the second answer is well-structured and smooth, and it drops in several technical keywords that demonstrates knowledge in the domain - it explains **what** (“distributed version control”), **how** (“add, commit, push code”), and **why** (“smoothing the process of collaborating”). Putting these together, it **sounds like the person giving the second answer has worked in-depth with git**.
+> Note a few problems in the first response: the use of filler words (“ummm”, “ahh”) - you should remove these as much as possible. Don’t lower your voice and trail off at the end of sentences, it implies uncertainty. Also note the vague words that are **bolded** - it doesn’t answer **how** git is helpful, how it is easy to work with, or how it lets you keep track of “stuff” (whatever that is). Finally, the only technical word mentioned is “pushing” code.
+> 
+> In contrast, the second answer is well-structured and smooth, and it drops in several technical keywords that demonstrates knowledge in the domain 
+> - it explains **what** (“distributed version control”), 
+> - **how** (“add, commit, push code”), and 
+> - **why** (“smoothing the process of collaborating”). <br>
+> 
+> Putting these together, it **sounds like the person giving the second answer has worked in-depth with git**.
+
+<br>
 
 Review one more high-level sample question and answer below.
+
+<br>
 
 *Q: “Tell me about the Spring framework”*
 
 *A: “The Spring framework is a **Java framework** for **production-ready enterprise applications** based on the concept of **inversion of control** where we hand off control over **instantiation of our objects** to an external entity. In Spring this entity is the **IOC container** which manages the **lifecycle of the application beans**, provided either through **XML, Java, or annotation configuration**. We can achieve **loose coupling** of our code by letting Spring **inject our bean dependencies** directly into our classes.”*
 
-Remember, there are 3 key questions you should ask for every technology you learn about - **what is it and what does it do, how does it work, and why is it useful?**
+<br>
+
+> ❗ Remember, there are 3 key questions you should ask for every technology you learn about:
+> - **What is it? And what does it do?** 
+> - **How does it work?**
+> - **Why is it useful?**
+
+<br>
 
 As you go through training, think about this approach for structuring your responses in QC, one-on-ones, and panels. To really improve at answering these conceptual questions, you **MUST** practice your own responses. **Also, it’s not enough to memorize the keywords to say - you must fully understand and internalize the knowledge, otherwise you will not be able to back yourself up when asked follow-up questions.**
 
@@ -39,4 +57,4 @@ The exercise below should help you improve your answers in QC, one-on-ones, pane
 7. Find a partner (a roommate or batchmate or your trainer). Practice saying your answers out loud and gather feedback from your partner. Make final revisions to your answers.
 8. Record yourself practicing your answer and watch the video to notice any problems you need to correct
 
-If you do this every week, at the end of training you will have a complete set of answers to each language, framework, and major concept you’ve covered. You can use these to improve the bullet points and written sections in your portfolio as well as prepare for the final, cumulative QC session. :shipit:
+*If you do this every week, at the end of training you will have a complete set of answers to each language, framework, and major concept you’ve covered. You can use these to improve the bullet points and written sections in your portfolio as well as prepare for the final, cumulative QC session. :shipit:*
